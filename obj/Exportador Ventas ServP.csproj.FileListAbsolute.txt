@@ -1,0 +1,28 @@
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador_Ventas_ServP.Exportador.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador_Ventas_ServP.Properties.Resources.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador Ventas ServP.csproj.GenerateResource.Cache
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Debug\Exportador Ventas ServP.exe
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Debug\Exportador Ventas ServP.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Debug\EstacionDB.dll
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Debug\EstacionDB.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador Ventas ServP.exe
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador Ventas ServP.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Debug\Exportador Ventas ServP.exe.config
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Exportador Ventas ServP.exe.config
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Exportador Ventas ServP.exe
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Exportador Ventas ServP.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\EstacionDB.dll
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\EstacionDB.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Exportador.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Properties.Resources.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.csproj.GenerateResource.Cache
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.exe
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.PanelPrincipal.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Lecturas.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador_Ventas_ServP.Lecturas.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador_Ventas_ServP.PanelPrincipal.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador_Ventas_ServP.Clientes.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Clientes.resources

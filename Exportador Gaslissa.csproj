@@ -1,0 +1,286 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC03FF01-E972-4C12-BD0F-88BFEFDAA1C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Exportador_Ventas_ServP</RootNamespace>
+    <AssemblyName>Exportador Ventas ServP</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\10.2.3600.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.ReportSource\10.2.3600.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.Shared\10.2.3600.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="GeoAPI, Version=1.1.0.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="NetTopologySuite, Version=1.7.3.17298, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Spatial, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\NHibernate.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComprasCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprasCombustible.Designer.cs">
+      <DependentUpon>ComprasCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisposicionEfectivo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DisposicionEfectivo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Exportador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exportador.Designer.cs">
+      <DependentUpon>Exportador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InformeDisposicionEfectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\InformeDisposicionEfectivo.Designer.cs">
+      <DependentUpon>InformeDisposicionEfectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InformesCierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\InformesCierre.Designer.cs">
+      <DependentUpon>InformesCierre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturas.Designer.cs">
+      <DependentUpon>Lecturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovimientosDiarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovimientosDiarios.Designer.cs">
+      <DependentUpon>MovimientosDiarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelPrincipal.Designer.cs">
+      <DependentUpon>PanelPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clientes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprasCombustible.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComprasCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisposicionEfectivo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DisposicionEfectivo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exportador.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Exportador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InformeDisposicionEfectivo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InformeDisposicionEfectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InformesCierre.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InformesCierre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Lecturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovimientosDiarios.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MovimientosDiarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PanelPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResumenProductoTurno.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ResumenProductoTurno.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasProductoTurno.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VentasProductoTurno.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\EstacionDB.VO.VentaVO.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ResumenProductoTurno.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResumenProductoTurno.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="VentasProductoTurno.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasProductoTurno.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EstacionDB\EstacionDB.csproj">
+      <Project>{E28F4582-E872-453F-AF72-98F8AF4655AA}</Project>
+      <Name>EstacionDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\EstacionDB.VO.BancoVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.ClienteVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.ClienteVO1.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.EgresoVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.EmpleadoVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.IngresoVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.ModoPagoVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO1.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO2.datasource" />
+    <None Include="Resources\add_hover.gif" />
+    <Content Include="Resources\calendar.gif" />
+    <None Include="Resources\refresh_hov.gif" />
+    <None Include="Resources\del_hover.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
