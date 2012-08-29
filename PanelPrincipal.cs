@@ -53,6 +53,7 @@ namespace Exportador_Ventas_ServP
             }
             Utilidades.grupo1 = ConfigurationSettings.AppSettings["grupoIsla1"].ToString();
             Utilidades.grupo2 = ConfigurationSettings.AppSettings["grupoIsla2"].ToString();
+            Utilidades.multiplicarX = int.Parse(ConfigurationSettings.AppSettings["MultiplicarX"].ToString());
         }
 
         private void ShowNewForm(object sender, EventArgs e)

@@ -26,6 +26,7 @@ namespace Exportador_Ventas_ServP
         private double totalOtros = 0;
         private double totalTarjetas = 0;
         private double totalPlus = 0;
+        private double totalTicketTronik = 0;
 
         private ControladorPersistencia cp = new ControladorPersistencia();
 
@@ -77,10 +78,15 @@ namespace Exportador_Ventas_ServP
                     long isla = long.Parse(txtIsla.Text);
                     long turno = long.Parse(txtTurno.Text);
                     cp = new ControladorPersistencia();
-                    if (cp.existeCierre(codEmp, turno, isla, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart.AddDays(1)) == 0)
+                    if (cp.existeCierre(codEmp, turno, isla, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart) == 0)
                     {
                         totalCredito = cp.consultarTotalVentasFidelizadas(codEmp, turno, isla, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart);
                         ventaVOBindingSource.DataSource = cp.consultarVentasFidelizados(codEmp, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, isla, turno);
+
+                        if (ventaVOBindingSource.Count == 0)
+                        {
+                            MessageBox.Show("No se encontraron ventas crédito para la fecha, turno e isla seleccionados", "Resultado del cierre ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
 
                         cmdExportExcel.Enabled = true;
                         cmdExportTxt.Enabled = true;
@@ -324,6 +330,7 @@ namespace Exportador_Ventas_ServP
                 "\tBig Pass:\t\t\t$ " + String.Format("{0,10:#,0.00}", totalBigPass) + "\n" +
                 "\tTarjetas:\t\t\t$ " + String.Format("{0,10:#,0.00}", totalTarjetas) + "\n" +
                 "\tTarjeta Plus:\t\t$ " + String.Format("{0,10:#,0.00}", totalPlus) + "\n" +
+                "\tTicket Prom:\t\t$ " + String.Format("{0,10:#,0.00}", totalTicketTronik) + "\n" +
                 "\tOtros:\t\t\t$ " + String.Format("{0,10:#,0.00}", totalOtros) + "\n" +
                 "TOTAL:\t\t\t$ " + String.Format("{0,10:#,0.00}", totalVentas) + "\n\n" +
                 "¿Desea continuar con el cierre?\n";
@@ -342,6 +349,7 @@ namespace Exportador_Ventas_ServP
                 cierre.Tarjetas = totalTarjetas;
                 cierre.TarjetaPlus = totalPlus;
                 cierre.Otros = totalOtros;
+                cierre.TicketTronik = totalTicketTronik;
                 cierre.TotalVentas = totalVentas;
                 cierre.Fecha = CalendarDesde.SelectionStart;
 
@@ -362,7 +370,8 @@ namespace Exportador_Ventas_ServP
                         ventasExportar = new List<VentaVO>(ventas);
 
                         rows = cp.guardarVentasDia(ventasExportar);
-                        rowsTurno = cp.guardarVentasTurno(cp.consultarVentasTurno(cierre.CodEmpleado, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, cierre.Isla, cierre.Turno));
+                        //rowsTurno = cp.guardarVentasTurno(cp.consultarVentasTurno(cierre.CodEmpleado, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, cierre.Isla, cierre.Turno));
+                        rowsTurno = cp.guardarProductosTurno(cp.consultarProductosTurno(CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, cierre.Isla, cierre.Turno));
                         MessageBox.Show("Se guardaron (" + rows + ") ventas en este cierre", "Resultado del cierre ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         totalEfectivo = 0;
                         totalOtros = 0;
@@ -371,6 +380,7 @@ namespace Exportador_Ventas_ServP
                         totalCredito = 0;
                         totalTarjetas = 0;
                         totalPlus = 0;
+                        totalTicketTronik = 0;
                         totalVentas = 0;
 
                         restaurarCampos();
@@ -403,6 +413,7 @@ namespace Exportador_Ventas_ServP
             totalVentas += totalCredito;
             totalVentas += totalTarjetas;
             totalVentas += totalPlus;
+            totalVentas += totalTicketTronik;
 
             txtCreditos.Text = String.Format("{0,10:#,0.00}", totalCredito);
             txtEfectivo.Text = String.Format("{0,10:#,0.00}", totalEfectivo);
@@ -412,6 +423,7 @@ namespace Exportador_Ventas_ServP
             txtTarjetas.Text = String.Format("{0,10:#,0.00}", totalTarjetas);
             txtTarjetaPlus.Text = String.Format("{0,10:#,0.00}", totalPlus);
             txtTotal.Text = String.Format("{0,10:#,0.00}", totalVentas);
+            txtTicketTronik.Text = String.Format("{0,10:#,0.00}", totalTicketTronik);
         }
 
         private void restaurarCampos()
@@ -557,6 +569,28 @@ namespace Exportador_Ventas_ServP
         {
             txtOtros.SelectionStart = 0;
             txtOtros.SelectionLength = txtOtros.Text.Length;
+        }
+
+        private void txtTicketTronik_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                totalTicketTronik = double.Parse(txtTicketTronik.Text);
+            }
+            catch { }
+            actualizarTotales();
+        }
+
+        private void txtTicketTronik_Enter(object sender, EventArgs e)
+        {
+            txtTicketTronik.SelectionStart = 0;
+            txtTicketTronik.SelectionLength = txtTicketTronik.Text.Length;
+        }
+
+        private void txtTicketTronik_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtTicketTronik.SelectionStart = 0;
+            txtTicketTronik.SelectionLength = txtTicketTronik.Text.Length;
         }
     }
 }

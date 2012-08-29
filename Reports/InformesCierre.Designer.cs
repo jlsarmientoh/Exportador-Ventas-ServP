@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.VentasProductoTurno1 = new Exportador_Ventas_ServP.VentasProductoTurno();
+            this.InformeGeneralCierreVenta1 = new Exportador_Ventas_ServP.InformeGeneralCierreVenta();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -39,18 +39,18 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.VentasProductoTurno1;
+            this.crystalReportViewer1.ReportSource = this.InformeGeneralCierreVenta1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(660, 514);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // Informes
+            // InformesCierre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 514);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "Informes";
+            this.Name = "InformesCierre";
             this.Text = "Informes";
             this.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             this.ResumeLayout(false);
@@ -60,7 +60,7 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private VentasProductoTurno VentasProductoTurno1;
+        private InformeGeneralCierreVenta InformeGeneralCierreVenta1;
 
     }
 }

@@ -90,6 +90,8 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTicketTronik = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.txtTarjetas = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtTarjetaPlus = new System.Windows.Forms.TextBox();
@@ -539,7 +541,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 583);
+            this.label2.Location = new System.Drawing.Point(70, 583);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 170;
@@ -547,7 +549,7 @@
             // 
             // txtEfectivo
             // 
-            this.txtEfectivo.Location = new System.Drawing.Point(235, 579);
+            this.txtEfectivo.Location = new System.Drawing.Point(135, 579);
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(141, 20);
             this.txtEfectivo.TabIndex = 18;
@@ -558,7 +560,7 @@
             // 
             // txtSodexo
             // 
-            this.txtSodexo.Location = new System.Drawing.Point(203, 80);
+            this.txtSodexo.Location = new System.Drawing.Point(103, 80);
             this.txtSodexo.Name = "txtSodexo";
             this.txtSodexo.Size = new System.Drawing.Size(141, 20);
             this.txtSodexo.TabIndex = 20;
@@ -570,7 +572,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(137, 84);
+            this.label11.Location = new System.Drawing.Point(37, 84);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 13);
             this.label11.TabIndex = 172;
@@ -578,7 +580,7 @@
             // 
             // txtBigpass
             // 
-            this.txtBigpass.Location = new System.Drawing.Point(203, 111);
+            this.txtBigpass.Location = new System.Drawing.Point(103, 111);
             this.txtBigpass.Name = "txtBigpass";
             this.txtBigpass.Size = new System.Drawing.Size(141, 20);
             this.txtBigpass.TabIndex = 21;
@@ -590,7 +592,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(137, 115);
+            this.label12.Location = new System.Drawing.Point(37, 115);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 13);
             this.label12.TabIndex = 174;
@@ -598,7 +600,7 @@
             // 
             // txtCreditos
             // 
-            this.txtCreditos.Location = new System.Drawing.Point(522, 578);
+            this.txtCreditos.Location = new System.Drawing.Point(391, 578);
             this.txtCreditos.Name = "txtCreditos";
             this.txtCreditos.ReadOnly = true;
             this.txtCreditos.Size = new System.Drawing.Size(141, 20);
@@ -609,7 +611,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(457, 581);
+            this.label13.Location = new System.Drawing.Point(320, 581);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 13);
             this.label13.TabIndex = 171;
@@ -617,7 +619,7 @@
             // 
             // txtOtros
             // 
-            this.txtOtros.Location = new System.Drawing.Point(491, 80);
+            this.txtOtros.Location = new System.Drawing.Point(360, 80);
             this.txtOtros.Name = "txtOtros";
             this.txtOtros.Size = new System.Drawing.Size(141, 20);
             this.txtOtros.TabIndex = 23;
@@ -629,7 +631,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(425, 83);
+            this.label14.Location = new System.Drawing.Point(288, 83);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(32, 13);
             this.label14.TabIndex = 173;
@@ -637,7 +639,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(491, 111);
+            this.txtTotal.Location = new System.Drawing.Point(597, 52);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(141, 20);
@@ -648,7 +650,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(424, 115);
+            this.label15.Location = new System.Drawing.Point(530, 56);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(47, 13);
             this.label15.TabIndex = 176;
@@ -656,6 +658,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtTicketTronik);
+            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.txtTarjetas);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.txtTarjetaPlus);
@@ -675,9 +679,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Totales";
             // 
+            // txtTicketTronik
+            // 
+            this.txtTicketTronik.Location = new System.Drawing.Point(361, 110);
+            this.txtTicketTronik.Name = "txtTicketTronik";
+            this.txtTicketTronik.Size = new System.Drawing.Size(141, 20);
+            this.txtTicketTronik.TabIndex = 181;
+            this.txtTicketTronik.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTicketTronik.Leave += new System.EventHandler(this.txtTicketTronik_Leave);
+            this.txtTicketTronik.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTicketTronik_MouseClick);
+            this.txtTicketTronik.Enter += new System.EventHandler(this.txtTicketTronik_Enter);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(289, 113);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(64, 13);
+            this.label18.TabIndex = 182;
+            this.label18.Text = "Ticket Prom";
+            // 
             // txtTarjetas
             // 
-            this.txtTarjetas.Location = new System.Drawing.Point(491, 51);
+            this.txtTarjetas.Location = new System.Drawing.Point(360, 51);
             this.txtTarjetas.Name = "txtTarjetas";
             this.txtTarjetas.Size = new System.Drawing.Size(141, 20);
             this.txtTarjetas.TabIndex = 22;
@@ -689,7 +713,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(425, 54);
+            this.label16.Location = new System.Drawing.Point(288, 54);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 13);
             this.label16.TabIndex = 180;
@@ -697,7 +721,7 @@
             // 
             // txtTarjetaPlus
             // 
-            this.txtTarjetaPlus.Location = new System.Drawing.Point(203, 51);
+            this.txtTarjetaPlus.Location = new System.Drawing.Point(103, 51);
             this.txtTarjetaPlus.Name = "txtTarjetaPlus";
             this.txtTarjetaPlus.ReadOnly = true;
             this.txtTarjetaPlus.Size = new System.Drawing.Size(141, 20);
@@ -708,7 +732,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(137, 55);
+            this.label17.Location = new System.Drawing.Point(37, 55);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(63, 13);
             this.label17.TabIndex = 179;
@@ -819,6 +843,8 @@
         private System.Windows.Forms.TextBox txtTarjetaPlus;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.CheckBox chkPlus;
+        private System.Windows.Forms.TextBox txtTicketTronik;
+        private System.Windows.Forms.Label label18;
     }
 }
 
