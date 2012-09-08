@@ -16,14 +16,14 @@ namespace Exportador_Ventas_ServP {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class DisposicionEfectivo : ReportClass {
+    public class EstadoCuentaCliente : ReportClass {
         
-        public DisposicionEfectivo() {
+        public EstadoCuentaCliente() {
         }
         
         public override string ResourceName {
             get {
-                return "DisposicionEfectivo.rpt";
+                return "EstadoCuentaCliente.rpt";
             }
             set {
                 // Do nothing
@@ -56,7 +56,7 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection2 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -64,7 +64,7 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection3 {
             get {
                 return this.ReportDefinition.Sections[4];
             }
@@ -72,7 +72,7 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection4 {
             get {
                 return this.ReportDefinition.Sections[5];
             }
@@ -80,7 +80,7 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[6];
             }
@@ -88,7 +88,55 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Fecha {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection4 {
+            get {
+                return this.ReportDefinition.Sections[7];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection3 {
+            get {
+                return this.ReportDefinition.Sections[8];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection2 {
+            get {
+                return this.ReportDefinition.Sections[9];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
+            get {
+                return this.ReportDefinition.Sections[10];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+            get {
+                return this.ReportDefinition.Sections[11];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[12];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Fecha1 {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -96,7 +144,7 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_SubtotalesDisposicion_Fecha {
+        public CrystalDecisions.Shared.IParameterField Parameter_Fecha2 {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
@@ -104,7 +152,7 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_SubtotalesDisposicion_totalDispuesto {
+        public CrystalDecisions.Shared.IParameterField Parameter_modoPago {
             get {
                 return this.DataDefinition.ParameterFields[2];
             }
@@ -112,9 +160,9 @@ namespace Exportador_Ventas_ServP {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedDisposicionEfectivo : Component, ICachedReport {
+    public class CachedEstadoCuentaCliente : Component, ICachedReport {
         
-        public CachedDisposicionEfectivo() {
+        public CachedEstadoCuentaCliente() {
         }
         
         [Browsable(false)]
@@ -151,7 +199,7 @@ namespace Exportador_Ventas_ServP {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            DisposicionEfectivo rpt = new DisposicionEfectivo();
+            EstadoCuentaCliente rpt = new EstadoCuentaCliente();
             rpt.Site = this.Site;
             return rpt;
         }

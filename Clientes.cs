@@ -52,6 +52,7 @@ namespace Exportador_Ventas_ServP
                 cli.Telefono = txtTelefono.Text;
                 cli.Contacto = txtContacto.Text;
                 cli.Email = txtCorreo.Text;
+                cli.Codigo = txtCodigo.Text;
 
                 if (cp.guardarCliente(cli))
                 {
@@ -79,6 +80,7 @@ namespace Exportador_Ventas_ServP
             txtTelefono.Text = "";
             txtContacto.Text = "";
             txtCorreo.Text = "";
+            txtCodigo.Text = "";
             cboTipoId.Focus();
         }
 
@@ -92,6 +94,7 @@ namespace Exportador_Ventas_ServP
             txtTelefono.Text = "";
             txtContacto.Text = "";
             txtCorreo.Text = "";
+            txtCodigo.Text = "";
             cboTipoId.Focus();
         }
 
@@ -102,6 +105,7 @@ namespace Exportador_Ventas_ServP
                 currentClient = (ClienteVO)clienteVOBindingSource.Current;
                 cboTipoId.SelectedValue = currentClient.TipoId;
                 txtId.Text = currentClient.Identificacion;
+                txtCodigo.Text = currentClient.Codigo;
                 txtNombre.Text = currentClient.Nombre;
                 txtDireccion.Text = currentClient.Direccion;
                 txtTelefono.Text = currentClient.Telefono;

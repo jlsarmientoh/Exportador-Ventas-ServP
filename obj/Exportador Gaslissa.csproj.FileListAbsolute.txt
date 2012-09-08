@@ -22,10 +22,19 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Ingreso.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Egreso.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\VentaTurno.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Cliente.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\ProductoTurno.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\ProductoTurnoExpo.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\DisposicionEfectivo.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\InformeGeneralCierreVenta.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ProductoTurno.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ResumenMediosPago.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ResumenProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\VentasProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\DisposicionEfectivo.cs
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\InformeGeneralCierreVenta.cs
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ProductoTurno.cs
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ResumenMediosPago.cs
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ResumenProductoTurno.cs
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\VentasProductoTurno.cs
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Exportador Ventas ServP.exe.config
@@ -53,6 +62,10 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\NHibernate.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\ResolveAssemblyReference.cache
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.DisposicionEfectivo.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.EstadoCuentaCliente.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.InformeGeneralCierreVenta.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ProductoTurno.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ResumenMediosPago.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ResumenProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.VentasProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Clientes.resources

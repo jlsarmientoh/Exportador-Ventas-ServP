@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtContacto = new System.Windows.Forms.TextBox();
@@ -52,6 +54,7 @@
             this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.identificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +70,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCodigo);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtContacto);
@@ -87,12 +92,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(143, 54);
+            this.txtCodigo.MaxLength = 15;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(253, 20);
+            this.txtCodigo.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 59);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Código:";
+            // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(145, 204);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(253, 20);
-            this.txtCorreo.TabIndex = 7;
+            this.txtCorreo.TabIndex = 8;
             // 
             // label6
             // 
@@ -109,7 +132,7 @@
             this.txtContacto.Location = new System.Drawing.Point(144, 173);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(253, 20);
-            this.txtContacto.TabIndex = 6;
+            this.txtContacto.TabIndex = 7;
             // 
             // label5
             // 
@@ -126,7 +149,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(144, 144);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(253, 20);
-            this.txtTelefono.TabIndex = 5;
+            this.txtTelefono.TabIndex = 6;
             // 
             // label4
             // 
@@ -143,7 +166,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(143, 114);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(254, 20);
-            this.txtDireccion.TabIndex = 4;
+            this.txtDireccion.TabIndex = 5;
             // 
             // label3
             // 
@@ -160,7 +183,7 @@
             this.txtNombre.Location = new System.Drawing.Point(143, 85);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(254, 20);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 4;
             // 
             // label2
             // 
@@ -177,7 +200,7 @@
             this.cboTipoId.DataSource = this.tipoIdVOBindingSource;
             this.cboTipoId.DisplayMember = "Nombre";
             this.cboTipoId.FormattingEnabled = true;
-            this.cboTipoId.Location = new System.Drawing.Point(143, 37);
+            this.cboTipoId.Location = new System.Drawing.Point(143, 25);
             this.cboTipoId.Name = "cboTipoId";
             this.cboTipoId.Size = new System.Drawing.Size(121, 21);
             this.cboTipoId.TabIndex = 1;
@@ -189,7 +212,8 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(273, 37);
+            this.txtId.Location = new System.Drawing.Point(273, 25);
+            this.txtId.MaxLength = 15;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(122, 20);
             this.txtId.TabIndex = 2;
@@ -198,7 +222,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 42);
+            this.label1.Location = new System.Drawing.Point(13, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 0;
@@ -221,7 +245,7 @@
             this.cmdNuevo.Location = new System.Drawing.Point(42, 64);
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(119, 30);
-            this.cmdNuevo.TabIndex = 10;
+            this.cmdNuevo.TabIndex = 11;
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.UseVisualStyleBackColor = true;
             this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
@@ -231,7 +255,7 @@
             this.cmdCancelar.Location = new System.Drawing.Point(43, 147);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(119, 30);
-            this.cmdCancelar.TabIndex = 9;
+            this.cmdCancelar.TabIndex = 10;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
@@ -241,7 +265,7 @@
             this.cmdGuardar.Location = new System.Drawing.Point(43, 105);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(119, 30);
-            this.cmdGuardar.TabIndex = 8;
+            this.cmdGuardar.TabIndex = 9;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
@@ -254,6 +278,7 @@
             this.idClienteDataGridViewTextBoxColumn,
             this.tipoIdDataGridViewTextBoxColumn,
             this.identificacionDataGridViewTextBoxColumn,
+            this.Codigo,
             this.nombreDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn,
@@ -271,48 +296,63 @@
             this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
             this.idClienteDataGridViewTextBoxColumn.HeaderText = "IdCliente";
             this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            this.idClienteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tipoIdDataGridViewTextBoxColumn
             // 
             this.tipoIdDataGridViewTextBoxColumn.DataPropertyName = "TipoId";
             this.tipoIdDataGridViewTextBoxColumn.HeaderText = "TipoId";
             this.tipoIdDataGridViewTextBoxColumn.Name = "tipoIdDataGridViewTextBoxColumn";
+            this.tipoIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // identificacionDataGridViewTextBoxColumn
             // 
             this.identificacionDataGridViewTextBoxColumn.DataPropertyName = "Identificacion";
             this.identificacionDataGridViewTextBoxColumn.HeaderText = "Identificacion";
             this.identificacionDataGridViewTextBoxColumn.Name = "identificacionDataGridViewTextBoxColumn";
+            this.identificacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // direccionDataGridViewTextBoxColumn
             // 
             this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
             this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
             this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefonoDataGridViewTextBoxColumn
             // 
             this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // contactoDataGridViewTextBoxColumn
             // 
             this.contactoDataGridViewTextBoxColumn.DataPropertyName = "Contacto";
             this.contactoDataGridViewTextBoxColumn.HeaderText = "Contacto";
             this.contactoDataGridViewTextBoxColumn.Name = "contactoDataGridViewTextBoxColumn";
+            this.contactoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // clienteVOBindingSource
             // 
@@ -362,14 +402,17 @@
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.BindingSource tipoIdVOBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource clienteVOBindingSource;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn identificacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contactoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource clienteVOBindingSource;
     }
 }
