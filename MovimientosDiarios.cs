@@ -113,14 +113,38 @@ namespace Exportador_Ventas_ServP
                     "¿Desea continuar?\n", "Resumen de egresos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (resp == DialogResult.Yes)
                     {
-                        if (totalEgresos <= saldo)
+                        if (totalEgresos > saldo)
                         {
-                            System.Collections.IList tmpEgresos = egresoVOBindingSource.List;
+                            DialogResult confirm = MessageBox.Show("El valor total de los egresos supera el saldo en efectivo para la fecha seleccionada. \n\n¿Desea continuar?", "Consulta egresos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (confirm == DialogResult.Yes)
+                            {
+                                guardarEgreso();
+                                /*System.Collections.IList tmpEgresos = egresoVOBindingSource.List;
+                                egresos = new EgresoVO[tmpEgresos.Count];
+                                tmpEgresos.CopyTo(egresos, 0);
+
+                                DateTime fecha = DateTime.Parse(txtFechaDesde.Text);
+                                DateTime fechaAplica = DateTime.Parse(txtFechaAplica.Text);
+
+                                int res = 0;
+                                res = cp.guardarEgresos(new List<EgresoVO>(egresos), fecha, fechaAplica);
+
+                                MessageBox.Show("Egresos guardados para la fecha: " + txtFechaDesde.Text + "\n\n" +
+                                    "Aplicados la fecha: " + txtFechaAplica.Text, "Egresos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                egresoVOBindingSource.Clear();
+                                txtTotalEgresos.Text = "0";
+                                txtSaldo.Text = "0";*/
+                            }
+                        }
+                        else
+                        {
+                            guardarEgreso();
+                            /*System.Collections.IList tmpEgresos = egresoVOBindingSource.List;
                             egresos = new EgresoVO[tmpEgresos.Count];
                             tmpEgresos.CopyTo(egresos, 0);
 
                             DateTime fecha = DateTime.Parse(txtFechaDesde.Text);
-                            DateTime fechaAplica = DateTime.Parse(txtFechaAplica.Text);                            
+                            DateTime fechaAplica = DateTime.Parse(txtFechaAplica.Text);
 
                             int res = 0;
                             res = cp.guardarEgresos(new List<EgresoVO>(egresos), fecha, fechaAplica);
@@ -129,11 +153,7 @@ namespace Exportador_Ventas_ServP
                                 "Aplicados la fecha: " + txtFechaAplica.Text, "Egresos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             egresoVOBindingSource.Clear();
                             txtTotalEgresos.Text = "0";
-                            txtSaldo.Text = "0";
-                        }
-                        else
-                        {
-                            MessageBox.Show("El valor total de los egresos supera el saldo en efectivo para la fecha seleccionada", "Consulta egresos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtSaldo.Text = "0";*/
                         }
                     }
                 }
@@ -195,8 +215,8 @@ namespace Exportador_Ventas_ServP
                 double egresosAplicados = 0;
                 saldo = 0;
 
-                efectivo = cp.consultarTotalEfectivoFecha(fechaAplica, fechaAplica.AddDays(1));
-                egresosAplicados = cp.consultarTotalEgresosAplicadosFecha(fechaAplica, fechaAplica.AddDays(1));
+                efectivo = cp.consultarTotalEfectivoFecha(fechaAplica, fechaAplica);
+                egresosAplicados = cp.consultarTotalEgresosAplicadosFecha(fechaAplica, fechaAplica);
                 saldo = efectivo - egresosAplicados;
                 txtTotalEgresos.Text = "0";
                 txtSaldo.Text = String.Format("{0,10:#,0.00}", saldo);
@@ -224,6 +244,25 @@ namespace Exportador_Ventas_ServP
             {
                 calendarAplica.Visible = false;
             }
+        }
+
+        private void guardarEgreso()
+        {
+            System.Collections.IList tmpEgresos = egresoVOBindingSource.List;
+            egresos = new EgresoVO[tmpEgresos.Count];
+            tmpEgresos.CopyTo(egresos, 0);
+
+            DateTime fecha = DateTime.Parse(txtFechaDesde.Text);
+            DateTime fechaAplica = DateTime.Parse(txtFechaAplica.Text);
+
+            int res = 0;
+            res = cp.guardarEgresos(new List<EgresoVO>(egresos), fecha, fechaAplica);
+
+            MessageBox.Show("Egresos guardados para la fecha: " + txtFechaDesde.Text + "\n\n" +
+                "Aplicados la fecha: " + txtFechaAplica.Text, "Egresos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            egresoVOBindingSource.Clear();
+            txtTotalEgresos.Text = "0";
+            txtSaldo.Text = "0";
         }
     }
 }
