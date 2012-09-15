@@ -220,7 +220,7 @@ namespace Exportador_Ventas_ServP
             else
             {
                 cp = new ControladorPersistencia();
-                VentaVO venta = cp.consultarVentaTurno(long.Parse(txtTiquete.Text), CalendarDesde.SelectionStart, CalendarDesde.SelectionStart.AddDays(1), int.Parse(txtIsla.Text), int.Parse(txtTurno.Text));
+                VentaVO venta = cp.consultarVentaTurno(long.Parse(txtTiquete.Text), CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, int.Parse(txtIsla.Text), int.Parse(txtTurno.Text));
                 if (venta != null)
                 {
                     venta.Nit = txtId.Text;
@@ -353,7 +353,7 @@ namespace Exportador_Ventas_ServP
                 cierre.TotalVentas = totalVentas;
                 cierre.Fecha = CalendarDesde.SelectionStart;
 
-                if (cp.existeCierre(cierre.CodEmpleado, cierre.Turno, cierre.Isla, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart.AddDays(1)) == 0)
+                if (cp.existeCierre(cierre.CodEmpleado, cierre.Turno, cierre.Isla, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart) == 0)
                 {
 
                     int rows = 0;
