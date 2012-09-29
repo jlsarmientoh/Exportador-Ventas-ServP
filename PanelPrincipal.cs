@@ -22,6 +22,8 @@ namespace Exportador_Ventas_ServP
         private ComprasCombustible comprasCombustible;
         private InformesCierre informes;
         private InformeDisposicionEfectivo rptDisposicionEfectivo;
+        private ImportarCliente importarCliente;
+        private ExportarMovimientos exportarMovimientos;
         #endregion
 
         public PanelPrincipal()
@@ -35,10 +37,7 @@ namespace Exportador_Ventas_ServP
             Utilidades.nombreVistaLecturas = ConfigurationSettings.AppSettings["NombreVistaLecturas"].ToString();
             Utilidades.nombreTablaEmpleados = ConfigurationSettings.AppSettings["NombreTablaEmpleados"].ToString();
             Utilidades.rutaPrincipalExport = ConfigurationSettings.AppSettings["RutaPrincipalExport"].ToString();
-            Utilidades.separador = ConfigurationSettings.AppSettings["Separador"].ToString();
-            Utilidades.sobretasaCorriente = double.Parse(ConfigurationSettings.AppSettings["sobretasaCorriente"].ToString());
-            Utilidades.sobretasaSuper = double.Parse(ConfigurationSettings.AppSettings["sobretasaSuper"].ToString());
-            Utilidades.sobretasaDiesel = double.Parse(ConfigurationSettings.AppSettings["sobretasaDiesel"].ToString());
+            Utilidades.separador = ConfigurationSettings.AppSettings["Separador"].ToString();            
             Utilidades.codigoCorriente = int.Parse(ConfigurationSettings.AppSettings["codigoCorriente"].ToString());
             Utilidades.codigoSuper = int.Parse(ConfigurationSettings.AppSettings["codigoSuper"].ToString());
             Utilidades.codigoDiesel = int.Parse(ConfigurationSettings.AppSettings["codigoDiesel"].ToString());
@@ -54,6 +53,28 @@ namespace Exportador_Ventas_ServP
             Utilidades.grupo1 = ConfigurationSettings.AppSettings["grupoIsla1"].ToString();
             Utilidades.grupo2 = ConfigurationSettings.AppSettings["grupoIsla2"].ToString();
             Utilidades.multiplicarX = int.Parse(ConfigurationSettings.AppSettings["MultiplicarX"].ToString());
+            Utilidades.TipoMovimiento = ConfigurationSettings.AppSettings["TipoMovimiento"].ToString();
+            Utilidades.NatutalezaDebito = ConfigurationSettings.AppSettings["NatutalezaDebito"].ToString();
+            Utilidades.NatutalezaCredito = ConfigurationSettings.AppSettings["NatutalezaCredito"].ToString();
+            Utilidades.NitEDS = ConfigurationSettings.AppSettings["NitEDS"].ToString();
+            Utilidades.NitSodexo = ConfigurationSettings.AppSettings["NitSodexo"].ToString();
+            Utilidades.NitBigPass = ConfigurationSettings.AppSettings["NitBigPass"].ToString();
+            Utilidades.NitTicketTronik = ConfigurationSettings.AppSettings["NitTicketTronik"].ToString();
+            Utilidades.CuentaCredito = ConfigurationSettings.AppSettings["CuentaCredito"].ToString();
+            Utilidades.CuentaEfectivo = ConfigurationSettings.AppSettings["CuentaEfectivo"].ToString();
+            Utilidades.CuentaSodexo = ConfigurationSettings.AppSettings["CuentaSodexo"].ToString();
+            Utilidades.CuentaBigPass = ConfigurationSettings.AppSettings["CuentaBigPass"].ToString();
+            Utilidades.CuentaTarjetas = ConfigurationSettings.AppSettings["CuentaTarjetas"].ToString();
+            Utilidades.CuentaOtros = ConfigurationSettings.AppSettings["CuentaOtros"].ToString();
+            Utilidades.CuentaTarjetaPlus = ConfigurationSettings.AppSettings["CuentaTarjetaPlus"].ToString();
+            Utilidades.CuentaTicketTronik = ConfigurationSettings.AppSettings["CuentaTicketTronik"].ToString();
+            Utilidades.CuentaSobretasaCorriente = ConfigurationSettings.AppSettings["CuentaSobretasaCorriente"].ToString();
+            Utilidades.CuentaSobretasaSuper = ConfigurationSettings.AppSettings["CuentaSobretasaSuper"].ToString();
+            Utilidades.CuentaSobretasaDiesel = ConfigurationSettings.AppSettings["CuentaSobretasaDiesel"].ToString();
+            Utilidades.CuentaVentaCorriente = ConfigurationSettings.AppSettings["CuentaVentaCorriente"].ToString();
+            Utilidades.CuentaVentaSuper = ConfigurationSettings.AppSettings["CuentaVentaSuper"].ToString();
+            Utilidades.CuentaVentaDiesel = ConfigurationSettings.AppSettings["CuentaVentaDiesel"].ToString();
+            Utilidades.CuentaAjuste = ConfigurationSettings.AppSettings["CuentaAjuste"].ToString();
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -210,6 +231,20 @@ namespace Exportador_Ventas_ServP
             rptDisposicionEfectivo = new InformeDisposicionEfectivo();
             rptDisposicionEfectivo.MdiParent = this;
             rptDisposicionEfectivo.Show();
+        }
+
+        private void importarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            importarCliente = new ImportarCliente();
+            importarCliente.MdiParent = this;
+            importarCliente.Show();
+        }
+
+        private void exportarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            exportarMovimientos = new ExportarMovimientos();
+            exportarMovimientos.MdiParent = this;
+            exportarMovimientos.Show();
         }
     }
 }

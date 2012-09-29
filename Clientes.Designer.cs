@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtConsecutivo = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -51,16 +52,17 @@
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clienteVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.identificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Consecutivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoIdVOBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -70,6 +72,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtConsecutivo);
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtCorreo);
@@ -92,13 +95,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
             // 
+            // txtConsecutivo
+            // 
+            this.txtConsecutivo.Location = new System.Drawing.Point(371, 25);
+            this.txtConsecutivo.MaxLength = 2;
+            this.txtConsecutivo.Name = "txtConsecutivo";
+            this.txtConsecutivo.Size = new System.Drawing.Size(25, 20);
+            this.txtConsecutivo.TabIndex = 3;
+            // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(143, 54);
             this.txtCodigo.MaxLength = 15;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(253, 20);
-            this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TabIndex = 4;
             // 
             // label7
             // 
@@ -115,7 +126,7 @@
             this.txtCorreo.Location = new System.Drawing.Point(145, 204);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(253, 20);
-            this.txtCorreo.TabIndex = 8;
+            this.txtCorreo.TabIndex = 9;
             // 
             // label6
             // 
@@ -132,7 +143,7 @@
             this.txtContacto.Location = new System.Drawing.Point(144, 173);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(253, 20);
-            this.txtContacto.TabIndex = 7;
+            this.txtContacto.TabIndex = 8;
             // 
             // label5
             // 
@@ -149,7 +160,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(144, 144);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(253, 20);
-            this.txtTelefono.TabIndex = 6;
+            this.txtTelefono.TabIndex = 7;
             // 
             // label4
             // 
@@ -166,7 +177,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(143, 114);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(254, 20);
-            this.txtDireccion.TabIndex = 5;
+            this.txtDireccion.TabIndex = 6;
             // 
             // label3
             // 
@@ -183,7 +194,7 @@
             this.txtNombre.Location = new System.Drawing.Point(143, 85);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(254, 20);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 5;
             // 
             // label2
             // 
@@ -215,7 +226,7 @@
             this.txtId.Location = new System.Drawing.Point(273, 25);
             this.txtId.MaxLength = 15;
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(122, 20);
+            this.txtId.Size = new System.Drawing.Size(95, 20);
             this.txtId.TabIndex = 2;
             // 
             // label1
@@ -245,7 +256,7 @@
             this.cmdNuevo.Location = new System.Drawing.Point(42, 64);
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(119, 30);
-            this.cmdNuevo.TabIndex = 11;
+            this.cmdNuevo.TabIndex = 12;
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.UseVisualStyleBackColor = true;
             this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
@@ -255,7 +266,7 @@
             this.cmdCancelar.Location = new System.Drawing.Point(43, 147);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(119, 30);
-            this.cmdCancelar.TabIndex = 10;
+            this.cmdCancelar.TabIndex = 11;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
@@ -265,7 +276,7 @@
             this.cmdGuardar.Location = new System.Drawing.Point(43, 105);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(119, 30);
-            this.cmdGuardar.TabIndex = 9;
+            this.cmdGuardar.TabIndex = 10;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
@@ -278,6 +289,7 @@
             this.idClienteDataGridViewTextBoxColumn,
             this.tipoIdDataGridViewTextBoxColumn,
             this.identificacionDataGridViewTextBoxColumn,
+            this.Consecutivo,
             this.Codigo,
             this.nombreDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
@@ -290,6 +302,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(623, 220);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // clienteVOBindingSource
+            // 
+            this.clienteVOBindingSource.DataSource = typeof(EstacionDB.VO.ClienteVO);
             // 
             // idClienteDataGridViewTextBoxColumn
             // 
@@ -312,10 +328,17 @@
             this.identificacionDataGridViewTextBoxColumn.Name = "identificacionDataGridViewTextBoxColumn";
             this.identificacionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // Consecutivo
+            // 
+            this.Consecutivo.DataPropertyName = "Consecutivo";
+            this.Consecutivo.HeaderText = "Dig. de ver";
+            this.Consecutivo.Name = "Consecutivo";
+            this.Consecutivo.ReadOnly = true;
+            // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "Codigo";
-            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.HeaderText = "Cuenta";
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
             // 
@@ -353,10 +376,6 @@
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clienteVOBindingSource
-            // 
-            this.clienteVOBindingSource.DataSource = typeof(EstacionDB.VO.ClienteVO);
             // 
             // Clientes
             // 
@@ -405,9 +424,11 @@
         private System.Windows.Forms.BindingSource clienteVOBindingSource;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtConsecutivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn identificacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Consecutivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;

@@ -44,6 +44,10 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39271, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Escritorio\libs\librerias\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Castle.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Escritorio\libs\NHibernate.Spatial-2.1.2.GA-bin\Core\Castle.Core.dll</HintPath>
@@ -141,6 +145,18 @@
     <Compile Include="Exportador.Designer.cs">
       <DependentUpon>Exportador.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExportarMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportarMovimientos.Designer.cs">
+      <DependentUpon>ExportarMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportarCliente.Designer.cs">
+      <DependentUpon>ImportarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="InformeGeneralCierreVenta.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -207,6 +223,14 @@
     <EmbeddedResource Include="Exportador.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Exportador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportarMovimientos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportarMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportarCliente.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformeGeneralCierreVenta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

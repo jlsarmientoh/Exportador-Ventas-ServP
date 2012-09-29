@@ -34,6 +34,7 @@
             this.lecturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDiarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,10 +43,11 @@
             this.combustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cierreVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disposiciónDeEfectivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.disposiciónDeEfectivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +85,8 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administrarToolStripMenuItem});
+            this.administrarToolStripMenuItem,
+            this.importarToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -95,10 +98,18 @@
             this.administrarToolStripMenuItem.Text = "Administrar";
             this.administrarToolStripMenuItem.Click += new System.EventHandler(this.administrarToolStripMenuItem_Click);
             // 
+            // importarToolStripMenuItem
+            // 
+            this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.importarToolStripMenuItem.Text = "Importar";
+            this.importarToolStripMenuItem.Click += new System.EventHandler(this.importarToolStripMenuItem_Click);
+            // 
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroDiarioToolStripMenuItem});
+            this.registroDiarioToolStripMenuItem,
+            this.exportarToolStripMenuItem});
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
             this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(52, 20);
             this.ventasToolStripMenuItem1.Text = "Ventas";
@@ -156,6 +167,13 @@
             this.cierreVentasToolStripMenuItem.Text = "Cierre ventas";
             this.cierreVentasToolStripMenuItem.Click += new System.EventHandler(this.cierreVentasToolStripMenuItem_Click);
             // 
+            // disposiciónDeEfectivoToolStripMenuItem
+            // 
+            this.disposiciónDeEfectivoToolStripMenuItem.Name = "disposiciónDeEfectivoToolStripMenuItem";
+            this.disposiciónDeEfectivoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.disposiciónDeEfectivoToolStripMenuItem.Text = "Disposición de efectivo";
+            this.disposiciónDeEfectivoToolStripMenuItem.Click += new System.EventHandler(this.disposiciónDeEfectivoToolStripMenuItem_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -172,12 +190,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // disposiciónDeEfectivoToolStripMenuItem
+            // exportarToolStripMenuItem
             // 
-            this.disposiciónDeEfectivoToolStripMenuItem.Name = "disposiciónDeEfectivoToolStripMenuItem";
-            this.disposiciónDeEfectivoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.disposiciónDeEfectivoToolStripMenuItem.Text = "Disposición de efectivo";
-            this.disposiciónDeEfectivoToolStripMenuItem.Click += new System.EventHandler(this.disposiciónDeEfectivoToolStripMenuItem_Click);
+            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.exportarToolStripMenuItem.Text = "Exportar";
+            this.exportarToolStripMenuItem.Click += new System.EventHandler(this.exportarToolStripMenuItem_Click);
             // 
             // PanelPrincipal
             // 
@@ -219,6 +237,8 @@
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cierreVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disposiciónDeEfectivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
     }
 }
 

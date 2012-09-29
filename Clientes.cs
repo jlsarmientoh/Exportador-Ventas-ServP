@@ -53,14 +53,11 @@ namespace Exportador_Ventas_ServP
                 cli.Contacto = txtContacto.Text;
                 cli.Email = txtCorreo.Text;
                 cli.Codigo = txtCodigo.Text;
+                cli.Consecutivo = txtConsecutivo.Text;
 
                 if (cp.guardarCliente(cli))
                 {
-                    MessageBox.Show("Datos del cliente ha sido guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
-                    //dataGridView1.DataSource = null;
-                    //dataGridView1.DataSource = cp.consultarClientes();
-                    //dataGridView1.Update();
-                    //dataGridView1.Refresh();   
+                    MessageBox.Show("Datos del cliente ha sido guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                                        
                     clienteVOBindingSource.DataSource = cp.consultarClientes();
                 }
                 else
@@ -81,6 +78,7 @@ namespace Exportador_Ventas_ServP
             txtContacto.Text = "";
             txtCorreo.Text = "";
             txtCodigo.Text = "";
+            txtConsecutivo.Text = "";
             cboTipoId.Focus();
         }
 
@@ -95,6 +93,7 @@ namespace Exportador_Ventas_ServP
             txtContacto.Text = "";
             txtCorreo.Text = "";
             txtCodigo.Text = "";
+            txtConsecutivo.Text = "";
             cboTipoId.Focus();
         }
 
@@ -111,6 +110,7 @@ namespace Exportador_Ventas_ServP
                 txtTelefono.Text = currentClient.Telefono;
                 txtContacto.Text = currentClient.Contacto;
                 txtCorreo.Text = currentClient.Email;
+                txtConsecutivo.Text = currentClient.Consecutivo;
             }
             cboTipoId.Focus();
         }

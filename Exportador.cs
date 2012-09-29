@@ -10,6 +10,7 @@ using EstacionDB.DAO;
 using EstacionDB.Utilidades;
 using System.Configuration;
 using System.IO;
+using EstacionDB.Exceptions;
 
 namespace Exportador_Ventas_ServP
 {
@@ -125,7 +126,27 @@ namespace Exportador_Ventas_ServP
 
         private void cmdExportTxt_Click(object sender, EventArgs e)
         {
-            bool exportado = false;
+            /*try
+            {
+                bool exportado = false;
+
+                dialogoGuardar.Title = "Exportar a archivo plano";
+                dialogoGuardar.InitialDirectory = Utilidades.rutaPrincipalExport;
+                dialogoGuardar.AddExtension = true;
+                //dialogoGuardar.Filter = "(*.txt)|*.txt";
+                dialogoGuardar.Filter = "(*.csv)|*.csv";
+                dialogoGuardar.FileName = Utilidades.rutaPrincipalExport + "creditos_servp_" + DateTime.Now.ToFileTime();
+                DialogResult resul = dialogoGuardar.ShowDialog();
+
+                exportado = FileExporter.exportar(cp.getMovimientosContables(CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, "24")
+                    , "C:\\Temp\\exportado_helissa.csv"
+                    ,FileExporter.EXCEL);
+            }
+            catch (PersistenciaException ex)
+            {
+
+            }
+            /*bool exportado = false;
 
             dialogoGuardar.Title = "Exportar a archivo plano";
             dialogoGuardar.InitialDirectory = Utilidades.rutaPrincipalExport;
@@ -144,12 +165,12 @@ namespace Exportador_Ventas_ServP
             else
             {
                 MessageBox.Show("No Exportado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void cmdExportExcel_Click(object sender, EventArgs e)
         {
-            bool exportado = false;
+            /*bool exportado = false;
 
             dialogoGuardar.Title = "Exportar a archivo csv";
             dialogoGuardar.InitialDirectory = Utilidades.rutaPrincipalExport;
@@ -167,7 +188,7 @@ namespace Exportador_Ventas_ServP
             else
             {
                 MessageBox.Show("No Exportado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
        
