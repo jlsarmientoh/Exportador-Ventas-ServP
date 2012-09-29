@@ -13,6 +13,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Deb
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador Gaslissa.csproj.GenerateResource.Cache
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador Ventas ServP.exe
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Debug\Exportador Ventas ServP.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Exportador Ventas ServP.exe.config
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Empleado.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Venta.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ConfigHibernate\configExpo.cfg.xml
@@ -39,7 +40,6 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ResumenMediosPago.cs
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ResumenProductoTurno.cs
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\VentasProductoTurno.cs
-C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Exportador Ventas ServP.exe.config
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Exportador Ventas ServP.exe
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Exportador Ventas ServP.pdb
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Antlr3.Runtime.dll
