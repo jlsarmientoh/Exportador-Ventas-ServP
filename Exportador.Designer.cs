@@ -96,6 +96,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtTarjetaPlus = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.cierreWorker = new System.ComponentModel.BackgroundWorker();
+            this.consultaWorker = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.GridVentasCargadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaVOBindingSource)).BeginInit();
             this.frameAdicionar.SuspendLayout();
@@ -738,6 +740,15 @@
             this.label17.TabIndex = 179;
             this.label17.Text = "Tarjeta Plus";
             // 
+            // cierreWorker
+            // 
+            this.cierreWorker.WorkerReportsProgress = true;
+            this.cierreWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.cierreWorker_DoWork);
+            // 
+            // consultaWorker
+            // 
+            this.consultaWorker.WorkerReportsProgress = true;
+            // 
             // Exportador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -845,6 +856,8 @@
         private System.Windows.Forms.CheckBox chkPlus;
         private System.Windows.Forms.TextBox txtTicketTronik;
         private System.Windows.Forms.Label label18;
+        private System.ComponentModel.BackgroundWorker cierreWorker;
+        private System.ComponentModel.BackgroundWorker consultaWorker;
     }
 }
 

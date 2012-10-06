@@ -63,6 +63,9 @@ namespace Exportador_Ventas_ServP
                 else
                 {
                     cliente.TipoId = 2;
+                    cliente.Identificacion = nit;
+                    cliente.Codigo = "0";
+                    cliente.Consecutivo = "0";
                 }
 
                 try

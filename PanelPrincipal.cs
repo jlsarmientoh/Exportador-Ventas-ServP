@@ -75,6 +75,11 @@ namespace Exportador_Ventas_ServP
             Utilidades.CuentaVentaSuper = ConfigurationSettings.AppSettings["CuentaVentaSuper"].ToString();
             Utilidades.CuentaVentaDiesel = ConfigurationSettings.AppSettings["CuentaVentaDiesel"].ToString();
             Utilidades.CuentaAjuste = ConfigurationSettings.AppSettings["CuentaAjuste"].ToString();
+            string homologar = ConfigurationSettings.AppSettings["HomologarNits"].ToString();
+            if (homologar.Trim().Equals("true"))
+            {
+                Utilidades.HomologarNits = true;
+            }
         }
 
         private void ShowNewForm(object sender, EventArgs e)

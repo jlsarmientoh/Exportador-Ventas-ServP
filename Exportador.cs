@@ -415,6 +415,7 @@ namespace Exportador_Ventas_ServP
                 {
                     MessageBox.Show("Ya se ha realizado cierre para la fecha seleccionada", "Resultado del cierre ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                  
                 UseWaitCursor = false;
             }
         }
@@ -612,6 +613,11 @@ namespace Exportador_Ventas_ServP
         {
             txtTicketTronik.SelectionStart = 0;
             txtTicketTronik.SelectionLength = txtTicketTronik.Text.Length;
+        }
+
+        private void cierreWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }
