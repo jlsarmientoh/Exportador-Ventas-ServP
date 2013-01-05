@@ -59,7 +59,7 @@
             this.cmdExportExcel.Name = "cmdExportExcel";
             this.cmdExportExcel.Size = new System.Drawing.Size(85, 26);
             this.cmdExportExcel.TabIndex = 16;
-            this.cmdExportExcel.Text = "Excel";
+            this.cmdExportExcel.Text = "Excel (csv)";
             this.cmdExportExcel.UseVisualStyleBackColor = true;
             this.cmdExportExcel.Click += new System.EventHandler(this.cmdExportExcel_Click);
             // 

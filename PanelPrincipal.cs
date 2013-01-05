@@ -80,6 +80,8 @@ namespace Exportador_Ventas_ServP
             {
                 Utilidades.HomologarNits = true;
             }
+            Utilidades.CuentaBancaria = ConfigurationSettings.AppSettings["CuentaBancaria"].ToString();
+            Utilidades.NitBanco = ConfigurationSettings.AppSettings["NitBanco"].ToString();
         }
 
         private void ShowNewForm(object sender, EventArgs e)
