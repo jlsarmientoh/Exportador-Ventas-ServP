@@ -334,6 +334,7 @@
     <None Include="Properties\DataSources\EstacionDB.VO.EmpleadoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.IngresoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ModoPagoVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.ProductoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO1.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO2.datasource" />

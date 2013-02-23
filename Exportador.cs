@@ -408,7 +408,7 @@ namespace Exportador_Ventas_ServP
                     }
                     else
                     {
-                        MessageBox.Show("Nose pudo registrar el cierre", "Resultado del cierre ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se pudo registrar el cierre", "Resultado del cierre ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

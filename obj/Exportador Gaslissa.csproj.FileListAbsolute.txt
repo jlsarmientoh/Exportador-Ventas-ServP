@@ -27,6 +27,8 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\ProductoTurnoExpo.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\ClienteServP.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Sobretasa.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\ControlCombustible.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Producto.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\DisposicionEfectivo.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\InformeGeneralCierreVenta.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ProductoTurno.rpt

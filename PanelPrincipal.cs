@@ -52,7 +52,9 @@ namespace Exportador_Ventas_ServP
             }
             Utilidades.grupo1 = ConfigurationSettings.AppSettings["grupoIsla1"].ToString();
             Utilidades.grupo2 = ConfigurationSettings.AppSettings["grupoIsla2"].ToString();
-            Utilidades.multiplicarX = int.Parse(ConfigurationSettings.AppSettings["MultiplicarX"].ToString());
+            Utilidades.corrienteMultiplicarX = int.Parse(ConfigurationSettings.AppSettings["CorrienteMultiplicarX"].ToString());
+            Utilidades.superMultiplicarX = int.Parse(ConfigurationSettings.AppSettings["SuperMultiplicarX"].ToString());
+            Utilidades.dieselMultiplicarX = int.Parse(ConfigurationSettings.AppSettings["DieselMultiplicarX"].ToString());
             Utilidades.TipoMovimiento = ConfigurationSettings.AppSettings["TipoMovimiento"].ToString();
             Utilidades.NatutalezaDebito = ConfigurationSettings.AppSettings["NatutalezaDebito"].ToString();
             Utilidades.NatutalezaCredito = ConfigurationSettings.AppSettings["NatutalezaCredito"].ToString();
@@ -222,7 +224,7 @@ namespace Exportador_Ventas_ServP
         {
             comprasCombustible = new ComprasCombustible();
             comprasCombustible.MdiParent = this;
-            movimientos.Show();
+            comprasCombustible.Show();
 
         }
 
