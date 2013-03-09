@@ -75,6 +75,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.VentasProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Clientes.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ComprasCombustible.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.EdicionCierres.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Exportador.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ExportarMovimientos.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ImportarCliente.resources

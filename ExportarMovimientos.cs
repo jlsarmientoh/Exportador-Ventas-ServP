@@ -19,6 +19,7 @@ namespace Exportador_Ventas_ServP
         private string documento;
         private bool rango;
         private TimeSpan intervalo;
+        private ControladorPersistencia cp = new ControladorPersistencia();
         public ExportarMovimientos()
         {
             InitializeComponent();
@@ -108,7 +109,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                ControladorPersistencia cp = new ControladorPersistencia();
+                //ControladorPersistencia cp = new ControladorPersistencia();
                 bool exportado = false;
                 int i = 0; // cuenta los exportados
                 int j = 0; // cuenta los nos exportados
@@ -186,29 +187,10 @@ namespace Exportador_Ventas_ServP
 
         private void workerExcel_DoWork(object sender, DoWorkEventArgs e)
         {
-            /*try
-            {
-                ControladorPersistencia cp = new ControladorPersistencia();
-                bool exportado = false;
-                exportado = FileExporter.exportar(cp.getMovimientosContables(fecha, fecha, documento)
-                    , Utilidades.rutaPrincipalExport + "movimientos_contables_" + fecha.ToString("dd-MM-yyy") + ".csv"
-                    , FileExporter.EXCEL);
-                if (exportado)
-                {
-                    e.Result = "Exportado";
-                }
-                else
-                {
-                    e.Result = "No Exportado";
-                }
-            }
-            catch (PersistenciaException ex)
-            {
-                e.Result = "Error al exportar: " + ex.Message;
-            }*/
+            
             try
             {
-                ControladorPersistencia cp = new ControladorPersistencia();
+                //ControladorPersistencia cp = new ControladorPersistencia();
                 bool exportado = false;
                 int i = 0; // cuenta los exportados
                 int j = 0; // cuenta los nos exportados

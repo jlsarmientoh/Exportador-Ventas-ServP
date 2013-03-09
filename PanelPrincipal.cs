@@ -24,6 +24,7 @@ namespace Exportador_Ventas_ServP
         private InformeDisposicionEfectivo rptDisposicionEfectivo;
         private ImportarCliente importarCliente;
         private ExportarMovimientos exportarMovimientos;
+        private EdicionCierres edicionCierres;
         #endregion
 
         public PanelPrincipal()
@@ -196,13 +197,10 @@ namespace Exportador_Ventas_ServP
         }
 
         private void registroDiarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //if (exportador == null)
-            //{
-                exportador = new Exportador();
-            //}
+        {            
+            /*exportador = new Exportador();            
             exportador.MdiParent = this;
-            exportador.Show();
+            exportador.Show();*/
         }
 
         private void ingresosEgresosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -254,6 +252,20 @@ namespace Exportador_Ventas_ServP
             exportarMovimientos = new ExportarMovimientos();
             exportarMovimientos.MdiParent = this;
             exportarMovimientos.Show();
+        }
+
+        private void registroDiarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {            
+            exportador = new Exportador();            
+            exportador.MdiParent = this;
+            exportador.Show();
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            edicionCierres = new EdicionCierres();
+            edicionCierres.MdiParent = this;
+            edicionCierres.Show();
         }
     }
 }

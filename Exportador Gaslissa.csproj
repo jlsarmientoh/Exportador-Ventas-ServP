@@ -133,6 +133,12 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="EdicionCierres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdicionCierres.Designer.cs">
+      <DependentUpon>EdicionCierres.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstadoCuentaCliente.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -215,6 +221,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DisposicionEfectivo.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdicionCierres.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EdicionCierres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadoCuentaCliente.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -328,6 +338,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\EstacionDB.VO.BancoVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.CierreVentasVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ClienteVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ClienteVO1.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.EgresoVO.datasource" />

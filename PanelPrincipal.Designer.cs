@@ -37,6 +37,7 @@
             this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDiarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresosEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDiarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -116,10 +118,20 @@
             // 
             // registroDiarioToolStripMenuItem
             // 
+            this.registroDiarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registroDiarioToolStripMenuItem1,
+            this.modificarToolStripMenuItem});
             this.registroDiarioToolStripMenuItem.Name = "registroDiarioToolStripMenuItem";
-            this.registroDiarioToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.registroDiarioToolStripMenuItem.Text = "Registro diario";
+            this.registroDiarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.registroDiarioToolStripMenuItem.Text = "Cierres";
             this.registroDiarioToolStripMenuItem.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem_Click);
+            // 
+            // exportarToolStripMenuItem
+            // 
+            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportarToolStripMenuItem.Text = "Exportar";
+            this.exportarToolStripMenuItem.Click += new System.EventHandler(this.exportarToolStripMenuItem_Click);
             // 
             // movimientosToolStripMenuItem
             // 
@@ -190,12 +202,19 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // exportarToolStripMenuItem
+            // registroDiarioToolStripMenuItem1
             // 
-            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.exportarToolStripMenuItem.Text = "Exportar";
-            this.exportarToolStripMenuItem.Click += new System.EventHandler(this.exportarToolStripMenuItem_Click);
+            this.registroDiarioToolStripMenuItem1.Name = "registroDiarioToolStripMenuItem1";
+            this.registroDiarioToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
+            this.registroDiarioToolStripMenuItem1.Text = "Registro diario";
+            this.registroDiarioToolStripMenuItem1.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem1_Click);
+            // 
+            // modificarToolStripMenuItem
+            // 
+            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // PanelPrincipal
             // 
@@ -239,6 +258,8 @@
         private System.Windows.Forms.ToolStripMenuItem disposiciónDeEfectivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDiarioToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
     }
 }
 
