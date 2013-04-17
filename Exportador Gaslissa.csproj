@@ -126,6 +126,7 @@
     <Compile Include="ComprasCombustible.Designer.cs">
       <DependentUpon>ComprasCombustible.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\ControladorPersistencia.cs" />
     <Compile Include="DisposicionEfectivo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -322,6 +323,7 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Properties\Settings.cs" />
     <Compile Include="VentasProductoTurno.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -349,10 +351,10 @@
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO1.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO2.datasource" />
-    <None Include="Resources\add_hover.gif" />
+    <Content Include="Resources\add_hover.gif" />
     <Content Include="Resources\calendar.gif" />
-    <None Include="Resources\refresh_hov.gif" />
-    <None Include="Resources\del_hover.gif" />
+    <Content Include="Resources\refresh_hov.gif" />
+    <Content Include="Resources\del_hover.gif" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />

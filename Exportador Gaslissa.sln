@@ -5,6 +5,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exportador Gaslissa", "Expo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstacionDB", "..\EstacionDB\EstacionDB.csproj", "{E28F4582-E872-453F-AF72-98F8AF4655AA}"
 EndProject
+Project("{E729F059-12D4-455F-A2A4-FDA8DD25E08A}") = "GaslissaInstalador", "..\GaslissaInstalador\GaslissaInstalador.isproj", "{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DC03FF01-E972-4C12-BD0F-88BFEFDAA1C5} = {DC03FF01-E972-4C12-BD0F-88BFEFDAA1C5}
+		{DC03FF01-E972-4C12-BD0F-88BFEFDAA1C5} = {DC03FF01-E972-4C12-BD0F-88BFEFDAA1C5}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +35,14 @@ Global
 		{E28F4582-E872-453F-AF72-98F8AF4655AA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E28F4582-E872-453F-AF72-98F8AF4655AA}.Release|x86.ActiveCfg = Release|x86
 		{E28F4582-E872-453F-AF72-98F8AF4655AA}.Release|x86.Build.0 = Release|x86
+		{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}.Debug|Any CPU.ActiveCfg = Debug
+		{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}.Debug|Any CPU.Build.0 = Debug
+		{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}.Debug|x86.ActiveCfg = Debug
+		{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}.Debug|x86.Build.0 = Debug
+		{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}.Release|Any CPU.ActiveCfg = Release
+		{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}.Release|Any CPU.Build.0 = Release
+		{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}.Release|x86.ActiveCfg = Release
+		{2DF33A46-2C87-49E8-A243-F9F6C39A73AF}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

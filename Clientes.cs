@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using EstacionDB.DAO;
+using Exportador_Ventas_ServP.Controller;
 using EstacionDB.VO;
 
 namespace Exportador_Ventas_ServP

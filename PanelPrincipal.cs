@@ -29,7 +29,7 @@ namespace Exportador_Ventas_ServP
 
         public PanelPrincipal()
         {
-            InitializeComponent();
+            InitializeComponent();            
             Utilidades.cadenaConexion = ConfigurationSettings.AppSettings["Main.ConnectionString"].ToString();
             Utilidades.appCadenaConexion = ConfigurationSettings.AppSettings["App.ConnectionString"].ToString();
             Utilidades.configServ = ConfigurationSettings.AppSettings["ServConfig"].ToString();

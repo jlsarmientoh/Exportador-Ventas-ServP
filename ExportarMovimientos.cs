@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using EstacionDB.Utilidades;
 using EstacionDB.Exceptions;
-using EstacionDB.DAO;
+using Exportador_Ventas_ServP.Controller;
 
 namespace Exportador_Ventas_ServP
 {

@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EstacionDB.VO;
-using EstacionDB.DAO;
+using Exportador_Ventas_ServP.Controller;
 using EstacionDB.Utilidades;
 using System.Configuration;
 using System.IO;
@@ -308,6 +308,11 @@ namespace Exportador_Ventas_ServP
                             case 2:
                                 {
                                     totalPlus -= venta.Total;
+                                    break;
+                                }
+                            case 7:
+                                {
+                                    totalCredito -= venta.Total;
                                     break;
                                 }
                         }

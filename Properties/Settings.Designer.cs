@@ -22,5 +22,49 @@ namespace Exportador_Ventas_ServP.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>1</string>
+  <string>2</string>
+  <string>3</string>
+  <string>4</string>
+  <string>5</string>
+  <string>6</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection grupoIsla {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["grupoIsla"]));
+            }
+            set {
+                this["grupoIsla"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("El Pino")]
+        public string nombreEDS {
+            get {
+                return ((string)(this["nombreEDS"]));
+            }
+            set {
+                this["nombreEDS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Calle 73 # 12 - 98")]
+        public string Direccion {
+            get {
+                return ((string)(this["Direccion"]));
+            }
+            set {
+                this["Direccion"] = value;
+            }
+        }
     }
 }
