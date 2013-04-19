@@ -37,6 +37,8 @@
             this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDiarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDiarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresosEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +50,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.registroDiarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobretasasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +81,7 @@
             // lecturasToolStripMenuItem
             // 
             this.lecturasToolStripMenuItem.Name = "lecturasToolStripMenuItem";
-            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.lecturasToolStripMenuItem.Text = "Lecturas";
             this.lecturasToolStripMenuItem.Click += new System.EventHandler(this.lecturasToolStripMenuItem_Click);
             // 
@@ -96,14 +97,14 @@
             // administrarToolStripMenuItem
             // 
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.administrarToolStripMenuItem.Text = "Administrar";
             this.administrarToolStripMenuItem.Click += new System.EventHandler(this.administrarToolStripMenuItem_Click);
             // 
             // importarToolStripMenuItem
             // 
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.importarToolStripMenuItem.Text = "Importar";
             this.importarToolStripMenuItem.Click += new System.EventHandler(this.importarToolStripMenuItem_Click);
             // 
@@ -126,6 +127,20 @@
             this.registroDiarioToolStripMenuItem.Text = "Cierres";
             this.registroDiarioToolStripMenuItem.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem_Click);
             // 
+            // registroDiarioToolStripMenuItem1
+            // 
+            this.registroDiarioToolStripMenuItem1.Name = "registroDiarioToolStripMenuItem1";
+            this.registroDiarioToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
+            this.registroDiarioToolStripMenuItem1.Text = "Registro diario";
+            this.registroDiarioToolStripMenuItem1.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem1_Click);
+            // 
+            // modificarToolStripMenuItem
+            // 
+            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
+            // 
             // exportarToolStripMenuItem
             // 
             this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
@@ -144,14 +159,15 @@
             // ingresosEgresosToolStripMenuItem
             // 
             this.ingresosEgresosToolStripMenuItem.Name = "ingresosEgresosToolStripMenuItem";
-            this.ingresosEgresosToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.ingresosEgresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ingresosEgresosToolStripMenuItem.Text = "Egresos";
             this.ingresosEgresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosEgresosToolStripMenuItem_Click);
             // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.combustibleToolStripMenuItem});
+            this.combustibleToolStripMenuItem,
+            this.sobretasasToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.comprasToolStripMenuItem.Text = "Compras";
@@ -159,7 +175,7 @@
             // combustibleToolStripMenuItem
             // 
             this.combustibleToolStripMenuItem.Name = "combustibleToolStripMenuItem";
-            this.combustibleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.combustibleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.combustibleToolStripMenuItem.Text = "Combustible";
             this.combustibleToolStripMenuItem.Click += new System.EventHandler(this.combustibleToolStripMenuItem_Click);
             // 
@@ -202,19 +218,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // registroDiarioToolStripMenuItem1
+            // sobretasasToolStripMenuItem
             // 
-            this.registroDiarioToolStripMenuItem1.Name = "registroDiarioToolStripMenuItem1";
-            this.registroDiarioToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
-            this.registroDiarioToolStripMenuItem1.Text = "Registro diario";
-            this.registroDiarioToolStripMenuItem1.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem1_Click);
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
+            this.sobretasasToolStripMenuItem.Name = "sobretasasToolStripMenuItem";
+            this.sobretasasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sobretasasToolStripMenuItem.Text = "Sobretasas";
+            this.sobretasasToolStripMenuItem.Click += new System.EventHandler(this.sobretasasToolStripMenuItem_Click);
             // 
             // PanelPrincipal
             // 
@@ -260,6 +269,7 @@
         private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDiarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobretasasToolStripMenuItem;
     }
 }
 

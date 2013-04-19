@@ -616,6 +616,18 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
+        public List<ClienteVO> consultarClientesPorCampo(string valor, int campo)
+        {
+            try
+            {
+                return getClientesDAO().consultarClientes(valor, campo);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la consulta clientes en DB app.", ex);
+            }
+        }
+
         public List<ClienteVO> consultarClientesServP()
         {
             try
@@ -934,5 +946,47 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
+        public List<SobretasaVO> consultarSobretasas()
+        {
+            try
+            {
+                return getSobreTasasDAO().consultarSobretasas();
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al consultar las sobretasas", ex);
+            }
+        }
+
+        public SobretasaVO consultarSobretasasProductoFecha(int mes, int anio, int idProducto, int dia)
+        {
+            try
+            {
+                return getSobreTasasDAO().consultarSobretasaProducto(mes, anio, idProducto, dia);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al consultar las sobretasas", ex);
+            }
+        }
+
+        public bool guardarSobertasa(SobretasaVO sobretasa)
+        {
+            bool resultado = false;
+            int rows = 0;
+            try
+            {
+                rows = getSobreTasasDAO().guardarSobretasa(sobretasa);
+                if (rows > 0)
+                {
+                    resultado = true;
+                }
+                return resultado;
+            }  
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al guardar la sobretasa", ex);
+            }
+        }
     }
 }

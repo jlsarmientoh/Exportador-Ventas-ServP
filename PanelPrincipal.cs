@@ -25,6 +25,7 @@ namespace Exportador_Ventas_ServP
         private ImportarCliente importarCliente;
         private ExportarMovimientos exportarMovimientos;
         private EdicionCierres edicionCierres;
+        private SobreTasas sobretasas;
         #endregion
 
         public PanelPrincipal()
@@ -266,6 +267,13 @@ namespace Exportador_Ventas_ServP
             edicionCierres = new EdicionCierres();
             edicionCierres.MdiParent = this;
             edicionCierres.Show();
+        }
+
+        private void sobretasasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sobretasas = new SobreTasas();
+            sobretasas.MdiParent = this;
+            sobretasas.Show();
         }
     }
 }

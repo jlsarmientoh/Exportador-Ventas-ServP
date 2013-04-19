@@ -288,6 +288,10 @@
       <LastGenOutput>ResumenProductoTurno.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="SobreTasas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SobreTasas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentasProductoTurno.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>VentasProductoTurno.cs</LastGenOutput>
@@ -324,6 +328,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Properties\Settings.cs" />
+    <Compile Include="SobreTasas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SobreTasas.Designer.cs">
+      <DependentUpon>SobreTasas.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentasProductoTurno.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -348,6 +358,7 @@
     <None Include="Properties\DataSources\EstacionDB.VO.IngresoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ModoPagoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ProductoVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.SobretasaVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO1.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO2.datasource" />
@@ -355,6 +366,9 @@
     <Content Include="Resources\calendar.gif" />
     <Content Include="Resources\refresh_hov.gif" />
     <Content Include="Resources\del_hover.gif" />
+    <Content Include="Resources\search.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />

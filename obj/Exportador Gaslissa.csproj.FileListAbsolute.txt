@@ -29,6 +29,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Sobretasa.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\ControlCombustible.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Producto.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Resources\search.gif
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\DisposicionEfectivo.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\InformeGeneralCierreVenta.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\ProductoTurno.rpt
@@ -85,6 +86,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.MovimientosDiarios.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.PanelPrincipal.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Properties.Resources.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.SobreTasas.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Gaslissa.csproj.GenerateResource.Cache
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.exe
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.pdb

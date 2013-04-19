@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Exportador_Ventas_ServP.Controller;
 using EstacionDB.VO;
+using EstacionDB.Utilidades;
 
 namespace Exportador_Ventas_ServP
 {
@@ -57,7 +58,7 @@ namespace Exportador_Ventas_ServP
 
                 if (cp.guardarCliente(cli))
                 {
-                    MessageBox.Show("Datos del cliente ha sido guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                                        
+                    MessageBox.Show("Datos del cliente han sido guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);                                        
                     clienteVOBindingSource.DataSource = cp.consultarClientes();
                 }
                 else
@@ -113,6 +114,38 @@ namespace Exportador_Ventas_ServP
                 txtConsecutivo.Text = currentClient.Consecutivo;
             }
             cboTipoId.Focus();
+        }
+
+        private void cmdBuscarNit_Click(object sender, EventArgs e)
+        {
+            if (!txtId.Text.Equals(""))
+            {
+                clienteVOBindingSource.Clear();
+                clienteVOBindingSource.DataSource = cp.consultarClientesPorCampo(txtId.Text, Utilidades.C_CLI_NIT);
+            }
+        }
+
+        private void cmdBuscarCodigo_Click(object sender, EventArgs e)
+        {
+            if (!txtConsecutivo.Text.Equals(""))
+            {
+                clienteVOBindingSource.Clear();
+                clienteVOBindingSource.DataSource = cp.consultarClientesPorCampo(txtConsecutivo.Text, Utilidades.C_CLI_CODIGO);
+            }
+        }
+
+        private void cmdBuscarNombre_Click(object sender, EventArgs e)
+        {
+            if (!txtNombre.Text.Equals(""))
+            {
+                clienteVOBindingSource.Clear();
+                clienteVOBindingSource.DataSource = cp.consultarClientesPorCampo(txtNombre.Text, Utilidades.C_CLI_NOMBRE);
+            }
+        }
+
+        private void cmdConsultar_Click(object sender, EventArgs e)
+        {
+            clienteVOBindingSource.DataSource = cp.consultarClientes();
         }
     }
 }

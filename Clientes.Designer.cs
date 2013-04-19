@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmdBuscarNombre = new System.Windows.Forms.Button();
+            this.cmdBuscarCodigo = new System.Windows.Forms.Button();
+            this.cmdBuscarNit = new System.Windows.Forms.Button();
             this.txtConsecutivo = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,6 +66,7 @@
             this.contactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmdConsultar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoIdVOBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -72,6 +76,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmdBuscarNombre);
+            this.groupBox1.Controls.Add(this.cmdBuscarCodigo);
+            this.groupBox1.Controls.Add(this.cmdBuscarNit);
             this.groupBox1.Controls.Add(this.txtConsecutivo);
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.label7);
@@ -90,10 +97,40 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(24, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(411, 245);
+            this.groupBox1.Size = new System.Drawing.Size(435, 245);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
+            // 
+            // cmdBuscarNombre
+            // 
+            this.cmdBuscarNombre.Image = global::Exportador_Ventas_ServP.Properties.Resources.search;
+            this.cmdBuscarNombre.Location = new System.Drawing.Point(401, 83);
+            this.cmdBuscarNombre.Name = "cmdBuscarNombre";
+            this.cmdBuscarNombre.Size = new System.Drawing.Size(24, 23);
+            this.cmdBuscarNombre.TabIndex = 15;
+            this.cmdBuscarNombre.UseVisualStyleBackColor = true;
+            this.cmdBuscarNombre.Click += new System.EventHandler(this.cmdBuscarNombre_Click);
+            // 
+            // cmdBuscarCodigo
+            // 
+            this.cmdBuscarCodigo.Image = global::Exportador_Ventas_ServP.Properties.Resources.search;
+            this.cmdBuscarCodigo.Location = new System.Drawing.Point(401, 53);
+            this.cmdBuscarCodigo.Name = "cmdBuscarCodigo";
+            this.cmdBuscarCodigo.Size = new System.Drawing.Size(24, 23);
+            this.cmdBuscarCodigo.TabIndex = 14;
+            this.cmdBuscarCodigo.UseVisualStyleBackColor = true;
+            this.cmdBuscarCodigo.Click += new System.EventHandler(this.cmdBuscarCodigo_Click);
+            // 
+            // cmdBuscarNit
+            // 
+            this.cmdBuscarNit.Image = global::Exportador_Ventas_ServP.Properties.Resources.search;
+            this.cmdBuscarNit.Location = new System.Drawing.Point(401, 23);
+            this.cmdBuscarNit.Name = "cmdBuscarNit";
+            this.cmdBuscarNit.Size = new System.Drawing.Size(24, 23);
+            this.cmdBuscarNit.TabIndex = 13;
+            this.cmdBuscarNit.UseVisualStyleBackColor = true;
+            this.cmdBuscarNit.Click += new System.EventHandler(this.cmdBuscarNit_Click);
             // 
             // txtConsecutivo
             // 
@@ -241,19 +278,20 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmdConsultar);
             this.groupBox2.Controls.Add(this.cmdNuevo);
             this.groupBox2.Controls.Add(this.cmdCancelar);
             this.groupBox2.Controls.Add(this.cmdGuardar);
-            this.groupBox2.Location = new System.Drawing.Point(445, 29);
+            this.groupBox2.Location = new System.Drawing.Point(465, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(201, 244);
+            this.groupBox2.Size = new System.Drawing.Size(181, 245);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
             // 
             // cmdNuevo
             // 
-            this.cmdNuevo.Location = new System.Drawing.Point(42, 64);
+            this.cmdNuevo.Location = new System.Drawing.Point(31, 84);
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(119, 30);
             this.cmdNuevo.TabIndex = 12;
@@ -263,7 +301,7 @@
             // 
             // cmdCancelar
             // 
-            this.cmdCancelar.Location = new System.Drawing.Point(43, 147);
+            this.cmdCancelar.Location = new System.Drawing.Point(32, 167);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(119, 30);
             this.cmdCancelar.TabIndex = 11;
@@ -273,7 +311,7 @@
             // 
             // cmdGuardar
             // 
-            this.cmdGuardar.Location = new System.Drawing.Point(43, 105);
+            this.cmdGuardar.Location = new System.Drawing.Point(32, 125);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(119, 30);
             this.cmdGuardar.TabIndex = 10;
@@ -377,6 +415,16 @@
             // 
             this.clienteVOBindingSource.DataSource = typeof(EstacionDB.VO.ClienteVO);
             // 
+            // cmdConsultar
+            // 
+            this.cmdConsultar.Location = new System.Drawing.Point(30, 44);
+            this.cmdConsultar.Name = "cmdConsultar";
+            this.cmdConsultar.Size = new System.Drawing.Size(119, 30);
+            this.cmdConsultar.TabIndex = 13;
+            this.cmdConsultar.Text = "Consultar todos";
+            this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,5 +483,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contactoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button cmdBuscarNit;
+        private System.Windows.Forms.Button cmdBuscarNombre;
+        private System.Windows.Forms.Button cmdBuscarCodigo;
+        private System.Windows.Forms.Button cmdConsultar;
     }
 }
