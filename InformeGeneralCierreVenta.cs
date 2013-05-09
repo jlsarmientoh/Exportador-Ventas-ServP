@@ -128,7 +128,7 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_ProductoTurnorpt_Fecha {
+        public CrystalDecisions.Shared.IParameterField Parameter_EDS_NOMBRE {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
@@ -136,9 +136,17 @@ namespace Exportador_Ventas_ServP {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_ResumenMediosPagorpt_Fecha {
+        public CrystalDecisions.Shared.IParameterField Parameter_ProductoTurnorpt_Fecha {
             get {
                 return this.DataDefinition.ParameterFields[2];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_ResumenMediosPagorpt_Fecha {
+            get {
+                return this.DataDefinition.ParameterFields[3];
             }
         }
     }

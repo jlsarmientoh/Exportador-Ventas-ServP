@@ -43,6 +43,7 @@
             this.crystalReportViewer1.Size = new System.Drawing.Size(660, 514);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
+            this.crystalReportViewer1.ReportRefresh += new CrystalDecisions.Windows.Forms.RefreshEventHandler(this.crystalReportViewer1_ReportRefresh);
             // 
             // InformesCierre
             // 

@@ -402,8 +402,8 @@ namespace Exportador_Ventas_ServP.Controller
                 // Movimientos deSobretasas
                 foreach (ProductoTurnoVO pt in productos)
                 {
-                    
-                    if (pt.Producto.Trim().Equals("CORRIENTE"))
+
+                    if (pt.Producto.Trim().Equals(Exportador_Ventas_ServP.Properties.Settings.Default.NombreCorriente))
                     {
                         MovimientoContableDTO mcs = new MovimientoContableDTO();
                         mcs.Fecha = pt.Fecha.ToString("dd/MM/yyyy");
@@ -431,7 +431,7 @@ namespace Exportador_Ventas_ServP.Controller
                         mcn.CuentaBancaria = "";
                         movimientos.Add(mcn);
                     }
-                    else if (pt.Producto.Trim().Equals("SUPER"))
+                    else if (pt.Producto.Trim().Equals(Exportador_Ventas_ServP.Properties.Settings.Default.NombreSuper))
                     {
                         MovimientoContableDTO mcs = new MovimientoContableDTO();
                         mcs.Fecha = pt.Fecha.ToString("dd/MM/yyyy");
@@ -459,7 +459,7 @@ namespace Exportador_Ventas_ServP.Controller
                         mcn.CuentaBancaria = "";
                         movimientos.Add(mcn);
                     }
-                    else if (pt.Producto.Trim().Equals("DIESEL"))
+                    else if (pt.Producto.Trim().Equals(Exportador_Ventas_ServP.Properties.Settings.Default.NombreDiesel))
                     {
                         MovimientoContableDTO mcs = new MovimientoContableDTO();
                         mcs.Fecha = pt.Fecha.ToString("dd/MM/yyyy");

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Exportador Ventas ServP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Gasonet S.A.")]
+[assembly: AssemblyCompany("Gaslissa")]
 [assembly: AssemblyProduct("Exportador Ventas ServP")]
-[assembly: AssemblyCopyright("© Gasonet S.A. 2011")]
+[assembly: AssemblyCopyright("© Gaslissa 2012 - 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Número de versión de compilación
 //      Revisión
 //
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.6.0.0")]
+[assembly: AssemblyFileVersion("1.6.0.0")]

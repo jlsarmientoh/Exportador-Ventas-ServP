@@ -19,5 +19,14 @@
     <Setting Name="Direccion" Type="System.String" Scope="User">
       <Value Profile="(Default)">Calle 73 # 12 - 98</Value>
     </Setting>
+    <Setting Name="NombreDiesel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DIESEL</Value>
+    </Setting>
+    <Setting Name="NombreSuper" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SUPER</Value>
+    </Setting>
+    <Setting Name="NombreCorriente" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CORRIENTE</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

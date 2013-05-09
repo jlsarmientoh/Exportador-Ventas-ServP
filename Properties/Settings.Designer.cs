@@ -66,5 +66,41 @@ namespace Exportador_Ventas_ServP.Properties {
                 this["Direccion"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("DIESEL")]
+        public string NombreDiesel {
+            get {
+                return ((string)(this["NombreDiesel"]));
+            }
+            set {
+                this["NombreDiesel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SUPER")]
+        public string NombreSuper {
+            get {
+                return ((string)(this["NombreSuper"]));
+            }
+            set {
+                this["NombreSuper"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CORRIENTE")]
+        public string NombreCorriente {
+            get {
+                return ((string)(this["NombreCorriente"]));
+            }
+            set {
+                this["NombreCorriente"] = value;
+            }
+        }
     }
 }
