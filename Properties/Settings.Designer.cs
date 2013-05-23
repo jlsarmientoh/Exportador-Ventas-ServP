@@ -102,5 +102,17 @@ namespace Exportador_Ventas_ServP.Properties {
                 this["NombreCorriente"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0901")]
+        public string CentroCostos {
+            get {
+                return ((string)(this["CentroCostos"]));
+            }
+            set {
+                this["CentroCostos"] = value;
+            }
+        }
     }
 }

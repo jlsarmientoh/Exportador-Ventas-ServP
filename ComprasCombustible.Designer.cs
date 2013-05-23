@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComprasCombustible));
             this.CalendarDesde = new System.Windows.Forms.MonthCalendar();
             this.txtFechaDesde = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -131,6 +132,7 @@
             this.txtGalones.Size = new System.Drawing.Size(77, 20);
             this.txtGalones.TabIndex = 4;
             this.txtGalones.TextChanged += new System.EventHandler(this.txtGalones_TextChanged);
+            this.txtGalones.Enter += new System.EventHandler(this.txtGalones_Enter);
             // 
             // cmdCalendarDesde
             // 
@@ -149,6 +151,7 @@
             this.txtFinal.Size = new System.Drawing.Size(77, 20);
             this.txtFinal.TabIndex = 6;
             this.txtFinal.TextChanged += new System.EventHandler(this.txtFinal_TextChanged);
+            this.txtFinal.Enter += new System.EventHandler(this.txtFinal_Enter);
             // 
             // txtInicial
             // 
@@ -157,6 +160,7 @@
             this.txtInicial.Size = new System.Drawing.Size(77, 20);
             this.txtInicial.TabIndex = 5;
             this.txtInicial.TextChanged += new System.EventHandler(this.txtInicial_TextChanged);
+            this.txtInicial.Enter += new System.EventHandler(this.txtInicial_Enter);
             // 
             // txtMedida
             // 
@@ -173,6 +177,7 @@
             this.txtSurtidor.Size = new System.Drawing.Size(77, 20);
             this.txtSurtidor.TabIndex = 7;
             this.txtSurtidor.TextChanged += new System.EventHandler(this.txtSurtidor_TextChanged);
+            this.txtSurtidor.Enter += new System.EventHandler(this.txtSurtidor_Enter);
             // 
             // Inicial
             // 
@@ -216,7 +221,7 @@
             this.groupBox1.Controls.Add(this.Surtidor);
             this.groupBox1.Controls.Add(this.Medida);
             this.groupBox1.Controls.Add(this.txtSurtidor);
-            this.groupBox1.Location = new System.Drawing.Point(404, 77);
+            this.groupBox1.Location = new System.Drawing.Point(404, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(312, 75);
             this.groupBox1.TabIndex = 25;
@@ -310,6 +315,7 @@
             this.Controls.Add(this.cmdCalendarDesde);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ComprasCombustible";
             this.Text = "Inventario de combustible";

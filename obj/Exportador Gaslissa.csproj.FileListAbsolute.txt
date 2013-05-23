@@ -71,6 +71,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\ResolveAssemblyReference.cache
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.DisposicionEfectivo.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.EstadoCuentaCliente.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.InformeCombustible.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.InformeGeneralCierreVenta.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ResumenMediosPago.rpt
@@ -82,6 +83,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Exportador.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ExportarMovimientos.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.ImportarCliente.resources
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Reports.InformeCombustible.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Reports.InformeDisposicionEfectivo.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.InformesCierre.resources
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Lecturas.resources

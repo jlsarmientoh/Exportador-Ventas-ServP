@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportarCliente));
             this.progressImport = new System.Windows.Forms.ProgressBar();
             this.lblStatus = new System.Windows.Forms.Label();
             this.cmdImportar = new System.Windows.Forms.Button();
@@ -75,6 +76,7 @@
             this.Controls.Add(this.cmdImportar);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.progressImport);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ImportarCliente";
             this.Text = "Importar Cliente";

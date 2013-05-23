@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exportador));
             this.label1 = new System.Windows.Forms.Label();
             this.txtFechaDesde = new System.Windows.Forms.TextBox();
             this.CalendarDesde = new System.Windows.Forms.MonthCalendar();
@@ -98,6 +99,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.cierreWorker = new System.ComponentModel.BackgroundWorker();
             this.consultaWorker = new System.ComponentModel.BackgroundWorker();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtTotalVentas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridVentasCargadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaVOBindingSource)).BeginInit();
             this.frameAdicionar.SuspendLayout();
@@ -660,6 +663,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtTotalVentas);
+            this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.txtTicketTronik);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.txtTarjetas);
@@ -749,6 +754,25 @@
             // 
             this.consultaWorker.WorkerReportsProgress = true;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(531, 96);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(56, 13);
+            this.label19.TabIndex = 183;
+            this.label19.Text = "VENTAS";
+            // 
+            // txtTotalVentas
+            // 
+            this.txtTotalVentas.Location = new System.Drawing.Point(597, 91);
+            this.txtTotalVentas.Name = "txtTotalVentas";
+            this.txtTotalVentas.ReadOnly = true;
+            this.txtTotalVentas.Size = new System.Drawing.Size(141, 20);
+            this.txtTotalVentas.TabIndex = 184;
+            this.txtTotalVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Exportador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,6 +789,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.frameAcciones);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Exportador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -858,6 +883,8 @@
         private System.Windows.Forms.Label label18;
         private System.ComponentModel.BackgroundWorker cierreWorker;
         private System.ComponentModel.BackgroundWorker consultaWorker;
+        private System.Windows.Forms.TextBox txtTotalVentas;
+        private System.Windows.Forms.Label label19;
     }
 }
 

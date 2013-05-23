@@ -61,7 +61,7 @@ namespace Exportador_Ventas_ServP
         private void ComprasCombustible_Load(object sender, EventArgs e)
         {
             productoVOBindingSource.DataSource = cp.consultarProductos();
-            cboProducto.SelectedItem = 0;
+            cboProducto.SelectedIndex = 0;
         }
 
         private void cmdGuardar_Click(object sender, EventArgs e)
@@ -101,6 +101,13 @@ namespace Exportador_Ventas_ServP
             sobranteDia = 0;
             sobranteAcumulado = 0;
             porcetaje = 0;
+            txtInicial.Text = "0";
+            txtFinal.Text = "0";
+            txtSurtidor.Text = "0";
+            txtGalones.Text = "0";
+            txtMedida.Text = "0";
+            txtSobranteDia.Text = "0";
+            txtSonbranteAcumulado.Text = "0";
         }
 
         private void ComprasCombustible_FormClosed(object sender, FormClosedEventArgs e)
@@ -187,18 +194,40 @@ namespace Exportador_Ventas_ServP
                     {
                         ControlCombustibleVO cc = controles[0];
                         sobranteAnterior = cc.SobranteAcumulado;
+                        inicial = cc.InventarioFinal;
+                        txtInicial.Text = inicial.ToString();
                     }
                 }
             }
-            catch (Exception ex)
+            catch (PersistenciaException pe)
             {
-
+                MessageBox.Show(pe.Message, "Error al consultar el inventario anterior", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void cboProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
             getAcumuladoAnterior();
+        }
+
+        private void txtGalones_Enter(object sender, EventArgs e)
+        {
+            txtGalones.SelectAll();
+        }
+
+        private void txtInicial_Enter(object sender, EventArgs e)
+        {
+            txtInicial.SelectAll();
+        }
+
+        private void txtFinal_Enter(object sender, EventArgs e)
+        {
+            txtFinal.SelectAll();
+        }
+
+        private void txtSurtidor_Enter(object sender, EventArgs e)
+        {
+            txtSurtidor.SelectAll();
         }
 
         

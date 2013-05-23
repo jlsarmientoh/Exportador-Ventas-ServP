@@ -29,9 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EdicionCierres));
             this.txtFecha = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idCierreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalVentasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.islaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.turnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creditosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.efectivoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bigPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otrosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tarjetasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tarjetaPlusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketTronikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cierreVentasVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCreditos = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,22 +70,9 @@
             this.cmdConsultar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
-            this.idCierreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalVentasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.islaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.turnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creditosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.efectivoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bigPassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otrosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tarjetasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tarjetaPlusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketTronikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cierreVentasVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cierreVentasVOBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFecha
@@ -118,6 +119,110 @@
             this.dataGridView1.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellLeave);
             this.dataGridView1.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowLeave);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            // 
+            // idCierreDataGridViewTextBoxColumn
+            // 
+            this.idCierreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.idCierreDataGridViewTextBoxColumn.DataPropertyName = "IdCierre";
+            this.idCierreDataGridViewTextBoxColumn.HeaderText = "Cierre";
+            this.idCierreDataGridViewTextBoxColumn.Name = "idCierreDataGridViewTextBoxColumn";
+            this.idCierreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idCierreDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // totalVentasDataGridViewTextBoxColumn
+            // 
+            this.totalVentasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.totalVentasDataGridViewTextBoxColumn.DataPropertyName = "TotalVentas";
+            this.totalVentasDataGridViewTextBoxColumn.HeaderText = "TotalVentas";
+            this.totalVentasDataGridViewTextBoxColumn.Name = "totalVentasDataGridViewTextBoxColumn";
+            this.totalVentasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalVentasDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // islaDataGridViewTextBoxColumn
+            // 
+            this.islaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.islaDataGridViewTextBoxColumn.DataPropertyName = "Isla";
+            this.islaDataGridViewTextBoxColumn.HeaderText = "Isla";
+            this.islaDataGridViewTextBoxColumn.Name = "islaDataGridViewTextBoxColumn";
+            this.islaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.islaDataGridViewTextBoxColumn.Width = 48;
+            // 
+            // turnoDataGridViewTextBoxColumn
+            // 
+            this.turnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.turnoDataGridViewTextBoxColumn.DataPropertyName = "Turno";
+            this.turnoDataGridViewTextBoxColumn.HeaderText = "Turno";
+            this.turnoDataGridViewTextBoxColumn.Name = "turnoDataGridViewTextBoxColumn";
+            this.turnoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.turnoDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // creditosDataGridViewTextBoxColumn
+            // 
+            this.creditosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.creditosDataGridViewTextBoxColumn.DataPropertyName = "Creditos";
+            this.creditosDataGridViewTextBoxColumn.HeaderText = "Creditos";
+            this.creditosDataGridViewTextBoxColumn.Name = "creditosDataGridViewTextBoxColumn";
+            this.creditosDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // efectivoDataGridViewTextBoxColumn
+            // 
+            this.efectivoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.efectivoDataGridViewTextBoxColumn.DataPropertyName = "Efectivo";
+            this.efectivoDataGridViewTextBoxColumn.HeaderText = "Efectivo";
+            this.efectivoDataGridViewTextBoxColumn.Name = "efectivoDataGridViewTextBoxColumn";
+            this.efectivoDataGridViewTextBoxColumn.Width = 71;
+            // 
+            // sodexoDataGridViewTextBoxColumn
+            // 
+            this.sodexoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.sodexoDataGridViewTextBoxColumn.DataPropertyName = "Sodexo";
+            this.sodexoDataGridViewTextBoxColumn.HeaderText = "Sodexo";
+            this.sodexoDataGridViewTextBoxColumn.Name = "sodexoDataGridViewTextBoxColumn";
+            this.sodexoDataGridViewTextBoxColumn.Width = 68;
+            // 
+            // bigPassDataGridViewTextBoxColumn
+            // 
+            this.bigPassDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.bigPassDataGridViewTextBoxColumn.DataPropertyName = "BigPass";
+            this.bigPassDataGridViewTextBoxColumn.HeaderText = "BigPass";
+            this.bigPassDataGridViewTextBoxColumn.Name = "bigPassDataGridViewTextBoxColumn";
+            this.bigPassDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // otrosDataGridViewTextBoxColumn
+            // 
+            this.otrosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.otrosDataGridViewTextBoxColumn.DataPropertyName = "Otros";
+            this.otrosDataGridViewTextBoxColumn.HeaderText = "Otros";
+            this.otrosDataGridViewTextBoxColumn.Name = "otrosDataGridViewTextBoxColumn";
+            this.otrosDataGridViewTextBoxColumn.Width = 57;
+            // 
+            // tarjetasDataGridViewTextBoxColumn
+            // 
+            this.tarjetasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.tarjetasDataGridViewTextBoxColumn.DataPropertyName = "Tarjetas";
+            this.tarjetasDataGridViewTextBoxColumn.HeaderText = "Tarjetas";
+            this.tarjetasDataGridViewTextBoxColumn.Name = "tarjetasDataGridViewTextBoxColumn";
+            this.tarjetasDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // tarjetaPlusDataGridViewTextBoxColumn
+            // 
+            this.tarjetaPlusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.tarjetaPlusDataGridViewTextBoxColumn.DataPropertyName = "TarjetaPlus";
+            this.tarjetaPlusDataGridViewTextBoxColumn.HeaderText = "TarjetaPlus";
+            this.tarjetaPlusDataGridViewTextBoxColumn.Name = "tarjetaPlusDataGridViewTextBoxColumn";
+            this.tarjetaPlusDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // ticketTronikDataGridViewTextBoxColumn
+            // 
+            this.ticketTronikDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ticketTronikDataGridViewTextBoxColumn.DataPropertyName = "TicketTronik";
+            this.ticketTronikDataGridViewTextBoxColumn.HeaderText = "TicketTronik";
+            this.ticketTronikDataGridViewTextBoxColumn.Name = "ticketTronikDataGridViewTextBoxColumn";
+            this.ticketTronikDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // cierreVentasVOBindingSource
+            // 
+            this.cierreVentasVOBindingSource.DataSource = typeof(EstacionDB.VO.CierreVentasVO);
             // 
             // groupBox2
             // 
@@ -371,110 +476,6 @@
             this.cmdCancelar.UseVisualStyleBackColor = true;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
-            // idCierreDataGridViewTextBoxColumn
-            // 
-            this.idCierreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.idCierreDataGridViewTextBoxColumn.DataPropertyName = "IdCierre";
-            this.idCierreDataGridViewTextBoxColumn.HeaderText = "Cierre";
-            this.idCierreDataGridViewTextBoxColumn.Name = "idCierreDataGridViewTextBoxColumn";
-            this.idCierreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idCierreDataGridViewTextBoxColumn.Width = 59;
-            // 
-            // totalVentasDataGridViewTextBoxColumn
-            // 
-            this.totalVentasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.totalVentasDataGridViewTextBoxColumn.DataPropertyName = "TotalVentas";
-            this.totalVentasDataGridViewTextBoxColumn.HeaderText = "TotalVentas";
-            this.totalVentasDataGridViewTextBoxColumn.Name = "totalVentasDataGridViewTextBoxColumn";
-            this.totalVentasDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalVentasDataGridViewTextBoxColumn.Width = 89;
-            // 
-            // islaDataGridViewTextBoxColumn
-            // 
-            this.islaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.islaDataGridViewTextBoxColumn.DataPropertyName = "Isla";
-            this.islaDataGridViewTextBoxColumn.HeaderText = "Isla";
-            this.islaDataGridViewTextBoxColumn.Name = "islaDataGridViewTextBoxColumn";
-            this.islaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.islaDataGridViewTextBoxColumn.Width = 48;
-            // 
-            // turnoDataGridViewTextBoxColumn
-            // 
-            this.turnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.turnoDataGridViewTextBoxColumn.DataPropertyName = "Turno";
-            this.turnoDataGridViewTextBoxColumn.HeaderText = "Turno";
-            this.turnoDataGridViewTextBoxColumn.Name = "turnoDataGridViewTextBoxColumn";
-            this.turnoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.turnoDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // creditosDataGridViewTextBoxColumn
-            // 
-            this.creditosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.creditosDataGridViewTextBoxColumn.DataPropertyName = "Creditos";
-            this.creditosDataGridViewTextBoxColumn.HeaderText = "Creditos";
-            this.creditosDataGridViewTextBoxColumn.Name = "creditosDataGridViewTextBoxColumn";
-            this.creditosDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // efectivoDataGridViewTextBoxColumn
-            // 
-            this.efectivoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.efectivoDataGridViewTextBoxColumn.DataPropertyName = "Efectivo";
-            this.efectivoDataGridViewTextBoxColumn.HeaderText = "Efectivo";
-            this.efectivoDataGridViewTextBoxColumn.Name = "efectivoDataGridViewTextBoxColumn";
-            this.efectivoDataGridViewTextBoxColumn.Width = 71;
-            // 
-            // sodexoDataGridViewTextBoxColumn
-            // 
-            this.sodexoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.sodexoDataGridViewTextBoxColumn.DataPropertyName = "Sodexo";
-            this.sodexoDataGridViewTextBoxColumn.HeaderText = "Sodexo";
-            this.sodexoDataGridViewTextBoxColumn.Name = "sodexoDataGridViewTextBoxColumn";
-            this.sodexoDataGridViewTextBoxColumn.Width = 68;
-            // 
-            // bigPassDataGridViewTextBoxColumn
-            // 
-            this.bigPassDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.bigPassDataGridViewTextBoxColumn.DataPropertyName = "BigPass";
-            this.bigPassDataGridViewTextBoxColumn.HeaderText = "BigPass";
-            this.bigPassDataGridViewTextBoxColumn.Name = "bigPassDataGridViewTextBoxColumn";
-            this.bigPassDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // otrosDataGridViewTextBoxColumn
-            // 
-            this.otrosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.otrosDataGridViewTextBoxColumn.DataPropertyName = "Otros";
-            this.otrosDataGridViewTextBoxColumn.HeaderText = "Otros";
-            this.otrosDataGridViewTextBoxColumn.Name = "otrosDataGridViewTextBoxColumn";
-            this.otrosDataGridViewTextBoxColumn.Width = 57;
-            // 
-            // tarjetasDataGridViewTextBoxColumn
-            // 
-            this.tarjetasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.tarjetasDataGridViewTextBoxColumn.DataPropertyName = "Tarjetas";
-            this.tarjetasDataGridViewTextBoxColumn.HeaderText = "Tarjetas";
-            this.tarjetasDataGridViewTextBoxColumn.Name = "tarjetasDataGridViewTextBoxColumn";
-            this.tarjetasDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // tarjetaPlusDataGridViewTextBoxColumn
-            // 
-            this.tarjetaPlusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.tarjetaPlusDataGridViewTextBoxColumn.DataPropertyName = "TarjetaPlus";
-            this.tarjetaPlusDataGridViewTextBoxColumn.HeaderText = "TarjetaPlus";
-            this.tarjetaPlusDataGridViewTextBoxColumn.Name = "tarjetaPlusDataGridViewTextBoxColumn";
-            this.tarjetaPlusDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // ticketTronikDataGridViewTextBoxColumn
-            // 
-            this.ticketTronikDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ticketTronikDataGridViewTextBoxColumn.DataPropertyName = "TicketTronik";
-            this.ticketTronikDataGridViewTextBoxColumn.HeaderText = "TicketTronik";
-            this.ticketTronikDataGridViewTextBoxColumn.Name = "ticketTronikDataGridViewTextBoxColumn";
-            this.ticketTronikDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // cierreVentasVOBindingSource
-            // 
-            this.cierreVentasVOBindingSource.DataSource = typeof(EstacionDB.VO.CierreVentasVO);
-            // 
             // EdicionCierres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,12 +490,13 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFecha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EdicionCierres";
             this.Text = "Edicion Cierres";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreVentasVOBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreVentasVOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

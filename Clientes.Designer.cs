@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmdBuscarNombre = new System.Windows.Forms.Button();
             this.cmdBuscarCodigo = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmdConsultar = new System.Windows.Forms.Button();
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
@@ -66,7 +68,6 @@
             this.contactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmdConsultar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoIdVOBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -289,6 +290,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
             // 
+            // cmdConsultar
+            // 
+            this.cmdConsultar.Location = new System.Drawing.Point(30, 44);
+            this.cmdConsultar.Name = "cmdConsultar";
+            this.cmdConsultar.Size = new System.Drawing.Size(119, 30);
+            this.cmdConsultar.TabIndex = 13;
+            this.cmdConsultar.Text = "Consultar todos";
+            this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
+            // 
             // cmdNuevo
             // 
             this.cmdNuevo.Location = new System.Drawing.Point(31, 84);
@@ -415,16 +426,6 @@
             // 
             this.clienteVOBindingSource.DataSource = typeof(EstacionDB.VO.ClienteVO);
             // 
-            // cmdConsultar
-            // 
-            this.cmdConsultar.Location = new System.Drawing.Point(30, 44);
-            this.cmdConsultar.Name = "cmdConsultar";
-            this.cmdConsultar.Size = new System.Drawing.Size(119, 30);
-            this.cmdConsultar.TabIndex = 13;
-            this.cmdConsultar.Text = "Consultar todos";
-            this.cmdConsultar.UseVisualStyleBackColor = true;
-            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
-            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +434,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Clientes";
             this.Text = "Clientes";

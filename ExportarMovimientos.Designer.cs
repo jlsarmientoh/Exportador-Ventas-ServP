@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExportarMovimientos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmdExportExcel = new System.Windows.Forms.Button();
             this.cmdExportTxt = new System.Windows.Forms.Button();
@@ -214,6 +215,7 @@
             this.Controls.Add(this.cmdCalendarDesde);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ExportarMovimientos";
             this.Text = "ExportarMovimientos";

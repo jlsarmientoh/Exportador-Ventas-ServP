@@ -427,7 +427,7 @@ namespace Exportador_Ventas_ServP.Controller
                         mcn.Cuenta = Utilidades.CuentaVentaCorriente;
                         double diffsub = pt.Valor - subtotalSobretasaCorriente;
                         mcn.Valor = diffsub.ToString("0.00", CultureInfo.InvariantCulture);
-                        mcn.CentroCosto = "0901";
+                        mcn.CentroCosto = Exportador_Ventas_ServP.Properties.Settings.Default.CentroCostos;
                         mcn.CuentaBancaria = "";
                         movimientos.Add(mcn);
                     }
@@ -455,7 +455,7 @@ namespace Exportador_Ventas_ServP.Controller
                         mcn.Cuenta = Utilidades.CuentaVentaSuper;
                         double diffsub1 = pt.Valor - subtotalSobretasaSuper;
                         mcn.Valor = diffsub1.ToString("0.00", CultureInfo.InvariantCulture);
-                        mcn.CentroCosto = "0901";
+                        mcn.CentroCosto = Exportador_Ventas_ServP.Properties.Settings.Default.CentroCostos;
                         mcn.CuentaBancaria = "";
                         movimientos.Add(mcn);
                     }
@@ -483,7 +483,7 @@ namespace Exportador_Ventas_ServP.Controller
                         mcn.Cuenta = Utilidades.CuentaVentaDiesel;
                         double diffsub2 = pt.Valor - subtotalSobretasaDiesel;
                         mcn.Valor = diffsub2.ToString("0.00", CultureInfo.InvariantCulture);
-                        mcn.CentroCosto = "0901";
+                        mcn.CentroCosto = Exportador_Ventas_ServP.Properties.Settings.Default.CentroCostos;
                         mcn.CuentaBancaria = "";
                         movimientos.Add(mcn);
                     }
@@ -515,7 +515,7 @@ namespace Exportador_Ventas_ServP.Controller
                     mca.Naturaleza = Utilidades.NatutalezaDebito;
                     mca.Cuenta = Utilidades.CuentaAjuste;
                     mca.Valor = diff1.ToString("0.00", CultureInfo.InvariantCulture);
-                    mca.CentroCosto = "0901";
+                    mca.CentroCosto = Exportador_Ventas_ServP.Properties.Settings.Default.CentroCostos;
                     mca.CuentaBancaria = "";
                     movimientos.Add(mca);
                 }
@@ -530,7 +530,7 @@ namespace Exportador_Ventas_ServP.Controller
                     mca.Naturaleza = Utilidades.NatutalezaCredito;
                     mca.Cuenta = Utilidades.CuentaAjuste;
                     mca.Valor = diff.ToString("0.00", CultureInfo.InvariantCulture);
-                    mca.CentroCosto = "0901";
+                    mca.CentroCosto = Exportador_Ventas_ServP.Properties.Settings.Default.CentroCostos;
                     mca.CuentaBancaria = "";
                     movimientos.Add(mca);
                 }

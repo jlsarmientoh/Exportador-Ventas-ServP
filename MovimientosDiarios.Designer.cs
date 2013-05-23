@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MovimientosDiarios));
             this.CalendarDesde = new System.Windows.Forms.MonthCalendar();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFechaDesde = new System.Windows.Forms.TextBox();
@@ -378,6 +379,7 @@
             this.Controls.Add(this.txtFechaDesde);
             this.Controls.Add(this.cmdCalendarDesde);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MovimientosDiarios";
             this.Text = "Ingresos / Egresos [Diario]";

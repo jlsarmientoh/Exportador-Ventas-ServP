@@ -20,6 +20,7 @@ namespace Exportador_Ventas_ServP
         private const int PLANO = 2;
 
         private double totalVentas = 0;
+        private double totalConsumos = 0;
         private double totalCredito = 0;
         private double totalSodexo = 0;
         private double totalEfectivo = 0;
@@ -30,6 +31,8 @@ namespace Exportador_Ventas_ServP
         private double totalTicketTronik = 0;
 
         private ControladorPersistencia cp = new ControladorPersistencia();
+
+        private List<ProductoTurnoVO> productosTurno;
 
         private List<VentaVO> ventasExportar;
 
@@ -70,6 +73,16 @@ namespace Exportador_Ventas_ServP
         {
             this.UseWaitCursor = true;
             ventaVOBindingSource.DataSource = null;
+            totalEfectivo = 0;
+            totalOtros = 0;
+            totalSodexo = 0;
+            totalBigPass = 0;
+            totalCredito = 0;
+            totalTarjetas = 0;
+            totalPlus = 0;
+            totalTicketTronik = 0;
+            totalVentas = 0;
+            totalConsumos = 0;
             try
             {
                 if (cboEmpleados.SelectedIndex != -1 && !txtIsla.Text.Equals("") && !txtTurno.Text.Equals(""))
@@ -83,6 +96,15 @@ namespace Exportador_Ventas_ServP
                     {
                         totalCredito = cp.consultarTotalVentasFidelizadas(codEmp, turno, isla, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart);
                         ventaVOBindingSource.DataSource = cp.consultarVentasFidelizados(codEmp, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, isla, turno);
+                        productosTurno = cp.consultarProductosTurno(CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, isla, turno);
+
+                        if (productosTurno != null && productosTurno.Count > 0)
+                        {   
+                            foreach (ProductoTurnoVO pt in productosTurno)
+                            {
+                                totalConsumos += pt.Valor;
+                            }
+                        }
 
                         if (ventaVOBindingSource.Count == 0)
                         {
@@ -397,7 +419,8 @@ namespace Exportador_Ventas_ServP
 
                         rows = cp.guardarVentasDia(ventasExportar);
                         //rowsTurno = cp.guardarVentasTurno(cp.consultarVentasTurno(cierre.CodEmpleado, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, cierre.Isla, cierre.Turno));
-                        rowsTurno = cp.guardarProductosTurno(cp.consultarProductosTurno(CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, cierre.Isla, cierre.Turno));
+                        //rowsTurno = cp.guardarProductosTurno(cp.consultarProductosTurno(CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, cierre.Isla, cierre.Turno));
+                        rowsTurno = cp.guardarProductosTurno(productosTurno);
                         MessageBox.Show("Se guardaron (" + rows + ") ventas en este cierre", "Resultado del cierre ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         totalEfectivo = 0;
                         totalOtros = 0;
@@ -408,6 +431,7 @@ namespace Exportador_Ventas_ServP
                         totalPlus = 0;
                         totalTicketTronik = 0;
                         totalVentas = 0;
+                        totalConsumos = 0;
 
                         restaurarCampos();
                     }
@@ -451,6 +475,7 @@ namespace Exportador_Ventas_ServP
             txtTarjetaPlus.Text = String.Format("{0,10:#,0.00}", totalPlus);
             txtTotal.Text = String.Format("{0,10:#,0.00}", totalVentas);
             txtTicketTronik.Text = String.Format("{0,10:#,0.00}", totalTicketTronik);
+            txtTotalVentas.Text = String.Format("{0,10:#,0.00}", totalConsumos);
         }
 
         private void restaurarCampos()

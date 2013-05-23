@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lecturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,13 +45,13 @@
             this.ingresosEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.combustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobretasasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cierreVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disposiciónDeEfectivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.sobretasasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +82,7 @@
             // lecturasToolStripMenuItem
             // 
             this.lecturasToolStripMenuItem.Name = "lecturasToolStripMenuItem";
-            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.lecturasToolStripMenuItem.Text = "Lecturas";
             this.lecturasToolStripMenuItem.Click += new System.EventHandler(this.lecturasToolStripMenuItem_Click);
             // 
@@ -97,14 +98,14 @@
             // administrarToolStripMenuItem
             // 
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.administrarToolStripMenuItem.Text = "Administrar";
             this.administrarToolStripMenuItem.Click += new System.EventHandler(this.administrarToolStripMenuItem_Click);
             // 
             // importarToolStripMenuItem
             // 
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.importarToolStripMenuItem.Text = "Importar";
             this.importarToolStripMenuItem.Click += new System.EventHandler(this.importarToolStripMenuItem_Click);
             // 
@@ -123,7 +124,7 @@
             this.registroDiarioToolStripMenuItem1,
             this.modificarToolStripMenuItem});
             this.registroDiarioToolStripMenuItem.Name = "registroDiarioToolStripMenuItem";
-            this.registroDiarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.registroDiarioToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.registroDiarioToolStripMenuItem.Text = "Cierres";
             this.registroDiarioToolStripMenuItem.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem_Click);
             // 
@@ -144,7 +145,7 @@
             // exportarToolStripMenuItem
             // 
             this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.exportarToolStripMenuItem.Text = "Exportar";
             this.exportarToolStripMenuItem.Click += new System.EventHandler(this.exportarToolStripMenuItem_Click);
             // 
@@ -159,7 +160,7 @@
             // ingresosEgresosToolStripMenuItem
             // 
             this.ingresosEgresosToolStripMenuItem.Name = "ingresosEgresosToolStripMenuItem";
-            this.ingresosEgresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresosEgresosToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.ingresosEgresosToolStripMenuItem.Text = "Egresos";
             this.ingresosEgresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosEgresosToolStripMenuItem_Click);
             // 
@@ -175,9 +176,16 @@
             // combustibleToolStripMenuItem
             // 
             this.combustibleToolStripMenuItem.Name = "combustibleToolStripMenuItem";
-            this.combustibleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.combustibleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.combustibleToolStripMenuItem.Text = "Combustible";
             this.combustibleToolStripMenuItem.Click += new System.EventHandler(this.combustibleToolStripMenuItem_Click);
+            // 
+            // sobretasasToolStripMenuItem
+            // 
+            this.sobretasasToolStripMenuItem.Name = "sobretasasToolStripMenuItem";
+            this.sobretasasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.sobretasasToolStripMenuItem.Text = "Sobretasas";
+            this.sobretasasToolStripMenuItem.Click += new System.EventHandler(this.sobretasasToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 
@@ -218,13 +226,6 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // sobretasasToolStripMenuItem
-            // 
-            this.sobretasasToolStripMenuItem.Name = "sobretasasToolStripMenuItem";
-            this.sobretasasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sobretasasToolStripMenuItem.Text = "Sobretasas";
-            this.sobretasasToolStripMenuItem.Click += new System.EventHandler(this.sobretasasToolStripMenuItem_Click);
-            // 
             // PanelPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +233,7 @@
             this.ClientSize = new System.Drawing.Size(632, 453);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "PanelPrincipal";

@@ -28,12 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lecturas));
             this.CalendarHasta = new System.Windows.Forms.MonthCalendar();
             this.CalendarDesde = new System.Windows.Forms.MonthCalendar();
             this.cmdExportTxt = new System.Windows.Forms.Button();
             this.cmdExportExcel = new System.Windows.Forms.Button();
             this.GridLecturasCargadas = new System.Windows.Forms.DataGridView();
             this.frameAdicionar = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNetaDiesel = new System.Windows.Forms.TextBox();
+            this.txtNetaSuper = new System.Windows.Forms.TextBox();
+            this.txtNetaCorriente = new System.Windows.Forms.TextBox();
+            this.txtNetaTotal = new System.Windows.Forms.TextBox();
+            this.txtSobretasaDiesel = new System.Windows.Forms.TextBox();
+            this.txtSobretasaSuper = new System.Windows.Forms.TextBox();
+            this.txtSobretasaCorriente = new System.Windows.Forms.TextBox();
+            this.txtSobretasaTotal = new System.Windows.Forms.TextBox();
+            this.txtVentaDiesel = new System.Windows.Forms.TextBox();
+            this.txtVentaSuper = new System.Windows.Forms.TextBox();
+            this.txtVentaCorriente = new System.Windows.Forms.TextBox();
+            this.txtVentaTotal = new System.Windows.Forms.TextBox();
             this.txtTotalGalonesDiesel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTotalGalonesSuper = new System.Windows.Forms.TextBox();
@@ -49,22 +66,6 @@
             this.txtFechaDesde = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmdConsultar = new System.Windows.Forms.Button();
-            this.txtVentaDiesel = new System.Windows.Forms.TextBox();
-            this.txtVentaSuper = new System.Windows.Forms.TextBox();
-            this.txtVentaCorriente = new System.Windows.Forms.TextBox();
-            this.txtVentaTotal = new System.Windows.Forms.TextBox();
-            this.txtSobretasaDiesel = new System.Windows.Forms.TextBox();
-            this.txtSobretasaSuper = new System.Windows.Forms.TextBox();
-            this.txtSobretasaCorriente = new System.Windows.Forms.TextBox();
-            this.txtSobretasaTotal = new System.Windows.Forms.TextBox();
-            this.txtNetaDiesel = new System.Windows.Forms.TextBox();
-            this.txtNetaSuper = new System.Windows.Forms.TextBox();
-            this.txtNetaCorriente = new System.Windows.Forms.TextBox();
-            this.txtNetaTotal = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridLecturasCargadas)).BeginInit();
             this.frameAdicionar.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +144,150 @@
             this.frameAdicionar.TabIndex = 17;
             this.frameAdicionar.TabStop = false;
             this.frameAdicionar.Text = "Resumen lecturas";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(438, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Venta Neta";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(315, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 13);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Vr Sobretasa";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(201, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Venta Total";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(101, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Galones";
+            // 
+            // txtNetaDiesel
+            // 
+            this.txtNetaDiesel.Location = new System.Drawing.Point(417, 131);
+            this.txtNetaDiesel.Name = "txtNetaDiesel";
+            this.txtNetaDiesel.ReadOnly = true;
+            this.txtNetaDiesel.Size = new System.Drawing.Size(103, 20);
+            this.txtNetaDiesel.TabIndex = 25;
+            this.txtNetaDiesel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtNetaSuper
+            // 
+            this.txtNetaSuper.Location = new System.Drawing.Point(417, 103);
+            this.txtNetaSuper.Name = "txtNetaSuper";
+            this.txtNetaSuper.ReadOnly = true;
+            this.txtNetaSuper.Size = new System.Drawing.Size(103, 20);
+            this.txtNetaSuper.TabIndex = 24;
+            this.txtNetaSuper.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtNetaCorriente
+            // 
+            this.txtNetaCorriente.Location = new System.Drawing.Point(417, 73);
+            this.txtNetaCorriente.Name = "txtNetaCorriente";
+            this.txtNetaCorriente.ReadOnly = true;
+            this.txtNetaCorriente.Size = new System.Drawing.Size(102, 20);
+            this.txtNetaCorriente.TabIndex = 23;
+            this.txtNetaCorriente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtNetaTotal
+            // 
+            this.txtNetaTotal.Location = new System.Drawing.Point(416, 43);
+            this.txtNetaTotal.Name = "txtNetaTotal";
+            this.txtNetaTotal.ReadOnly = true;
+            this.txtNetaTotal.Size = new System.Drawing.Size(103, 20);
+            this.txtNetaTotal.TabIndex = 22;
+            this.txtNetaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSobretasaDiesel
+            // 
+            this.txtSobretasaDiesel.Location = new System.Drawing.Point(300, 131);
+            this.txtSobretasaDiesel.Name = "txtSobretasaDiesel";
+            this.txtSobretasaDiesel.ReadOnly = true;
+            this.txtSobretasaDiesel.Size = new System.Drawing.Size(103, 20);
+            this.txtSobretasaDiesel.TabIndex = 21;
+            this.txtSobretasaDiesel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSobretasaSuper
+            // 
+            this.txtSobretasaSuper.Location = new System.Drawing.Point(300, 103);
+            this.txtSobretasaSuper.Name = "txtSobretasaSuper";
+            this.txtSobretasaSuper.ReadOnly = true;
+            this.txtSobretasaSuper.Size = new System.Drawing.Size(103, 20);
+            this.txtSobretasaSuper.TabIndex = 20;
+            this.txtSobretasaSuper.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSobretasaCorriente
+            // 
+            this.txtSobretasaCorriente.Location = new System.Drawing.Point(300, 72);
+            this.txtSobretasaCorriente.Name = "txtSobretasaCorriente";
+            this.txtSobretasaCorriente.ReadOnly = true;
+            this.txtSobretasaCorriente.Size = new System.Drawing.Size(102, 20);
+            this.txtSobretasaCorriente.TabIndex = 19;
+            this.txtSobretasaCorriente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSobretasaTotal
+            // 
+            this.txtSobretasaTotal.Location = new System.Drawing.Point(299, 43);
+            this.txtSobretasaTotal.Name = "txtSobretasaTotal";
+            this.txtSobretasaTotal.ReadOnly = true;
+            this.txtSobretasaTotal.Size = new System.Drawing.Size(103, 20);
+            this.txtSobretasaTotal.TabIndex = 18;
+            this.txtSobretasaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtVentaDiesel
+            // 
+            this.txtVentaDiesel.Location = new System.Drawing.Point(183, 131);
+            this.txtVentaDiesel.Name = "txtVentaDiesel";
+            this.txtVentaDiesel.ReadOnly = true;
+            this.txtVentaDiesel.Size = new System.Drawing.Size(103, 20);
+            this.txtVentaDiesel.TabIndex = 17;
+            this.txtVentaDiesel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtVentaSuper
+            // 
+            this.txtVentaSuper.Location = new System.Drawing.Point(183, 103);
+            this.txtVentaSuper.Name = "txtVentaSuper";
+            this.txtVentaSuper.ReadOnly = true;
+            this.txtVentaSuper.Size = new System.Drawing.Size(103, 20);
+            this.txtVentaSuper.TabIndex = 16;
+            this.txtVentaSuper.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtVentaCorriente
+            // 
+            this.txtVentaCorriente.Location = new System.Drawing.Point(183, 72);
+            this.txtVentaCorriente.Name = "txtVentaCorriente";
+            this.txtVentaCorriente.ReadOnly = true;
+            this.txtVentaCorriente.Size = new System.Drawing.Size(102, 20);
+            this.txtVentaCorriente.TabIndex = 15;
+            this.txtVentaCorriente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtVentaTotal
+            // 
+            this.txtVentaTotal.Location = new System.Drawing.Point(182, 42);
+            this.txtVentaTotal.Name = "txtVentaTotal";
+            this.txtVentaTotal.ReadOnly = true;
+            this.txtVentaTotal.Size = new System.Drawing.Size(103, 20);
+            this.txtVentaTotal.TabIndex = 14;
+            this.txtVentaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtTotalGalonesDiesel
             // 
@@ -278,150 +423,6 @@
             this.cmdConsultar.UseVisualStyleBackColor = true;
             this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
             // 
-            // txtVentaDiesel
-            // 
-            this.txtVentaDiesel.Location = new System.Drawing.Point(183, 131);
-            this.txtVentaDiesel.Name = "txtVentaDiesel";
-            this.txtVentaDiesel.ReadOnly = true;
-            this.txtVentaDiesel.Size = new System.Drawing.Size(103, 20);
-            this.txtVentaDiesel.TabIndex = 17;
-            this.txtVentaDiesel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtVentaSuper
-            // 
-            this.txtVentaSuper.Location = new System.Drawing.Point(183, 103);
-            this.txtVentaSuper.Name = "txtVentaSuper";
-            this.txtVentaSuper.ReadOnly = true;
-            this.txtVentaSuper.Size = new System.Drawing.Size(103, 20);
-            this.txtVentaSuper.TabIndex = 16;
-            this.txtVentaSuper.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtVentaCorriente
-            // 
-            this.txtVentaCorriente.Location = new System.Drawing.Point(183, 72);
-            this.txtVentaCorriente.Name = "txtVentaCorriente";
-            this.txtVentaCorriente.ReadOnly = true;
-            this.txtVentaCorriente.Size = new System.Drawing.Size(102, 20);
-            this.txtVentaCorriente.TabIndex = 15;
-            this.txtVentaCorriente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtVentaTotal
-            // 
-            this.txtVentaTotal.Location = new System.Drawing.Point(182, 42);
-            this.txtVentaTotal.Name = "txtVentaTotal";
-            this.txtVentaTotal.ReadOnly = true;
-            this.txtVentaTotal.Size = new System.Drawing.Size(103, 20);
-            this.txtVentaTotal.TabIndex = 14;
-            this.txtVentaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSobretasaDiesel
-            // 
-            this.txtSobretasaDiesel.Location = new System.Drawing.Point(300, 131);
-            this.txtSobretasaDiesel.Name = "txtSobretasaDiesel";
-            this.txtSobretasaDiesel.ReadOnly = true;
-            this.txtSobretasaDiesel.Size = new System.Drawing.Size(103, 20);
-            this.txtSobretasaDiesel.TabIndex = 21;
-            this.txtSobretasaDiesel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSobretasaSuper
-            // 
-            this.txtSobretasaSuper.Location = new System.Drawing.Point(300, 103);
-            this.txtSobretasaSuper.Name = "txtSobretasaSuper";
-            this.txtSobretasaSuper.ReadOnly = true;
-            this.txtSobretasaSuper.Size = new System.Drawing.Size(103, 20);
-            this.txtSobretasaSuper.TabIndex = 20;
-            this.txtSobretasaSuper.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSobretasaCorriente
-            // 
-            this.txtSobretasaCorriente.Location = new System.Drawing.Point(300, 72);
-            this.txtSobretasaCorriente.Name = "txtSobretasaCorriente";
-            this.txtSobretasaCorriente.ReadOnly = true;
-            this.txtSobretasaCorriente.Size = new System.Drawing.Size(102, 20);
-            this.txtSobretasaCorriente.TabIndex = 19;
-            this.txtSobretasaCorriente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSobretasaTotal
-            // 
-            this.txtSobretasaTotal.Location = new System.Drawing.Point(299, 43);
-            this.txtSobretasaTotal.Name = "txtSobretasaTotal";
-            this.txtSobretasaTotal.ReadOnly = true;
-            this.txtSobretasaTotal.Size = new System.Drawing.Size(103, 20);
-            this.txtSobretasaTotal.TabIndex = 18;
-            this.txtSobretasaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtNetaDiesel
-            // 
-            this.txtNetaDiesel.Location = new System.Drawing.Point(417, 131);
-            this.txtNetaDiesel.Name = "txtNetaDiesel";
-            this.txtNetaDiesel.ReadOnly = true;
-            this.txtNetaDiesel.Size = new System.Drawing.Size(103, 20);
-            this.txtNetaDiesel.TabIndex = 25;
-            this.txtNetaDiesel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtNetaSuper
-            // 
-            this.txtNetaSuper.Location = new System.Drawing.Point(417, 103);
-            this.txtNetaSuper.Name = "txtNetaSuper";
-            this.txtNetaSuper.ReadOnly = true;
-            this.txtNetaSuper.Size = new System.Drawing.Size(103, 20);
-            this.txtNetaSuper.TabIndex = 24;
-            this.txtNetaSuper.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtNetaCorriente
-            // 
-            this.txtNetaCorriente.Location = new System.Drawing.Point(417, 73);
-            this.txtNetaCorriente.Name = "txtNetaCorriente";
-            this.txtNetaCorriente.ReadOnly = true;
-            this.txtNetaCorriente.Size = new System.Drawing.Size(102, 20);
-            this.txtNetaCorriente.TabIndex = 23;
-            this.txtNetaCorriente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtNetaTotal
-            // 
-            this.txtNetaTotal.Location = new System.Drawing.Point(416, 43);
-            this.txtNetaTotal.Name = "txtNetaTotal";
-            this.txtNetaTotal.ReadOnly = true;
-            this.txtNetaTotal.Size = new System.Drawing.Size(103, 20);
-            this.txtNetaTotal.TabIndex = 22;
-            this.txtNetaTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(101, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Galones";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(201, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Venta Total";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(315, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Vr Sobretasa";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(438, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Venta Neta";
-            // 
             // Lecturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,6 +441,7 @@
             this.Controls.Add(this.cmdExportExcel);
             this.Controls.Add(this.GridLecturasCargadas);
             this.Controls.Add(this.frameAdicionar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Lecturas";
             this.Text = "Lecturas";

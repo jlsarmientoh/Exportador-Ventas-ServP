@@ -60,6 +60,20 @@ namespace Exportador_Ventas_ServP.Properties {
             }
         }
         
+        internal static System.Drawing.Icon _32x32 {
+            get {
+                object obj = ResourceManager.GetObject("_32x32", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon _64x64 {
+            get {
+                object obj = ResourceManager.GetObject("_64x64", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap add_hover {
             get {
                 object obj = ResourceManager.GetObject("add_hover", resourceCulture);

@@ -28,5 +28,8 @@
     <Setting Name="NombreCorriente" Type="System.String" Scope="User">
       <Value Profile="(Default)">CORRIENTE</Value>
     </Setting>
+    <Setting Name="CentroCostos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0901</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

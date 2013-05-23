@@ -129,4 +129,29 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>51</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAC1tbT/wsLB/8PCwv/DwsL/wcLB/8TExP/BwsL/vsHB/8DExP/BwcD/w8LC/8PCwv/DwsH/wcC//9nZ
+        2f/+/v7/m5qZ/0FAQP9gX1//YWBf/2NiYf9kY2P/V1ZV/3FwcP9sa2v/UVBQ/2tqav9hYGD/YWBg/3p5
+        ef/Q0M///v7+/5GQkP9UU1P/hYSE/zQzM/+Ih4b/dXR0/2BfX/9/fn7/gH9+/19eXv91dHP/iomI/zw7
+        Ov+SkZD/0NDQ//7+/v+fnp7/SEdH/6Sko/9YV1f/fHt6/3Nxcf9wb2//i4qK/3V0dP9dXFv/cXBv/359
+        fP9fXl7/trW0/9DQz//+/v7/np2d/6qpqP+rqqn/q6qp/6uqqf+rqqn/q6qp/6qqqf+qqqn/q6qp/6uq
+        qf+rqqn/q6qp/6Cfn/++vr7/3d3d/3Fvb/+LiYj/iomH/2ZlZP8ICAn/LDI0/x0yN/8OMTf/CiQo/wgI
+        CP9vbm3/goF//4uJiP9hX1//u7q6/8TExP9dWlr/fHp5/3x6ef98enn/Om94/8/1/v9y5/7/Ht7+/xbT
+        8/85TE//RUND/z8+Pv9aWFj/aWdm/8/Ozv/+/v7/WVZX/3Vzcv91c3L/dXJx/zl2gv/P9f7/cuf+/x7e
+        /v8b0vL/Mk1R/1ZUVP91c3L/RURD/2hmZf/Hxsb//v7+/2NhYf+Afn3/gH59/4B+ff87eYT/z/X+/3Ln
+        /v8e3v7/Ftb3/ypESP95d3b/f318/15cW/9lY2P/2tra//7+/v+Afn//jIqJ/46Ni/+OjYv/PnuH/8/1
+        /v9y5/7/Ht7+/w7c/f80T1P/joyL/46Mi/98enn/ZGJi//r6+v/+/v7/ysnK/3Fvbv+fnZz/n56c/0F/
+        iv/O9f7/cub9/x7d/f8N3f7/P1tf/56dm/+enZv/iYeG/5mXmP/9/f3//f39//39/f+EgoL/k5KR/7Cv
+        rf9Dd4L/nqKj/6Gkpf+OkZH/TZSf/0BcYP+vrqz/pKOh/317e//z8/P//f39//39/f/+/v7/9vX2/3l3
+        d/+Qj47/RXaB/8nJyf/My8n/tbSy/2egqf9BXmL/pKOh/2ZjZP+Lior//f39//39/f/9/f3//v7+//7+
+        /v/6+vr/paSk/zdlcf/IyMj/zMvJ/7W0sv9nn6j/JEBF/4uKiv98e3v/cHBw//39/f/9/f3//f39//39
+        /f/9/f3//f39//39/f9YgYz/o6ut/5ysr/+Bmp7/RZuo/1p1ef+kpKT/NTU1/+np6f/9/f3//f39//39
+        /f/+/v7//v7+//7+/v/+/v7/i5SW/5amqv9voqz/UJim/1CQmv+vsLD/zs7O//X19f/9/f3//f39//39
+        /f/9/f3/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>
