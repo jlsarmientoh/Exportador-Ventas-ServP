@@ -22,6 +22,7 @@ namespace Exportador_Ventas_ServP
         private ComprasCombustible comprasCombustible;
         private InformesCierre informes;
         private InformeDisposicionEfectivo rptDisposicionEfectivo;
+        private Exportador_Ventas_ServP.Reports.InformeCombustible informeCombustible;
         private ImportarCliente importarCliente;
         private ExportarMovimientos exportarMovimientos;
         private EdicionCierres edicionCierres;
@@ -274,6 +275,13 @@ namespace Exportador_Ventas_ServP
             sobretasas = new SobreTasas();
             sobretasas.MdiParent = this;
             sobretasas.Show();
+        }
+
+        private void controlDeTanquesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            informeCombustible = new Exportador_Ventas_ServP.Reports.InformeCombustible();
+            informeCombustible.MdiParent = this;
+            informeCombustible.Show();
         }
     }
 }

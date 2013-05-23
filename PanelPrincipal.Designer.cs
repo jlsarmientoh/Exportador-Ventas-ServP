@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lecturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +50,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.controlDeTanquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +58,6 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultasToolStripMenuItem,
             this.clientesToolStripMenuItem,
             this.ventasToolStripMenuItem1,
             this.movimientosToolStripMenuItem,
@@ -70,21 +68,6 @@
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
-            // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lecturasToolStripMenuItem});
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            // 
-            // lecturasToolStripMenuItem
-            // 
-            this.lecturasToolStripMenuItem.Name = "lecturasToolStripMenuItem";
-            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.lecturasToolStripMenuItem.Text = "Lecturas";
-            this.lecturasToolStripMenuItem.Click += new System.EventHandler(this.lecturasToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -98,14 +81,14 @@
             // administrarToolStripMenuItem
             // 
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.administrarToolStripMenuItem.Text = "Administrar";
             this.administrarToolStripMenuItem.Click += new System.EventHandler(this.administrarToolStripMenuItem_Click);
             // 
             // importarToolStripMenuItem
             // 
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.importarToolStripMenuItem.Text = "Importar";
             this.importarToolStripMenuItem.Click += new System.EventHandler(this.importarToolStripMenuItem_Click);
             // 
@@ -191,7 +174,8 @@
             // 
             this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cierreVentasToolStripMenuItem,
-            this.disposiciónDeEfectivoToolStripMenuItem});
+            this.disposiciónDeEfectivoToolStripMenuItem,
+            this.controlDeTanquesToolStripMenuItem});
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.informesToolStripMenuItem.Text = "Informes";
@@ -226,6 +210,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
+            // controlDeTanquesToolStripMenuItem
+            // 
+            this.controlDeTanquesToolStripMenuItem.Name = "controlDeTanquesToolStripMenuItem";
+            this.controlDeTanquesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.controlDeTanquesToolStripMenuItem.Text = "Control de tanques";
+            this.controlDeTanquesToolStripMenuItem.Click += new System.EventHandler(this.controlDeTanquesToolStripMenuItem_Click);
+            // 
             // PanelPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,8 +245,6 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip ToolTip;
-        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lecturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem1;
@@ -272,6 +261,7 @@
         private System.Windows.Forms.ToolStripMenuItem registroDiarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobretasasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlDeTanquesToolStripMenuItem;
     }
 }
 

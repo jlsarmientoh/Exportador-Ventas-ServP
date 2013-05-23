@@ -188,6 +188,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InformeCombustible.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="InformeGeneralCierreVenta.cs">
       <AutoGen>True</AutoGen>
@@ -277,6 +278,7 @@
     <EmbeddedResource Include="InformeCombustible.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>InformeCombustible.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="InformeGeneralCierreVenta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
