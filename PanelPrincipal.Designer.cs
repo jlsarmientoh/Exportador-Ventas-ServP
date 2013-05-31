@@ -47,10 +47,11 @@
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cierreVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disposiciónDeEfectivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlDeTanquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.controlDeTanquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +63,8 @@
             this.ventasToolStripMenuItem1,
             this.movimientosToolStripMenuItem,
             this.comprasToolStripMenuItem,
-            this.informesToolStripMenuItem});
+            this.informesToolStripMenuItem,
+            this.acercaDeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
@@ -81,14 +83,14 @@
             // administrarToolStripMenuItem
             // 
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.administrarToolStripMenuItem.Text = "Administrar";
             this.administrarToolStripMenuItem.Click += new System.EventHandler(this.administrarToolStripMenuItem_Click);
             // 
             // importarToolStripMenuItem
             // 
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.importarToolStripMenuItem.Text = "Importar";
             this.importarToolStripMenuItem.Click += new System.EventHandler(this.importarToolStripMenuItem_Click);
             // 
@@ -194,6 +196,13 @@
             this.disposiciónDeEfectivoToolStripMenuItem.Text = "Disposición de efectivo";
             this.disposiciónDeEfectivoToolStripMenuItem.Click += new System.EventHandler(this.disposiciónDeEfectivoToolStripMenuItem_Click);
             // 
+            // controlDeTanquesToolStripMenuItem
+            // 
+            this.controlDeTanquesToolStripMenuItem.Name = "controlDeTanquesToolStripMenuItem";
+            this.controlDeTanquesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.controlDeTanquesToolStripMenuItem.Text = "Control de tanques";
+            this.controlDeTanquesToolStripMenuItem.Click += new System.EventHandler(this.controlDeTanquesToolStripMenuItem_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -210,12 +219,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // controlDeTanquesToolStripMenuItem
+            // acercaDeToolStripMenuItem
             // 
-            this.controlDeTanquesToolStripMenuItem.Name = "controlDeTanquesToolStripMenuItem";
-            this.controlDeTanquesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.controlDeTanquesToolStripMenuItem.Text = "Control de tanques";
-            this.controlDeTanquesToolStripMenuItem.Click += new System.EventHandler(this.controlDeTanquesToolStripMenuItem_Click);
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de ...";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // PanelPrincipal
             // 
@@ -262,6 +271,7 @@
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobretasasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlDeTanquesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }
 

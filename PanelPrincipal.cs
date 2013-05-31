@@ -27,6 +27,7 @@ namespace Exportador_Ventas_ServP
         private ExportarMovimientos exportarMovimientos;
         private EdicionCierres edicionCierres;
         private SobreTasas sobretasas;
+        private AboutGaslissa about;
         #endregion
 
         public PanelPrincipal()
@@ -282,6 +283,13 @@ namespace Exportador_Ventas_ServP
             informeCombustible = new Exportador_Ventas_ServP.Reports.InformeCombustible();
             informeCombustible.MdiParent = this;
             informeCombustible.Show();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            about = new AboutGaslissa();
+            about.MdiParent = this;
+            about.Show();
         }
     }
 }

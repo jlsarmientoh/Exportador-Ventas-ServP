@@ -8,6 +8,9 @@ using System.Windows.Forms;
 using EstacionDB.Utilidades;
 using EstacionDB.Exceptions;
 using Exportador_Ventas_ServP.Controller;
+using System.Threading;
+using EstacionDB.DTO;
+using EstacionDB.VO;
 
 namespace Exportador_Ventas_ServP
 {
@@ -109,11 +112,14 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
+                
                 //ControladorPersistencia cp = new ControladorPersistencia();
                 bool exportado = false;
                 int i = 0; // cuenta los exportados
                 int j = 0; // cuenta los nos exportados
                 int k = 0; // cuenta el progreso general
+                List<MovimientoContableDTO> movimientos = null;
+                List<ClienteVO> clientes = cp.consultarClientes();
                 if (rango)
                 {
                     while (DateTime.Compare(tmFecha, fechaHasta) <= 0)
@@ -130,9 +136,11 @@ namespace Exportador_Ventas_ServP
                         }
                         sb.Append(tmFecha.Month);
                         documento = sb.ToString();
-                        exportado = FileExporter.exportar(cp.getMovimientosContables(tmFecha, tmFecha, documento)
+                        movimientos = cp.getMovimientosContables(tmFecha, tmFecha, documento, clientes);                        
+                        exportado = FileExporter.exportar(movimientos
                             , Utilidades.rutaPrincipalExport + "movimientos_contables_" + tmFecha.ToString("dd-MM-yyy") + ".txt"
                             , FileExporter.PLANO);
+                        
                         if (exportado)
                         {
                             i++;
@@ -146,13 +154,14 @@ namespace Exportador_Ventas_ServP
                         k++;
                         tmFecha = tmFecha.AddDays(1d);
                         workerTxt.ReportProgress(k);
+                        Thread.Sleep(1000);
                     }
 
                     e.Result = "Exportados: ("+ i +")\nNo exportados: ("+ j +")";
                 }
                 else
                 {
-                    exportado = FileExporter.exportar(cp.getMovimientosContables(fecha, fecha, documento)
+                    exportado = FileExporter.exportar(cp.getMovimientosContables(fecha, fecha, documento, clientes)
                             , Utilidades.rutaPrincipalExport + "movimientos_contables_" + fecha.ToString("dd-MM-yyy") + ".txt"
                             , FileExporter.PLANO);
                     if (exportado)
@@ -195,6 +204,8 @@ namespace Exportador_Ventas_ServP
                 int i = 0; // cuenta los exportados
                 int j = 0; // cuenta los nos exportados
                 int k = 0; // cuenta el progreso general
+                List<MovimientoContableDTO> movimientos = null;
+                List<ClienteVO> clientes = cp.consultarClientes();
                 if (rango)
                 {
                     while (DateTime.Compare(tmFecha, fechaHasta) <= 0)
@@ -211,9 +222,11 @@ namespace Exportador_Ventas_ServP
                         }
                         sb.Append(tmFecha.Month);
                         documento = sb.ToString();
-                        exportado = FileExporter.exportar(cp.getMovimientosContables(tmFecha, tmFecha, documento)
+                        movimientos = cp.getMovimientosContables(tmFecha, tmFecha, documento, clientes);                        
+                        exportado = FileExporter.exportar(movimientos
                             , Utilidades.rutaPrincipalExport + "movimientos_contables_" + tmFecha.ToString("dd-MM-yyy") + ".csv"
                             , FileExporter.EXCEL);
+                        
                         if (exportado)
                         {
                             i++;
@@ -225,15 +238,16 @@ namespace Exportador_Ventas_ServP
                             //e.Result = "No Exportado";
                         }
                         k++;
-                        tmFecha = tmFecha.AddDays(1d);
-                        workerTxt.ReportProgress(k);
+                        tmFecha = tmFecha.AddDays(1d);                        
+                        workerExcel.ReportProgress(k);
+                        Thread.Sleep(1000);
                     }
 
                     e.Result = "Exportados: (" + i + ")\nNo exportados: (" + j + ")";
                 }
                 else
                 {
-                    exportado = FileExporter.exportar(cp.getMovimientosContables(fecha, fecha, documento)
+                    exportado = FileExporter.exportar(cp.getMovimientosContables(fecha, fecha, documento, clientes)
                     , Utilidades.rutaPrincipalExport + "movimientos_contables_" + fecha.ToString("dd-MM-yyy") + ".csv"
                     , FileExporter.EXCEL);
                     if (exportado)

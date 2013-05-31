@@ -133,6 +133,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutGaslissa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutGaslissa.Designer.cs">
+      <DependentUpon>AboutGaslissa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutGaslissa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutGaslissa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Clientes.cs</DependentUpon>

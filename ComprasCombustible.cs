@@ -22,7 +22,7 @@ namespace Exportador_Ventas_ServP
         private int sobranteDia = 0;
         private int sobranteAcumulado = 0;
         private int sobranteAnterior = 0;
-        private int porcetaje = 0;
+        private double porcentaje = 0;
 
         public ComprasCombustible()
         {
@@ -78,7 +78,8 @@ namespace Exportador_Ventas_ServP
                 cc.VentaSurtidor = surtidor;
                 cc.SobranteDia = sobranteDia;
                 cc.SobranteAcumulado = sobranteAcumulado;
-                cc.Procentaje = 0;
+                porcentaje = (double)(((double)sobranteDia / (double)inicial) *100);
+                cc.Procentaje = porcentaje;
                 cc.IdProducto = (int)cboProducto.SelectedValue;
                 cp.guardarControlCombustible(cc);
 
@@ -100,7 +101,7 @@ namespace Exportador_Ventas_ServP
             surtidor = 0;
             sobranteDia = 0;
             sobranteAcumulado = 0;
-            porcetaje = 0;
+            porcentaje = 0;
             txtInicial.Text = "0";
             txtFinal.Text = "0";
             txtSurtidor.Text = "0";
@@ -202,6 +203,9 @@ namespace Exportador_Ventas_ServP
             catch (PersistenciaException pe)
             {
                 MessageBox.Show(pe.Message, "Error al consultar el inventario anterior", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (NullReferenceException npr)
+            {
             }
         }
 

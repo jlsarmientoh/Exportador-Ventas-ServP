@@ -25,26 +25,6 @@ namespace Exportador_Ventas_ServP.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
-<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>1</string>
-  <string>2</string>
-  <string>3</string>
-  <string>4</string>
-  <string>5</string>
-  <string>6</string>
-</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection grupoIsla {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["grupoIsla"]));
-            }
-            set {
-                this["grupoIsla"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("El Pino")]
         public string nombreEDS {
             get {
@@ -112,6 +92,20 @@ namespace Exportador_Ventas_ServP.Properties {
             }
             set {
                 this["CentroCostos"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>1,2</string>\r\n  <string>3,4</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection grupoIsla {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["grupoIsla"]));
+            }
+            set {
+                this["grupoIsla"] = value;
             }
         }
     }

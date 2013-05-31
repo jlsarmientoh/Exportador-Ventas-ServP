@@ -205,7 +205,7 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
-        public List<MovimientoContableDTO> getMovimientosContables(DateTime fecha1, DateTime fecha2, string doc)
+        public List<MovimientoContableDTO> getMovimientosContables(DateTime fecha1, DateTime fecha2, string doc, List<ClienteVO> clientes)
         {
             List<MovimientoContableDTO> movimientos = null;
             movimientos = new List<MovimientoContableDTO>();
@@ -224,13 +224,14 @@ namespace Exportador_Ventas_ServP.Controller
                 List<VentaVO> ventasCredito = null;
                 List<CierreVentasVO> cierresVenta = null;
                 List<SobretasaVO> sobretasas = null;
-                List<ProductoTurnoVO> productos = null;
+                List<ProductoTurnoVO> productos = null;                
                 CierreVentasVO cv = null;
 
                 ventasCredito = getVentasDAO().consultarVentasAgrupadas(fecha1, fecha2);
                 cierresVenta = getCierreDAO().consultarCierresAgrupados(fecha1, fecha2);
                 sobretasas = getSobreTasasDAO().consultarSobretasas(fecha1.Month, fecha1.Year, fecha1.Day);
                 productos = getProductosTurnoDAO().consultarProductosAgrupados(fecha1, fecha2);
+                clientes = getClientesDAO().consultarClientes();
                 cv = cierresVenta[0];
 
                 #region Movimientos Debito
@@ -245,7 +246,16 @@ namespace Exportador_Ventas_ServP.Controller
                     {
                         try
                         {
-                            ClienteVO tmpCliente = getClientesDAO().consultarClienteByCodigo(vc.Nit);
+                            ClienteVO tmpCliente = null;
+                            foreach (ClienteVO cTmp in clientes)
+                            {
+                                if ((cTmp.Codigo != null) && (cTmp.Codigo.Trim().Equals(vc.Nit.Trim())))
+                                {
+                                    tmpCliente = cTmp;
+                                    break;
+                                }
+                            }
+                            //ClienteVO tmpCliente = getClientesDAO().consultarClienteByCodigo(vc.Nit);
                             if (tmpCliente != null)
                             {
                                 mc.Nit = tmpCliente.Identificacion.Trim();
