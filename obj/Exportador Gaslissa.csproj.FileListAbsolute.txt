@@ -100,3 +100,5 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.application
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.exe
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\Tanque.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\bin\Release\Mappings\VolumenTanque.hbm.xml

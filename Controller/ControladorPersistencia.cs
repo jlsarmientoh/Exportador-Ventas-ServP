@@ -28,6 +28,8 @@ namespace Exportador_Ventas_ServP.Controller
         private SobretasasDAO sobretasasDAO = null;
         private ProductosDAO productosDAO = null;
         private ControlCombustibleDAO controlCombustibleDAO = null;
+        private TanquesDAO tanquesDAO = null;
+        private VolumenTanqueDAO volumenesDAO = null;
         #endregion
         #region métodos para obtener instancias de los DAO's
         private VentasDAO getVentasDAO()
@@ -146,9 +148,27 @@ namespace Exportador_Ventas_ServP.Controller
             }
             return controlCombustibleDAO;
         }
+
+        private TanquesDAO getTanquesDAO()
+        {
+            if (tanquesDAO == null)
+            {
+                tanquesDAO = new TanquesDAO();
+            }
+            return tanquesDAO;
+        }
+
+        private VolumenTanqueDAO getVolumenesDAO()
+        {
+            if(volumenesDAO == null)
+            {
+                volumenesDAO = new VolumenTanqueDAO();
+            }
+            return volumenesDAO;
+        }
         #endregion
 
-
+        #region ventas
         public List<VentaVO> consultarVentasFidelizados(long codEmp, DateTime fecha1, DateTime fecha2, long isla, long turno)
         {
             try
@@ -602,6 +622,54 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
+        public int guardarVentasDia(List<VentaVO> ventas)
+        {
+            try
+            {
+                return getVentasDAO().guardarVentas(ventas);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la actualizacion de las ventas en DB app.", ex);
+            }
+        }
+
+        public List<VentaTurnoVO> consultarVentasTurno(long codEmp, DateTime fecha1, DateTime fecha2, long isla, long turno)
+        {
+            try
+            {
+                List<VentaTurnoVO> ventas;
+                int i = int.Parse(isla.ToString());
+                i--;
+                string[] islas = Exportador_Ventas_ServP.Properties.Settings.Default.grupoIsla[i].Split(',');
+
+                ventas = getVentasDAO().consultarVentasTurno(codEmp, fecha1, fecha2, islas, int.Parse(turno.ToString()));
+                foreach (VentaTurnoVO v in ventas)
+                {
+                    v.Isla = int.Parse(isla.ToString());
+                }
+                return ventas;
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la consulta ventas en DB estación.", ex);
+            }
+        }
+
+        public int guardarVentasTurno(List<VentaTurnoVO> ventas)
+        {
+            try
+            {
+                return getVentasDAO().guardarVentasTurno(ventas);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la actualizacion de las ventas en DB app.", ex);
+            }
+        }
+        #endregion
+
+        #region lecturas
         public List<LecturaVO> consultarLecturas(DateTime fecha1, DateTime fecha2)
         {
             try
@@ -613,7 +681,9 @@ namespace Exportador_Ventas_ServP.Controller
                 throw new PersistenciaException("Error en la consulta lecturas en DB estación.", ex);
             }
         }
+        #endregion
 
+        #region clientes
         public List<ClienteVO> consultarClientes()
         {
             try
@@ -662,18 +732,6 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
-        public List<TipoIdVO> consultarTipos()
-        {
-            try
-            {
-                return getTiposDAO().consultarTipos();
-            }
-            catch (EstacionDBException ex)
-            {
-                throw new PersistenciaException("Error en la consulta tipos id en DB app.", ex);
-            }
-        }
-
         public bool guardarCliente(ClienteVO cliente)
         {
             bool result = false;
@@ -692,19 +750,23 @@ namespace Exportador_Ventas_ServP.Controller
             }
 
         }
+        #endregion
 
-        public int guardarVentasDia(List<VentaVO> ventas)
+        #region tipos
+        public List<TipoIdVO> consultarTipos()
         {
             try
             {
-                return getVentasDAO().guardarVentas(ventas);
+                return getTiposDAO().consultarTipos();
             }
             catch (EstacionDBException ex)
             {
-                throw new PersistenciaException("Error en la actualizacion de las ventas en DB app.", ex);
+                throw new PersistenciaException("Error en la consulta tipos id en DB app.", ex);
             }
         }
+        #endregion
 
+        #region bancos
         public List<BancoVO> consultarBancos()
         {
             try
@@ -716,7 +778,9 @@ namespace Exportador_Ventas_ServP.Controller
                 throw new PersistenciaException("Error en la consulta bancos en DB app.", ex);
             }
         }
+        #endregion
 
+        #region ingresos / egresos
         public int guardarIngresos(List<IngresoVO> ingresos, DateTime fecha)
         {
             try
@@ -743,18 +807,6 @@ namespace Exportador_Ventas_ServP.Controller
             catch (EstacionDBException ex)
             {
                 throw new PersistenciaException("No se pudo realizar el cierre de egresos para la fecha seleccionada", ex);
-            }
-        }
-
-        public int existeCierre(long codEmpleado, long turno, long isla, DateTime fecha1, DateTime fecha2)
-        {
-            try
-            {
-                return getCierreDAO().consultarCuentaCierres(codEmpleado, turno, isla, fecha1, fecha2);
-            }
-            catch (EstacionDBException ex)
-            {
-                throw new PersistenciaException("Error en la consulta cierres en DB Expo.", ex);
             }
         }
 
@@ -794,6 +846,20 @@ namespace Exportador_Ventas_ServP.Controller
             }
 
             return total;
+        }
+        #endregion
+
+        #region Cierres
+        public int existeCierre(long codEmpleado, long turno, long isla, DateTime fecha1, DateTime fecha2)
+        {
+            try
+            {
+                return getCierreDAO().consultarCuentaCierres(codEmpleado, turno, isla, fecha1, fecha2);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la consulta cierres en DB Expo.", ex);
+            }
         }
 
         public int guardarCierre(CierreVentasVO cierre)
@@ -839,7 +905,9 @@ namespace Exportador_Ventas_ServP.Controller
             }
             return cierre;
         }
+        #endregion
 
+        #region empleados
         public IList getEmpleados()
         {
             try
@@ -851,41 +919,9 @@ namespace Exportador_Ventas_ServP.Controller
                 throw new PersistenciaException("Error en la consulta de empleados", ex);
             }
         }
+        #endregion
 
-        public List<VentaTurnoVO> consultarVentasTurno(long codEmp, DateTime fecha1, DateTime fecha2, long isla, long turno)
-        {
-            try
-            {
-                List<VentaTurnoVO> ventas;
-                int i = int.Parse(isla.ToString());
-                i--;
-                string[] islas = Exportador_Ventas_ServP.Properties.Settings.Default.grupoIsla[i].Split(',');
-
-                ventas = getVentasDAO().consultarVentasTurno(codEmp, fecha1, fecha2, islas, int.Parse(turno.ToString()));
-                foreach (VentaTurnoVO v in ventas)
-                {
-                    v.Isla = int.Parse(isla.ToString());
-                }
-                return ventas;
-            }
-            catch (EstacionDBException ex)
-            {
-                throw new PersistenciaException("Error en la consulta ventas en DB estación.", ex);
-            }
-        }
-
-        public int guardarVentasTurno(List<VentaTurnoVO> ventas)
-        {
-            try
-            {
-                return getVentasDAO().guardarVentasTurno(ventas);
-            }
-            catch (EstacionDBException ex)
-            {
-                throw new PersistenciaException("Error en la actualizacion de las ventas en DB app.", ex);
-            }
-        }
-
+        #region productos turno
         public List<ProductoTurnoVO> consultarProductosTurno(DateTime fecha1, DateTime fecha2, long isla, long turno)
         {
             try
@@ -919,7 +955,9 @@ namespace Exportador_Ventas_ServP.Controller
                 throw new PersistenciaException("Error en la actualizacion de los productos del turno en DB app.", ex);
             }
         }
+        #endregion
 
+        #region Control combustible
         public int guardarControlCombustible(ControlCombustibleVO cc)
         {
             try
@@ -929,18 +967,6 @@ namespace Exportador_Ventas_ServP.Controller
             catch (EstacionDBException ex)
             {
                 throw new PersistenciaException("Error al guardar el control de combustible", ex);
-            }
-        }
-
-        public List<ProductoVO> consultarProductos()
-        {
-            try
-            {
-                return getProductosDAO().consultarProductos();
-            }
-            catch (EstacionDBException ex)
-            {
-                throw new PersistenciaException("Error al consultar los productos", ex);
             }
         }
 
@@ -955,7 +981,71 @@ namespace Exportador_Ventas_ServP.Controller
                 throw new PersistenciaException("Error al consultar el control de combustible por fecha y producto", ex);
             }
         }
+        #endregion
 
+        #region Tanques / volumenes / medidas
+        public List<TanqueVO> consultarTanques()
+        {
+            try
+            {
+                return getTanquesDAO().consultarTanques();
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al consultar los tanques", ex);
+            }
+        }
+
+        public int guardarTanque(TanqueVO t)
+        {
+            try
+            {
+                return getTanquesDAO().guardarTanque(t);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al guardar el tanque" , ex);
+            }
+        }
+
+        public int guardarVolumen(VolumenTanqueVO v)
+        {
+            try{
+                return getVolumenesDAO().guardarVolumenTanque(v);
+            }catch(EstacionDBException ex){
+                throw new PersistenciaException("Error al guardar el volumen", ex);
+            }
+        }
+
+        public VolumenTanqueVO consultarVolumen(int idTanque, int idProducto, double cms)
+        {
+            try
+            {
+                return getVolumenesDAO().consultarVolumen(idTanque, idProducto, cms);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al consultar el volumen", ex);
+            }
+        }
+
+        
+        #endregion
+        #region productos
+        public List<ProductoVO> consultarProductos()
+        {
+            try
+            {
+                return getProductosDAO().consultarProductos();
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al consultar los productos", ex);
+            }
+        }
+        #endregion
+
+        #region sobretasas
         public List<SobretasaVO> consultarSobretasas()
         {
             try
@@ -998,5 +1088,6 @@ namespace Exportador_Ventas_ServP.Controller
                 throw new PersistenciaException("Error al guardar la sobretasa", ex);
             }
         }
+        #endregion
     }
 }
