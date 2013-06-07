@@ -702,7 +702,7 @@ namespace Exportador_Ventas_ServP.Controller
                 }
                 diferencia = getLecturasDAO().consultarDiferenciaProducto(fecha1, fecha2, prod);
                 diferencia = Math.Round(diferencia, 0, MidpointRounding.AwayFromZero);
-                //diferencia = double.Parse(tmp.ToString());
+                
                 return diferencia;
             }
             catch (EstacionDBException ex)
@@ -714,12 +714,12 @@ namespace Exportador_Ventas_ServP.Controller
         public LecturaDTO consultarNivel(int idProducto, int idTanque, double nivel)
         {
             LecturaDTO lectura = null;
-            nivel = Math.Round(nivel, 1, MidpointRounding.AwayFromZero);
+            nivel = Utilidades.redondear(nivel);
             VolumenTanqueVO vt = getVolumenesDAO().consultarVolumen(idTanque, idProducto, nivel);
             if (vt != null)
             {
                 lectura = new LecturaDTO();
-                lectura.Galones = vt.Galones;
+                lectura.Galones = Math.Round(vt.Galones, 0, MidpointRounding.AwayFromZero);
                 lectura.IdProducto = vt.IdProducto;
                 lectura.IdTanque = vt.IdTanque;                
             }
@@ -1002,6 +1002,100 @@ namespace Exportador_Ventas_ServP.Controller
         #endregion
 
         #region Control combustible
+        public int procesarControles(DateTime fecha, LecturaDTO[] lecturas)
+        {
+            int rows = 0;
+            bool isCorriente = false;
+            bool isSuper = false;
+            bool isDiesel = false;
+            ControlCombustibleVO controlCorriente = new ControlCombustibleVO();
+            ControlCombustibleVO controlSuper = new ControlCombustibleVO();
+            ControlCombustibleVO controlDiesel = new ControlCombustibleVO();
+
+            try
+            {
+
+                for (int i = 0; i < lecturas.Length; i++)
+                {
+                    int idProd = lecturas[i].IdProducto;
+                    switch (idProd)
+                    {
+                        //Corriente
+                        case 1:
+                            {
+                                controlCorriente.InventarioFinal += (int)lecturas[i].Galones;
+                                isCorriente = true;
+                                break;
+                            }
+                        //Super
+                        case 2:
+                            {
+                                controlSuper.InventarioFinal += (int)lecturas[i].Galones;
+                                isSuper = true;
+                                break;
+                            }
+                        //Diesel
+                        case 3:
+                            {
+                                controlDiesel.InventarioFinal += (int)lecturas[i].Galones;
+                                isDiesel = true;
+                                break;
+                            }
+                    }
+                }
+                DateTime diaAnterior = fecha.AddDays(-1);
+                //Corriente
+                if (isCorriente)
+                {
+                    controlCorriente.IdProducto = 1;
+                    controlCorriente.Fecha = fecha;
+                    controlCorriente.InventarioInicial = (int)this.consultarSaldoAnterior(1, diaAnterior, diaAnterior);
+                    controlCorriente.VentaMedida = controlCorriente.InventarioInicial - controlCorriente.InventarioFinal;
+                    controlCorriente.VentaSurtidor = (int)this.consultarVentaProducto(fecha, fecha, 1);
+                    controlCorriente.SobranteDia = controlCorriente.VentaSurtidor - controlCorriente.VentaMedida;
+                    controlCorriente.SobranteAcumulado = controlCorriente.SobranteDia + (int)this.consultarAcumuladoAnterior(1, diaAnterior, diaAnterior);
+                    controlCorriente.Procentaje = (double)(((double)controlCorriente.SobranteDia / (double)controlCorriente.InventarioInicial) * 100);
+
+                    rows += this.guardarControlCombustible(controlCorriente);
+                }
+
+                //Super
+                if (isSuper)
+                {
+                    controlSuper.IdProducto = 2;
+                    controlSuper.Fecha = fecha;
+                    controlSuper.InventarioInicial = (int)this.consultarSaldoAnterior(2, diaAnterior, diaAnterior);
+                    controlSuper.VentaMedida = controlSuper.InventarioInicial - controlSuper.InventarioFinal;
+                    controlSuper.VentaSurtidor = (int)this.consultarVentaProducto(fecha, fecha, 2);
+                    controlSuper.SobranteDia = controlSuper.VentaSurtidor - controlSuper.VentaMedida;
+                    controlSuper.SobranteAcumulado = controlSuper.SobranteDia + (int)this.consultarAcumuladoAnterior(2, diaAnterior, diaAnterior);
+                    controlSuper.Procentaje = (double)(((double)controlSuper.SobranteDia / (double)controlSuper.InventarioInicial) * 100);
+
+                    rows += this.guardarControlCombustible(controlSuper);
+                }
+
+                //Diesel
+                if (isDiesel)
+                {
+                    controlDiesel.IdProducto = 3;
+                    controlDiesel.Fecha = fecha;
+                    controlDiesel.InventarioInicial = (int)this.consultarSaldoAnterior(3, diaAnterior, diaAnterior);
+                    controlDiesel.VentaMedida = controlDiesel.InventarioInicial - controlDiesel.InventarioFinal;
+                    controlDiesel.VentaSurtidor = (int)this.consultarVentaProducto(fecha, fecha, 3);
+                    controlDiesel.SobranteDia = controlDiesel.VentaSurtidor - controlDiesel.VentaMedida;
+                    controlDiesel.SobranteAcumulado = controlDiesel.SobranteDia + (int)this.consultarAcumuladoAnterior(3, diaAnterior, diaAnterior);
+                    controlDiesel.Procentaje = (double)(((double)controlDiesel.SobranteDia / (double)controlDiesel.InventarioInicial) * 100);
+
+                    rows += this.guardarControlCombustible(controlDiesel);
+                }
+            }
+            catch (PersistenciaException ex)
+            {
+                throw new PersistenciaException("Error al procesar las lecturas", ex);
+            }
+            return rows;
+        }
+
         public int guardarControlCombustible(ControlCombustibleVO cc)
         {
             try
@@ -1019,6 +1113,49 @@ namespace Exportador_Ventas_ServP.Controller
             try
             {
                 return getControlCombustibleDAO().consultarControles(idProducto, fechadesde, fechaHasta);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al consultar el control de combustible por fecha y producto", ex);
+            }
+        }
+
+        private double consultarSaldoAnterior(int idProducto, DateTime fechadesde, DateTime fechaHasta)
+        {
+            try
+            {
+                double saldo = 0;
+                List<ControlCombustibleVO> lista = getControlCombustibleDAO().consultarControles(idProducto, fechadesde, fechaHasta);
+                
+                if (lista != null && lista.Count > 0)
+                {
+                    ControlCombustibleVO control = lista[0];
+                    saldo = control.InventarioFinal;
+                }
+                return saldo;
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al consultar el control de combustible por fecha y producto", ex);
+            }
+        }
+
+        private double consultarAcumuladoAnterior(int idProducto, DateTime fechadesde, DateTime fechaHasta)
+        {
+            try
+            {
+                double acumulado = 0;
+                if (fechadesde.Day > 1)
+                {
+                    List<ControlCombustibleVO> lista = getControlCombustibleDAO().consultarControles(idProducto, fechadesde, fechaHasta);
+
+                    if (lista != null && lista.Count > 0)
+                    {
+                        ControlCombustibleVO control = lista[0];
+                        acumulado = control.SobranteAcumulado;
+                    }
+                }
+                return acumulado;
             }
             catch (EstacionDBException ex)
             {

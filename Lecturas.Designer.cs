@@ -43,11 +43,12 @@
             this.cmdLimpiar = new System.Windows.Forms.Button();
             this.cmdAgregar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lecturaDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.galonesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lecturaDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmdGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productoVOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tanqueVOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,7 +66,7 @@
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new System.Drawing.Point(89, 25);
+            this.txtFecha.Location = new System.Drawing.Point(112, 25);
             this.txtFecha.Mask = "00/00/0000";
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(100, 20);
@@ -75,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(207, 30);
+            this.label2.Location = new System.Drawing.Point(230, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 22;
@@ -86,9 +87,9 @@
             this.cboProducto.DataSource = this.productoVOBindingSource;
             this.cboProducto.DisplayMember = "Nombre";
             this.cboProducto.FormattingEnabled = true;
-            this.cboProducto.Location = new System.Drawing.Point(266, 24);
+            this.cboProducto.Location = new System.Drawing.Point(289, 24);
             this.cboProducto.Name = "cboProducto";
-            this.cboProducto.Size = new System.Drawing.Size(146, 21);
+            this.cboProducto.Size = new System.Drawing.Size(234, 21);
             this.cboProducto.TabIndex = 23;
             this.cboProducto.ValueMember = "IdProducto";
             // 
@@ -99,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(434, 29);
+            this.label3.Location = new System.Drawing.Point(232, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 24;
@@ -110,7 +111,7 @@
             this.cboTanque.DataSource = this.tanqueVOBindingSource;
             this.cboTanque.DisplayMember = "Descripcion";
             this.cboTanque.FormattingEnabled = true;
-            this.cboTanque.Location = new System.Drawing.Point(486, 24);
+            this.cboTanque.Location = new System.Drawing.Point(290, 66);
             this.cboTanque.Name = "cboTanque";
             this.cboTanque.Size = new System.Drawing.Size(233, 21);
             this.cboTanque.TabIndex = 25;
@@ -139,16 +140,17 @@
             // cmdLimpiar
             // 
             this.cmdLimpiar.Image = global::Exportador_Ventas_ServP.Properties.Resources.del_hover;
-            this.cmdLimpiar.Location = new System.Drawing.Point(266, 124);
+            this.cmdLimpiar.Location = new System.Drawing.Point(486, 106);
             this.cmdLimpiar.Name = "cmdLimpiar";
             this.cmdLimpiar.Size = new System.Drawing.Size(36, 30);
             this.cmdLimpiar.TabIndex = 29;
             this.cmdLimpiar.UseVisualStyleBackColor = true;
+            this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
             // 
             // cmdAgregar
             // 
             this.cmdAgregar.Image = global::Exportador_Ventas_ServP.Properties.Resources.add_hover;
-            this.cmdAgregar.Location = new System.Drawing.Point(266, 70);
+            this.cmdAgregar.Location = new System.Drawing.Point(423, 106);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(35, 31);
             this.cmdAgregar.TabIndex = 28;
@@ -167,15 +169,11 @@
             this.productoDataGridViewTextBoxColumn,
             this.tanqueDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.lecturaDTOBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 197);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 148);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(693, 215);
+            this.dataGridView1.Size = new System.Drawing.Size(484, 227);
             this.dataGridView1.TabIndex = 30;
-            // 
-            // lecturaDTOBindingSource
-            // 
-            this.lecturaDTOBindingSource.DataSource = typeof(EstacionDB.DTO.LecturaDTO);
             // 
             // nivelDataGridViewTextBoxColumn
             // 
@@ -213,11 +211,26 @@
             this.tanqueDataGridViewTextBoxColumn.ReadOnly = true;
             this.tanqueDataGridViewTextBoxColumn.Width = 69;
             // 
+            // lecturaDTOBindingSource
+            // 
+            this.lecturaDTOBindingSource.DataSource = typeof(EstacionDB.DTO.LecturaDTO);
+            // 
+            // cmdGuardar
+            // 
+            this.cmdGuardar.Location = new System.Drawing.Point(227, 394);
+            this.cmdGuardar.Name = "cmdGuardar";
+            this.cmdGuardar.Size = new System.Drawing.Size(83, 29);
+            this.cmdGuardar.TabIndex = 31;
+            this.cmdGuardar.Text = "Guardar";
+            this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
+            // 
             // Lecturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 496);
+            this.ClientSize = new System.Drawing.Size(580, 437);
+            this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cmdLimpiar);
             this.Controls.Add(this.cmdAgregar);
@@ -263,5 +276,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn galonesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tanqueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button cmdGuardar;
     }
 }
