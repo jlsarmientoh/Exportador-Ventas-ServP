@@ -402,6 +402,7 @@
   <ItemGroup>
     <None Include="Exportador Gaslissa_TemporaryKey.pfx" />
     <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\EstacionDB.DTO.LecturaDTO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.BancoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.CierreVentasVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ClienteVO.datasource" />
@@ -412,6 +413,7 @@
     <None Include="Properties\DataSources\EstacionDB.VO.ModoPagoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ProductoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.SobretasaVO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.TanqueVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO1.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO2.datasource" />

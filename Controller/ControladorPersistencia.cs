@@ -681,6 +681,50 @@ namespace Exportador_Ventas_ServP.Controller
                 throw new PersistenciaException("Error en la consulta lecturas en DB estación.", ex);
             }
         }
+
+        public double consultarVentaProducto(DateTime fecha1, DateTime fecha2, int idProdcuto)
+        {
+            try
+            {
+                double diferencia = 0;
+                int prod = 0;
+                switch (idProdcuto)
+                {
+                    case 1: {
+                        prod = Utilidades.codigoCorriente;
+                        break; }
+                    case 2: {
+                        prod = Utilidades.codigoSuper;
+                        break; }
+                    case 3: {
+                        prod = Utilidades.codigoDiesel;
+                        break; }
+                }
+                diferencia = getLecturasDAO().consultarDiferenciaProducto(fecha1, fecha2, prod);
+                diferencia = Math.Round(diferencia, 0, MidpointRounding.AwayFromZero);
+                //diferencia = double.Parse(tmp.ToString());
+                return diferencia;
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la consulta lecturas en DB estación.", ex);
+            }
+        }
+
+        public LecturaDTO consultarNivel(int idProducto, int idTanque, double nivel)
+        {
+            LecturaDTO lectura = null;
+            nivel = Math.Round(nivel, 1, MidpointRounding.AwayFromZero);
+            VolumenTanqueVO vt = getVolumenesDAO().consultarVolumen(idTanque, idProducto, nivel);
+            if (vt != null)
+            {
+                lectura = new LecturaDTO();
+                lectura.Galones = vt.Galones;
+                lectura.IdProducto = vt.IdProducto;
+                lectura.IdTanque = vt.IdTanque;                
+            }
+            return lectura;
+        }
         #endregion
 
         #region clientes

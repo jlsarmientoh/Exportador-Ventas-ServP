@@ -67,7 +67,7 @@
             this.CalendarDesde.Name = "CalendarDesde";
             this.CalendarDesde.TabIndex = 11;
             this.CalendarDesde.Visible = false;
-            this.CalendarDesde.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalendarDesde_DateChanged);
+            this.CalendarDesde.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.CalendarDesde_DateChanged);
             // 
             // txtFechaDesde
             // 

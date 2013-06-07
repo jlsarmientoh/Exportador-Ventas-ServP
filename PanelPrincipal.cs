@@ -223,9 +223,9 @@ namespace Exportador_Ventas_ServP
 
         private void combustibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            comprasCombustible = new ComprasCombustible();
-            comprasCombustible.MdiParent = this;
-            comprasCombustible.Show();
+            //comprasCombustible = new ComprasCombustible();
+            //comprasCombustible.MdiParent = this;
+            //comprasCombustible.Show();
 
         }
 
@@ -290,6 +290,13 @@ namespace Exportador_Ventas_ServP
             about = new AboutGaslissa();
             about.MdiParent = this;
             about.Show();
+        }
+
+        private void lecturasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            lecturas = new Lecturas();
+            lecturas.MdiParent = this;
+            lecturas.Show();
         }
     }
 }

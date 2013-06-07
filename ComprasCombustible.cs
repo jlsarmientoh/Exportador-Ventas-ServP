@@ -191,6 +191,8 @@ namespace Exportador_Ventas_ServP
                 {
                     DateTime ayer = tmp.AddDays(-1d);
                     List<ControlCombustibleVO> controles = cp.consultarControlProductoFecha((int)cboProducto.SelectedValue, ayer, ayer);
+                    surtidor = (int)cp.consultarVentaProducto(tmp, tmp, (int)cboProducto.SelectedValue);
+                    txtSurtidor.Text = surtidor.ToString();
                     if (controles.Count > 0)
                     {
                         ControlCombustibleVO cc = controles[0];
