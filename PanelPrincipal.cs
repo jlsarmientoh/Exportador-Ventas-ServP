@@ -298,5 +298,12 @@ namespace Exportador_Ventas_ServP
             lecturas.MdiParent = this;
             lecturas.Show();
         }
+
+        private void comprasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            comprasCombustible = new ComprasCombustible();
+            comprasCombustible.MdiParent = this;
+            comprasCombustible.Show();
+        }
     }
 }

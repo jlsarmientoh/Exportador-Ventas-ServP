@@ -244,6 +244,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(588, 471);
             this.Name = "Lecturas";
             this.Text = "Lecturas";
             this.Load += new System.EventHandler(this.Lecturas_Load);

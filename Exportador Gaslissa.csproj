@@ -407,6 +407,7 @@
     <None Include="Properties\DataSources\EstacionDB.VO.CierreVentasVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ClienteVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ClienteVO1.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.VO.CompraCombustibleVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.EgresoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.EmpleadoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.IngresoVO.datasource" />

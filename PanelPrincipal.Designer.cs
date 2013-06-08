@@ -43,6 +43,7 @@
             this.ingresosEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.combustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lecturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobretasasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cierreVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.lecturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -162,11 +163,19 @@
             // combustibleToolStripMenuItem
             // 
             this.combustibleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lecturasToolStripMenuItem});
+            this.lecturasToolStripMenuItem,
+            this.comprasToolStripMenuItem1});
             this.combustibleToolStripMenuItem.Name = "combustibleToolStripMenuItem";
             this.combustibleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.combustibleToolStripMenuItem.Text = "Combustible";
             this.combustibleToolStripMenuItem.Click += new System.EventHandler(this.combustibleToolStripMenuItem_Click);
+            // 
+            // lecturasToolStripMenuItem
+            // 
+            this.lecturasToolStripMenuItem.Name = "lecturasToolStripMenuItem";
+            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lecturasToolStripMenuItem.Text = "Lecturas";
+            this.lecturasToolStripMenuItem.Click += new System.EventHandler(this.lecturasToolStripMenuItem_Click_1);
             // 
             // sobretasasToolStripMenuItem
             // 
@@ -229,12 +238,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // lecturasToolStripMenuItem
+            // comprasToolStripMenuItem1
             // 
-            this.lecturasToolStripMenuItem.Name = "lecturasToolStripMenuItem";
-            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lecturasToolStripMenuItem.Text = "Lecturas";
-            this.lecturasToolStripMenuItem.Click += new System.EventHandler(this.lecturasToolStripMenuItem_Click_1);
+            this.comprasToolStripMenuItem1.Name = "comprasToolStripMenuItem1";
+            this.comprasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.comprasToolStripMenuItem1.Text = "Compras";
+            this.comprasToolStripMenuItem1.Click += new System.EventHandler(this.comprasToolStripMenuItem1_Click);
             // 
             // PanelPrincipal
             // 
@@ -283,6 +292,7 @@
         private System.Windows.Forms.ToolStripMenuItem controlDeTanquesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lecturasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem1;
     }
 }
 

@@ -30,86 +30,206 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComprasCombustible));
-            this.CalendarDesde = new System.Windows.Forms.MonthCalendar();
-            this.txtFechaDesde = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtImpuesto = new System.Windows.Forms.TextBox();
+            this.txtSoldicom = new System.Windows.Forms.TextBox();
+            this.txtFlete = new System.Windows.Forms.TextBox();
+            this.txtValorTotal = new System.Windows.Forms.TextBox();
+            this.txtValorUnitario = new System.Windows.Forms.TextBox();
+            this.txtGalones = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmdBuscar = new System.Windows.Forms.Button();
             this.cboProducto = new System.Windows.Forms.ComboBox();
             this.productoVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.txtGalones = new System.Windows.Forms.TextBox();
-            this.cmdCalendarDesde = new System.Windows.Forms.Button();
-            this.txtFinal = new System.Windows.Forms.TextBox();
-            this.txtInicial = new System.Windows.Forms.TextBox();
-            this.txtMedida = new System.Windows.Forms.TextBox();
-            this.txtSurtidor = new System.Windows.Forms.TextBox();
-            this.Inicial = new System.Windows.Forms.Label();
-            this.Final = new System.Windows.Forms.Label();
-            this.Medida = new System.Windows.Forms.Label();
-            this.Surtidor = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmdGuardar = new System.Windows.Forms.Button();
+            this.txtFactura = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.MaskedTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtSobranteDia = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSonbranteAcumulado = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.productoVOBindingSource)).BeginInit();
+            this.cmdGuardar = new System.Windows.Forms.Button();
+            this.cmdLimpiar = new System.Windows.Forms.Button();
+            this.cmdAgregar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.productoVOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.galonesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fleteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soldicomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.impuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.compraCombustibleVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoVOBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoVOBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.compraCombustibleVOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // CalendarDesde
+            // groupBox1
             // 
-            this.CalendarDesde.Location = new System.Drawing.Point(24, 14);
-            this.CalendarDesde.Name = "CalendarDesde";
-            this.CalendarDesde.TabIndex = 11;
-            this.CalendarDesde.Visible = false;
-            this.CalendarDesde.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.CalendarDesde_DateChanged);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtImpuesto);
+            this.groupBox1.Controls.Add(this.txtSoldicom);
+            this.groupBox1.Controls.Add(this.txtFlete);
+            this.groupBox1.Controls.Add(this.txtValorTotal);
+            this.groupBox1.Controls.Add(this.txtValorUnitario);
+            this.groupBox1.Controls.Add(this.txtGalones);
+            this.groupBox1.Location = new System.Drawing.Point(16, 134);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(459, 171);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Valores";
             // 
-            // txtFechaDesde
+            // label9
             // 
-            this.txtFechaDesde.Location = new System.Drawing.Point(83, 27);
-            this.txtFechaDesde.Name = "txtFechaDesde";
-            this.txtFechaDesde.Size = new System.Drawing.Size(115, 20);
-            this.txtFechaDesde.TabIndex = 1;
-            this.txtFechaDesde.TextChanged += new System.EventHandler(this.txtFechaDesde_TextChanged);
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(258, 124);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Impuesto";
             // 
-            // label1
+            // label8
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Fecha:";
-            this.label1.UseWaitCursor = true;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(257, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Soldicom";
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(238, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Tipo de combustible";
-            this.label2.UseWaitCursor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(259, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 13);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Flete";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 123);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Valor";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Valor unitario";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Galones";
+            // 
+            // txtImpuesto
+            // 
+            this.txtImpuesto.Location = new System.Drawing.Point(316, 120);
+            this.txtImpuesto.Name = "txtImpuesto";
+            this.txtImpuesto.Size = new System.Drawing.Size(100, 20);
+            this.txtImpuesto.TabIndex = 9;
+            // 
+            // txtSoldicom
+            // 
+            this.txtSoldicom.Location = new System.Drawing.Point(316, 83);
+            this.txtSoldicom.Name = "txtSoldicom";
+            this.txtSoldicom.Size = new System.Drawing.Size(100, 20);
+            this.txtSoldicom.TabIndex = 8;
+            // 
+            // txtFlete
+            // 
+            this.txtFlete.Location = new System.Drawing.Point(316, 41);
+            this.txtFlete.Name = "txtFlete";
+            this.txtFlete.Size = new System.Drawing.Size(100, 20);
+            this.txtFlete.TabIndex = 7;
+            // 
+            // txtValorTotal
+            // 
+            this.txtValorTotal.Location = new System.Drawing.Point(116, 119);
+            this.txtValorTotal.Name = "txtValorTotal";
+            this.txtValorTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtValorTotal.TabIndex = 6;
+            // 
+            // txtValorUnitario
+            // 
+            this.txtValorUnitario.Location = new System.Drawing.Point(116, 79);
+            this.txtValorUnitario.Name = "txtValorUnitario";
+            this.txtValorUnitario.Size = new System.Drawing.Size(100, 20);
+            this.txtValorUnitario.TabIndex = 5;
+            // 
+            // txtGalones
+            // 
+            this.txtGalones.Location = new System.Drawing.Point(116, 39);
+            this.txtGalones.Name = "txtGalones";
+            this.txtGalones.Size = new System.Drawing.Size(100, 20);
+            this.txtGalones.TabIndex = 4;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cmdBuscar);
+            this.groupBox2.Controls.Add(this.cboProducto);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.txtFactura);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtFecha);
+            this.groupBox2.Location = new System.Drawing.Point(16, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(718, 100);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Datos de la compra";
+            // 
+            // cmdBuscar
+            // 
+            this.cmdBuscar.Image = global::Exportador_Ventas_ServP.Properties.Resources.search;
+            this.cmdBuscar.Location = new System.Drawing.Point(245, 39);
+            this.cmdBuscar.Name = "cmdBuscar";
+            this.cmdBuscar.Size = new System.Drawing.Size(26, 23);
+            this.cmdBuscar.TabIndex = 11;
+            this.cmdBuscar.UseVisualStyleBackColor = true;
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 
             // cboProducto
             // 
             this.cboProducto.DataSource = this.productoVOBindingSource;
             this.cboProducto.DisplayMember = "Nombre";
             this.cboProducto.FormattingEnabled = true;
-            this.cboProducto.Location = new System.Drawing.Point(348, 27);
+            this.cboProducto.Location = new System.Drawing.Point(517, 40);
             this.cboProducto.Name = "cboProducto";
-            this.cboProducto.Size = new System.Drawing.Size(160, 21);
+            this.cboProducto.Size = new System.Drawing.Size(158, 21);
             this.cboProducto.TabIndex = 3;
             this.cboProducto.ValueMember = "IdProducto";
-            this.cboProducto.SelectedIndexChanged += new System.EventHandler(this.cboProducto_SelectedIndexChanged);
             // 
             // productoVOBindingSource
             // 
@@ -118,202 +238,203 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(526, 31);
+            this.label3.Location = new System.Drawing.Point(456, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Cantidad (Galones)";
-            this.label3.UseWaitCursor = true;
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Producto";
             // 
-            // txtGalones
+            // txtFactura
             // 
-            this.txtGalones.Location = new System.Drawing.Point(636, 28);
-            this.txtGalones.Name = "txtGalones";
-            this.txtGalones.Size = new System.Drawing.Size(77, 20);
-            this.txtGalones.TabIndex = 4;
-            this.txtGalones.TextChanged += new System.EventHandler(this.txtGalones_TextChanged);
-            this.txtGalones.Enter += new System.EventHandler(this.txtGalones_Enter);
+            this.txtFactura.Location = new System.Drawing.Point(341, 41);
+            this.txtFactura.Name = "txtFactura";
+            this.txtFactura.Size = new System.Drawing.Size(100, 20);
+            this.txtFactura.TabIndex = 2;
             // 
-            // cmdCalendarDesde
+            // label2
             // 
-            this.cmdCalendarDesde.Image = global::Exportador_Ventas_ServP.Properties.Resources.calendar;
-            this.cmdCalendarDesde.Location = new System.Drawing.Point(200, 26);
-            this.cmdCalendarDesde.Name = "cmdCalendarDesde";
-            this.cmdCalendarDesde.Size = new System.Drawing.Size(22, 23);
-            this.cmdCalendarDesde.TabIndex = 2;
-            this.cmdCalendarDesde.UseVisualStyleBackColor = true;
-            this.cmdCalendarDesde.Click += new System.EventHandler(this.cmdCalendarDesde_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(282, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Factura";
             // 
-            // txtFinal
+            // label1
             // 
-            this.txtFinal.Location = new System.Drawing.Point(204, 30);
-            this.txtFinal.Name = "txtFinal";
-            this.txtFinal.Size = new System.Drawing.Size(77, 20);
-            this.txtFinal.TabIndex = 6;
-            this.txtFinal.TextChanged += new System.EventHandler(this.txtFinal_TextChanged);
-            this.txtFinal.Enter += new System.EventHandler(this.txtFinal_Enter);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Fecha de compra";
             // 
-            // txtInicial
+            // txtFecha
             // 
-            this.txtInicial.Location = new System.Drawing.Point(63, 31);
-            this.txtInicial.Name = "txtInicial";
-            this.txtInicial.Size = new System.Drawing.Size(77, 20);
-            this.txtInicial.TabIndex = 5;
-            this.txtInicial.TextChanged += new System.EventHandler(this.txtInicial_TextChanged);
-            this.txtInicial.Enter += new System.EventHandler(this.txtInicial_Enter);
-            // 
-            // txtMedida
-            // 
-            this.txtMedida.Location = new System.Drawing.Point(63, 28);
-            this.txtMedida.Name = "txtMedida";
-            this.txtMedida.ReadOnly = true;
-            this.txtMedida.Size = new System.Drawing.Size(77, 20);
-            this.txtMedida.TabIndex = 19;
-            // 
-            // txtSurtidor
-            // 
-            this.txtSurtidor.Location = new System.Drawing.Point(204, 27);
-            this.txtSurtidor.Name = "txtSurtidor";
-            this.txtSurtidor.Size = new System.Drawing.Size(77, 20);
-            this.txtSurtidor.TabIndex = 7;
-            this.txtSurtidor.TextChanged += new System.EventHandler(this.txtSurtidor_TextChanged);
-            this.txtSurtidor.Enter += new System.EventHandler(this.txtSurtidor_Enter);
-            // 
-            // Inicial
-            // 
-            this.Inicial.AutoSize = true;
-            this.Inicial.Location = new System.Drawing.Point(16, 35);
-            this.Inicial.Name = "Inicial";
-            this.Inicial.Size = new System.Drawing.Size(34, 13);
-            this.Inicial.TabIndex = 21;
-            this.Inicial.Text = "Inicial";
-            // 
-            // Final
-            // 
-            this.Final.AutoSize = true;
-            this.Final.Location = new System.Drawing.Point(157, 35);
-            this.Final.Name = "Final";
-            this.Final.Size = new System.Drawing.Size(29, 13);
-            this.Final.TabIndex = 22;
-            this.Final.Text = "Final";
-            // 
-            // Medida
-            // 
-            this.Medida.AutoSize = true;
-            this.Medida.Location = new System.Drawing.Point(14, 32);
-            this.Medida.Name = "Medida";
-            this.Medida.Size = new System.Drawing.Size(42, 13);
-            this.Medida.TabIndex = 23;
-            this.Medida.Text = "Medida";
-            // 
-            // Surtidor
-            // 
-            this.Surtidor.AutoSize = true;
-            this.Surtidor.Location = new System.Drawing.Point(157, 31);
-            this.Surtidor.Name = "Surtidor";
-            this.Surtidor.Size = new System.Drawing.Size(43, 13);
-            this.Surtidor.TabIndex = 24;
-            this.Surtidor.Text = "Surtidor";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtMedida);
-            this.groupBox1.Controls.Add(this.Surtidor);
-            this.groupBox1.Controls.Add(this.Medida);
-            this.groupBox1.Controls.Add(this.txtSurtidor);
-            this.groupBox1.Location = new System.Drawing.Point(404, 79);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(312, 75);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ventas";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtInicial);
-            this.groupBox2.Controls.Add(this.Inicial);
-            this.groupBox2.Controls.Add(this.Final);
-            this.groupBox2.Controls.Add(this.txtFinal);
-            this.groupBox2.Location = new System.Drawing.Point(48, 79);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(312, 75);
-            this.groupBox2.TabIndex = 26;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Inventario";
-            // 
-            // cmdGuardar
-            // 
-            this.cmdGuardar.Location = new System.Drawing.Point(321, 272);
-            this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(85, 28);
-            this.cmdGuardar.TabIndex = 8;
-            this.cmdGuardar.Text = "Guardar";
-            this.cmdGuardar.UseVisualStyleBackColor = true;
-            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
+            this.txtFecha.Location = new System.Drawing.Point(142, 41);
+            this.txtFecha.Mask = "00/00/0000";
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(99, 20);
+            this.txtFecha.TabIndex = 1;
+            this.txtFecha.ValidatingType = typeof(System.DateTime);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtSobranteDia);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.txtSonbranteAcumulado);
-            this.groupBox3.Location = new System.Drawing.Point(217, 177);
+            this.groupBox3.Controls.Add(this.cmdGuardar);
+            this.groupBox3.Controls.Add(this.cmdLimpiar);
+            this.groupBox3.Controls.Add(this.cmdAgregar);
+            this.groupBox3.Location = new System.Drawing.Point(489, 134);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(312, 75);
-            this.groupBox3.TabIndex = 28;
+            this.groupBox3.Size = new System.Drawing.Size(246, 171);
+            this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sobrantes";
+            this.groupBox3.Text = "Acciones";
             // 
-            // txtSobranteDia
+            // cmdGuardar
             // 
-            this.txtSobranteDia.Location = new System.Drawing.Point(64, 28);
-            this.txtSobranteDia.Name = "txtSobranteDia";
-            this.txtSobranteDia.ReadOnly = true;
-            this.txtSobranteDia.Size = new System.Drawing.Size(77, 20);
-            this.txtSobranteDia.TabIndex = 24;
+            this.cmdGuardar.Location = new System.Drawing.Point(129, 76);
+            this.cmdGuardar.Name = "cmdGuardar";
+            this.cmdGuardar.Size = new System.Drawing.Size(75, 28);
+            this.cmdGuardar.TabIndex = 15;
+            this.cmdGuardar.Text = "Guardar";
+            this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click_1);
             // 
-            // label4
+            // cmdLimpiar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Día";
+            this.cmdLimpiar.Image = global::Exportador_Ventas_ServP.Properties.Resources.del_hover;
+            this.cmdLimpiar.Location = new System.Drawing.Point(46, 100);
+            this.cmdLimpiar.Name = "cmdLimpiar";
+            this.cmdLimpiar.Size = new System.Drawing.Size(36, 30);
+            this.cmdLimpiar.TabIndex = 14;
+            this.cmdLimpiar.UseVisualStyleBackColor = true;
+            this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
             // 
-            // label5
+            // cmdAgregar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(148, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Acumulado";
+            this.cmdAgregar.Image = global::Exportador_Ventas_ServP.Properties.Resources.add_hover;
+            this.cmdAgregar.Location = new System.Drawing.Point(46, 46);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(35, 31);
+            this.cmdAgregar.TabIndex = 13;
+            this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
-            // txtSonbranteAcumulado
+            // dataGridView1
             // 
-            this.txtSonbranteAcumulado.Location = new System.Drawing.Point(212, 27);
-            this.txtSonbranteAcumulado.Name = "txtSonbranteAcumulado";
-            this.txtSonbranteAcumulado.ReadOnly = true;
-            this.txtSonbranteAcumulado.Size = new System.Drawing.Size(77, 20);
-            this.txtSonbranteAcumulado.TabIndex = 23;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fechaDataGridViewTextBoxColumn,
+            this.facturaDataGridViewTextBoxColumn,
+            this.idProductoDataGridViewTextBoxColumn,
+            this.galonesDataGridViewTextBoxColumn,
+            this.valorUnitarioDataGridViewTextBoxColumn,
+            this.valorDataGridViewTextBoxColumn,
+            this.fleteDataGridViewTextBoxColumn,
+            this.soldicomDataGridViewTextBoxColumn,
+            this.impuestoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.compraCombustibleVOBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(18, 321);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(719, 178);
+            this.dataGridView1.TabIndex = 21;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.Width = 62;
+            // 
+            // facturaDataGridViewTextBoxColumn
+            // 
+            this.facturaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.facturaDataGridViewTextBoxColumn.DataPropertyName = "Factura";
+            this.facturaDataGridViewTextBoxColumn.HeaderText = "Factura";
+            this.facturaDataGridViewTextBoxColumn.Name = "facturaDataGridViewTextBoxColumn";
+            this.facturaDataGridViewTextBoxColumn.Width = 68;
+            // 
+            // idProductoDataGridViewTextBoxColumn
+            // 
+            this.idProductoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idProductoDataGridViewTextBoxColumn.DataPropertyName = "IdProducto";
+            this.idProductoDataGridViewTextBoxColumn.DataSource = this.productoVOBindingSource1;
+            this.idProductoDataGridViewTextBoxColumn.DisplayMember = "Nombre";
+            this.idProductoDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.idProductoDataGridViewTextBoxColumn.Name = "idProductoDataGridViewTextBoxColumn";
+            this.idProductoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idProductoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idProductoDataGridViewTextBoxColumn.ValueMember = "IdProducto";
+            this.idProductoDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // productoVOBindingSource1
+            // 
+            this.productoVOBindingSource1.DataSource = typeof(EstacionDB.VO.ProductoVO);
+            // 
+            // galonesDataGridViewTextBoxColumn
+            // 
+            this.galonesDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.galonesDataGridViewTextBoxColumn.DataPropertyName = "Galones";
+            this.galonesDataGridViewTextBoxColumn.HeaderText = "Galones";
+            this.galonesDataGridViewTextBoxColumn.Name = "galonesDataGridViewTextBoxColumn";
+            this.galonesDataGridViewTextBoxColumn.Width = 71;
+            // 
+            // valorUnitarioDataGridViewTextBoxColumn
+            // 
+            this.valorUnitarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitario";
+            this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "ValorUnitario";
+            this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
+            this.valorUnitarioDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "Valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            this.valorDataGridViewTextBoxColumn.Width = 56;
+            // 
+            // fleteDataGridViewTextBoxColumn
+            // 
+            this.fleteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fleteDataGridViewTextBoxColumn.DataPropertyName = "Flete";
+            this.fleteDataGridViewTextBoxColumn.HeaderText = "Flete";
+            this.fleteDataGridViewTextBoxColumn.Name = "fleteDataGridViewTextBoxColumn";
+            this.fleteDataGridViewTextBoxColumn.Width = 55;
+            // 
+            // soldicomDataGridViewTextBoxColumn
+            // 
+            this.soldicomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.soldicomDataGridViewTextBoxColumn.DataPropertyName = "Soldicom";
+            this.soldicomDataGridViewTextBoxColumn.HeaderText = "Soldicom";
+            this.soldicomDataGridViewTextBoxColumn.Name = "soldicomDataGridViewTextBoxColumn";
+            this.soldicomDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // impuestoDataGridViewTextBoxColumn
+            // 
+            this.impuestoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.impuestoDataGridViewTextBoxColumn.DataPropertyName = "Impuesto";
+            this.impuestoDataGridViewTextBoxColumn.HeaderText = "Impuesto";
+            this.impuestoDataGridViewTextBoxColumn.Name = "impuestoDataGridViewTextBoxColumn";
+            this.impuestoDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // compraCombustibleVOBindingSource
+            // 
+            this.compraCombustibleVOBindingSource.DataSource = typeof(EstacionDB.VO.CompraCombustibleVO);
             // 
             // ComprasCombustible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 313);
+            this.ClientSize = new System.Drawing.Size(757, 510);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtGalones);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cboProducto);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.CalendarDesde);
-            this.Controls.Add(this.txtFechaDesde);
-            this.Controls.Add(this.cmdCalendarDesde);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -321,44 +442,58 @@
             this.Text = "Inventario de combustible";
             this.Load += new System.EventHandler(this.ComprasCombustible_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ComprasCombustible_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.productoVOBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoVOBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoVOBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.compraCombustibleVOBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MonthCalendar CalendarDesde;
-        private System.Windows.Forms.TextBox txtFechaDesde;
-        private System.Windows.Forms.Button cmdCalendarDesde;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource productoVOBindingSource;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtImpuesto;
+        private System.Windows.Forms.TextBox txtSoldicom;
+        private System.Windows.Forms.TextBox txtFlete;
+        private System.Windows.Forms.TextBox txtValorTotal;
+        private System.Windows.Forms.TextBox txtValorUnitario;
+        private System.Windows.Forms.TextBox txtGalones;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cboProducto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtGalones;
-        private System.Windows.Forms.TextBox txtFinal;
-        private System.Windows.Forms.TextBox txtInicial;
-        private System.Windows.Forms.TextBox txtMedida;
-        private System.Windows.Forms.TextBox txtSurtidor;
-        private System.Windows.Forms.Label Inicial;
-        private System.Windows.Forms.Label Final;
-        private System.Windows.Forms.Label Medida;
-        private System.Windows.Forms.Label Surtidor;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.BindingSource productoVOBindingSource;
-        private System.Windows.Forms.Button cmdGuardar;
+        private System.Windows.Forms.TextBox txtFactura;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtFecha;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtSobranteDia;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSonbranteAcumulado;
+        private System.Windows.Forms.Button cmdLimpiar;
+        private System.Windows.Forms.Button cmdAgregar;
+        private System.Windows.Forms.Button cmdGuardar;
+        private System.Windows.Forms.Button cmdBuscar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource productoVOBindingSource1;
+        private System.Windows.Forms.BindingSource compraCombustibleVOBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn facturaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idProductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn galonesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fleteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soldicomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn impuestoDataGridViewTextBoxColumn;
     }
 }

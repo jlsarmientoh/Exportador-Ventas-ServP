@@ -30,6 +30,7 @@ namespace Exportador_Ventas_ServP.Controller
         private ControlCombustibleDAO controlCombustibleDAO = null;
         private TanquesDAO tanquesDAO = null;
         private VolumenTanqueDAO volumenesDAO = null;
+        private CompraCombustibleDAO comprasDAO = null;
         #endregion
         #region métodos para obtener instancias de los DAO's
         private VentasDAO getVentasDAO()
@@ -165,6 +166,15 @@ namespace Exportador_Ventas_ServP.Controller
                 volumenesDAO = new VolumenTanqueDAO();
             }
             return volumenesDAO;
+        }
+
+        private CompraCombustibleDAO getComprasDAO()
+        {
+            if (comprasDAO == null)
+            {
+                comprasDAO = new CompraCombustibleDAO();
+            }
+            return comprasDAO;
         }
         #endregion
 
@@ -1049,12 +1059,13 @@ namespace Exportador_Ventas_ServP.Controller
                 {
                     controlCorriente.IdProducto = 1;
                     controlCorriente.Fecha = fecha;
+                    controlCorriente.GalonesCompra = (int)this.consultarComprasGalonesFechaProducto(1, fecha);
                     controlCorriente.InventarioInicial = (int)this.consultarSaldoAnterior(1, diaAnterior, diaAnterior);
-                    controlCorriente.VentaMedida = controlCorriente.InventarioInicial - controlCorriente.InventarioFinal;
+                    controlCorriente.VentaMedida = (controlCorriente.GalonesCompra + controlCorriente.InventarioInicial) - controlCorriente.InventarioFinal;
                     controlCorriente.VentaSurtidor = (int)this.consultarVentaProducto(fecha, fecha, 1);
                     controlCorriente.SobranteDia = controlCorriente.VentaSurtidor - controlCorriente.VentaMedida;
                     controlCorriente.SobranteAcumulado = controlCorriente.SobranteDia + (int)this.consultarAcumuladoAnterior(1, diaAnterior, diaAnterior);
-                    controlCorriente.Procentaje = (double)(((double)controlCorriente.SobranteDia / (double)controlCorriente.InventarioInicial) * 100);
+                    controlCorriente.Procentaje = (double)(((double)controlCorriente.SobranteDia / (double)(controlCorriente.GalonesCompra + controlCorriente.InventarioInicial)) * 100);
 
                     rows += this.guardarControlCombustible(controlCorriente);
                 }
@@ -1064,12 +1075,13 @@ namespace Exportador_Ventas_ServP.Controller
                 {
                     controlSuper.IdProducto = 2;
                     controlSuper.Fecha = fecha;
+                    controlSuper.GalonesCompra = (int)this.consultarComprasGalonesFechaProducto(2, fecha);
                     controlSuper.InventarioInicial = (int)this.consultarSaldoAnterior(2, diaAnterior, diaAnterior);
-                    controlSuper.VentaMedida = controlSuper.InventarioInicial - controlSuper.InventarioFinal;
+                    controlSuper.VentaMedida = (controlSuper.GalonesCompra + controlSuper.InventarioInicial) - controlSuper.InventarioFinal;
                     controlSuper.VentaSurtidor = (int)this.consultarVentaProducto(fecha, fecha, 2);
                     controlSuper.SobranteDia = controlSuper.VentaSurtidor - controlSuper.VentaMedida;
                     controlSuper.SobranteAcumulado = controlSuper.SobranteDia + (int)this.consultarAcumuladoAnterior(2, diaAnterior, diaAnterior);
-                    controlSuper.Procentaje = (double)(((double)controlSuper.SobranteDia / (double)controlSuper.InventarioInicial) * 100);
+                    controlSuper.Procentaje = (double)(((double)controlSuper.SobranteDia / (double)(controlSuper.GalonesCompra + controlSuper.InventarioInicial)) * 100);
 
                     rows += this.guardarControlCombustible(controlSuper);
                 }
@@ -1079,12 +1091,13 @@ namespace Exportador_Ventas_ServP.Controller
                 {
                     controlDiesel.IdProducto = 3;
                     controlDiesel.Fecha = fecha;
+                    controlDiesel.GalonesCompra = (int)this.consultarComprasGalonesFechaProducto(3, fecha);
                     controlDiesel.InventarioInicial = (int)this.consultarSaldoAnterior(3, diaAnterior, diaAnterior);
-                    controlDiesel.VentaMedida = controlDiesel.InventarioInicial - controlDiesel.InventarioFinal;
+                    controlDiesel.VentaMedida = (controlDiesel.GalonesCompra + controlDiesel.InventarioInicial) - controlDiesel.InventarioFinal;
                     controlDiesel.VentaSurtidor = (int)this.consultarVentaProducto(fecha, fecha, 3);
                     controlDiesel.SobranteDia = controlDiesel.VentaSurtidor - controlDiesel.VentaMedida;
                     controlDiesel.SobranteAcumulado = controlDiesel.SobranteDia + (int)this.consultarAcumuladoAnterior(3, diaAnterior, diaAnterior);
-                    controlDiesel.Procentaje = (double)(((double)controlDiesel.SobranteDia / (double)controlDiesel.InventarioInicial) * 100);
+                    controlDiesel.Procentaje = (double)(((double)controlDiesel.SobranteDia / (double)(controlDiesel.GalonesCompra + controlDiesel.InventarioInicial)) * 100);
 
                     rows += this.guardarControlCombustible(controlDiesel);
                 }
@@ -1160,6 +1173,42 @@ namespace Exportador_Ventas_ServP.Controller
             catch (EstacionDBException ex)
             {
                 throw new PersistenciaException("Error al consultar el control de combustible por fecha y producto", ex);
+            }
+        }
+
+        public int guardarCompraCombustible(CompraCombustibleVO c)
+        {
+            try
+            {
+                return getComprasDAO().guardar(c);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error al guardar la compra de combustible", ex);
+            }
+        }
+
+        public List<CompraCombustibleVO> consultarComprasFecha(DateTime fecha)
+        {
+            try
+            {
+                return getComprasDAO().consultarComprasFecha(fecha, fecha);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new EstacionDBException("Error al consultar las compras de combustible", ex);
+            }
+        }
+
+        private double consultarComprasGalonesFechaProducto(long idProducto, DateTime fecha)
+        {
+            try
+            {
+                return getComprasDAO().consultarComprasGalonesFechaProducto(idProducto, fecha, fecha);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new EstacionDBException("Error al consultar las compras de combustible", ex);
             }
         }
         #endregion
