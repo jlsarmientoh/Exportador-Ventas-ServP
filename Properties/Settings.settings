@@ -27,5 +27,11 @@
   &lt;string&gt;3,4&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
+    <Setting Name="NITEDS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">830.051.180-7</Value>
+    </Setting>
+    <Setting Name="telefonoEDS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3107855</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

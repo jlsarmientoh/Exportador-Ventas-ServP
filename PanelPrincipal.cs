@@ -23,6 +23,7 @@ namespace Exportador_Ventas_ServP
         private InformesCierre informes;
         private InformeDisposicionEfectivo rptDisposicionEfectivo;
         private Exportador_Ventas_ServP.Reports.InformeCombustible informeCombustible;
+        private InformeEstadoDeCuenta informaEstadoDeCuenta;
         private ImportarCliente importarCliente;
         private ExportarMovimientos exportarMovimientos;
         private EdicionCierres edicionCierres;
@@ -304,6 +305,13 @@ namespace Exportador_Ventas_ServP
             comprasCombustible = new ComprasCombustible();
             comprasCombustible.MdiParent = this;
             comprasCombustible.Show();
+        }
+
+        private void estadosDeCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            informaEstadoDeCuenta = new InformeEstadoDeCuenta();
+            informaEstadoDeCuenta.MdiParent = this;
+            informaEstadoDeCuenta.Show();
         }
     }
 }

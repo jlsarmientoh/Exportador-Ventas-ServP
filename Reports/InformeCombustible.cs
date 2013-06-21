@@ -23,9 +23,20 @@ namespace Exportador_Ventas_ServP.Reports
         private void button1_Click(object sender, EventArgs e)
         {
             if (!txtDesde.Text.Equals("") && !txtHasta.Text.Equals(""))
-            {   
-                getReportData();                
-                this.crystalReportViewer1.Show();
+            {
+                if (this.crystalReportViewer1.Visible)
+                {
+                    this.crystalReportViewer1.Hide();
+                    this.InformeCombustible1.Refresh();
+                    this.crystalReportViewer1.ReportSource = this.InformeCombustible1;
+                    getReportData();
+                    this.crystalReportViewer1.Show();
+                }
+                else
+                {
+                    getReportData();
+                    this.crystalReportViewer1.Show();
+                }
             }
             else
             {

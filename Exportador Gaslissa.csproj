@@ -171,6 +171,12 @@
       <DependentUpon>EstadoCuentaCliente.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EstadoDeCuenta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstadoDeCuenta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Exportador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,8 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Reports\DTO\EstadoCuentaDTO.cs" />
+    <Compile Include="Reports\DTO\ModoPagoDTO.cs" />
     <Compile Include="Reports\InformeCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +229,12 @@
     </Compile>
     <Compile Include="Reports\InformeDisposicionEfectivo.Designer.cs">
       <DependentUpon>InformeDisposicionEfectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InformeEstadoDeCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\InformeEstadoDeCuenta.Designer.cs">
+      <DependentUpon>InformeEstadoDeCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\InformesCierre.cs">
       <SubType>Form</SubType>
@@ -273,6 +287,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>EstadoCuentaCliente.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="EstadoDeCuenta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EstadoDeCuenta.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Exportador.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Exportador.cs</DependentUpon>
@@ -307,6 +325,10 @@
     <EmbeddedResource Include="Reports\InformeDisposicionEfectivo.resx">
       <SubType>Designer</SubType>
       <DependentUpon>InformeDisposicionEfectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InformeEstadoDeCuenta.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InformeEstadoDeCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\InformesCierre.resx">
       <SubType>Designer</SubType>
@@ -418,6 +440,7 @@
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO1.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.TipoIdVO2.datasource" />
+    <None Include="Properties\DataSources\Exportador_Ventas_ServP.Reports.DTO.ModoPagoDTO.datasource" />
     <None Include="Resources\32x32.ico" />
     <None Include="Resources\64x64.ico" />
     <Content Include="Resources\add_hover.gif" />

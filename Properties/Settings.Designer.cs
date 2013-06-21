@@ -108,5 +108,29 @@ namespace Exportador_Ventas_ServP.Properties {
                 this["grupoIsla"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("830.051.180-7")]
+        public string NITEDS {
+            get {
+                return ((string)(this["NITEDS"]));
+            }
+            set {
+                this["NITEDS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3107855")]
+        public string telefonoEDS {
+            get {
+                return ((string)(this["telefonoEDS"]));
+            }
+            set {
+                this["telefonoEDS"] = value;
+            }
+        }
     }
 }

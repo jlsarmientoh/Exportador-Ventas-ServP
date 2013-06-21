@@ -44,6 +44,7 @@
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.combustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lecturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sobretasasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cierreVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.comprasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadosDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -166,21 +167,28 @@
             this.lecturasToolStripMenuItem,
             this.comprasToolStripMenuItem1});
             this.combustibleToolStripMenuItem.Name = "combustibleToolStripMenuItem";
-            this.combustibleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.combustibleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.combustibleToolStripMenuItem.Text = "Combustible";
             this.combustibleToolStripMenuItem.Click += new System.EventHandler(this.combustibleToolStripMenuItem_Click);
             // 
             // lecturasToolStripMenuItem
             // 
             this.lecturasToolStripMenuItem.Name = "lecturasToolStripMenuItem";
-            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lecturasToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.lecturasToolStripMenuItem.Text = "Lecturas";
             this.lecturasToolStripMenuItem.Click += new System.EventHandler(this.lecturasToolStripMenuItem_Click_1);
+            // 
+            // comprasToolStripMenuItem1
+            // 
+            this.comprasToolStripMenuItem1.Name = "comprasToolStripMenuItem1";
+            this.comprasToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
+            this.comprasToolStripMenuItem1.Text = "Compras";
+            this.comprasToolStripMenuItem1.Click += new System.EventHandler(this.comprasToolStripMenuItem1_Click);
             // 
             // sobretasasToolStripMenuItem
             // 
             this.sobretasasToolStripMenuItem.Name = "sobretasasToolStripMenuItem";
-            this.sobretasasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sobretasasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.sobretasasToolStripMenuItem.Text = "Sobretasas";
             this.sobretasasToolStripMenuItem.Click += new System.EventHandler(this.sobretasasToolStripMenuItem_Click);
             // 
@@ -189,7 +197,8 @@
             this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cierreVentasToolStripMenuItem,
             this.disposiciónDeEfectivoToolStripMenuItem,
-            this.controlDeTanquesToolStripMenuItem});
+            this.controlDeTanquesToolStripMenuItem,
+            this.estadosDeCuentaToolStripMenuItem});
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.informesToolStripMenuItem.Text = "Informes";
@@ -238,12 +247,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // comprasToolStripMenuItem1
+            // estadosDeCuentaToolStripMenuItem
             // 
-            this.comprasToolStripMenuItem1.Name = "comprasToolStripMenuItem1";
-            this.comprasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.comprasToolStripMenuItem1.Text = "Compras";
-            this.comprasToolStripMenuItem1.Click += new System.EventHandler(this.comprasToolStripMenuItem1_Click);
+            this.estadosDeCuentaToolStripMenuItem.Name = "estadosDeCuentaToolStripMenuItem";
+            this.estadosDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.estadosDeCuentaToolStripMenuItem.Text = "Estados de cuenta";
+            this.estadosDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.estadosDeCuentaToolStripMenuItem_Click);
             // 
             // PanelPrincipal
             // 
@@ -293,6 +302,7 @@
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lecturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem estadosDeCuentaToolStripMenuItem;
     }
 }
 
