@@ -158,6 +158,10 @@
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.Size = new System.Drawing.Size(100, 20);
             this.txtImpuesto.TabIndex = 9;
+            this.txtImpuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtImpuesto.Leave += new System.EventHandler(this.txtImpuesto_Leave);
+            this.txtImpuesto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtImpuesto_MouseClick);
+            this.txtImpuesto.Enter += new System.EventHandler(this.txtImpuesto_Enter);
             // 
             // txtSoldicom
             // 
@@ -165,6 +169,10 @@
             this.txtSoldicom.Name = "txtSoldicom";
             this.txtSoldicom.Size = new System.Drawing.Size(100, 20);
             this.txtSoldicom.TabIndex = 8;
+            this.txtSoldicom.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSoldicom.Leave += new System.EventHandler(this.txtSoldicom_Leave);
+            this.txtSoldicom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSoldicom_MouseClick);
+            this.txtSoldicom.Enter += new System.EventHandler(this.txtSoldicom_Enter);
             // 
             // txtFlete
             // 
@@ -172,6 +180,10 @@
             this.txtFlete.Name = "txtFlete";
             this.txtFlete.Size = new System.Drawing.Size(100, 20);
             this.txtFlete.TabIndex = 7;
+            this.txtFlete.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtFlete.Leave += new System.EventHandler(this.txtFlete_Leave);
+            this.txtFlete.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFlete_MouseClick);
+            this.txtFlete.Enter += new System.EventHandler(this.txtFlete_Enter);
             // 
             // txtValorTotal
             // 
@@ -179,6 +191,10 @@
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(100, 20);
             this.txtValorTotal.TabIndex = 6;
+            this.txtValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorTotal.Leave += new System.EventHandler(this.txtValorTotal_Leave);
+            this.txtValorTotal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtValorTotal_MouseClick);
+            this.txtValorTotal.Enter += new System.EventHandler(this.txtValorTotal_Enter);
             // 
             // txtValorUnitario
             // 
@@ -186,6 +202,10 @@
             this.txtValorUnitario.Name = "txtValorUnitario";
             this.txtValorUnitario.Size = new System.Drawing.Size(100, 20);
             this.txtValorUnitario.TabIndex = 5;
+            this.txtValorUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorUnitario.Leave += new System.EventHandler(this.txtValorUnitario_Leave);
+            this.txtValorUnitario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtValorUnitario_MouseClick);
+            this.txtValorUnitario.Enter += new System.EventHandler(this.txtValorUnitario_Enter);
             // 
             // txtGalones
             // 
@@ -193,6 +213,10 @@
             this.txtGalones.Name = "txtGalones";
             this.txtGalones.Size = new System.Drawing.Size(100, 20);
             this.txtGalones.TabIndex = 4;
+            this.txtGalones.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGalones.Leave += new System.EventHandler(this.txtGalones_Leave);
+            this.txtGalones.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtGalones_MouseClick);
+            this.txtGalones.Enter += new System.EventHandler(this.txtGalones_Enter);
             // 
             // groupBox2
             // 

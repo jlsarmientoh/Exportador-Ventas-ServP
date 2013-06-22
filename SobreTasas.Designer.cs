@@ -146,6 +146,10 @@
             this.txtPrecioBase.Name = "txtPrecioBase";
             this.txtPrecioBase.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioBase.TabIndex = 4;
+            this.txtPrecioBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrecioBase.Leave += new System.EventHandler(this.txtPrecioBase_Leave);
+            this.txtPrecioBase.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPrecioBase_MouseClick);
+            this.txtPrecioBase.Enter += new System.EventHandler(this.txtPrecioBase_Enter);
             // 
             // txtFlete
             // 
@@ -153,6 +157,10 @@
             this.txtFlete.Name = "txtFlete";
             this.txtFlete.Size = new System.Drawing.Size(100, 20);
             this.txtFlete.TabIndex = 5;
+            this.txtFlete.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtFlete.Leave += new System.EventHandler(this.txtFlete_Leave);
+            this.txtFlete.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFlete_MouseClick);
+            this.txtFlete.Enter += new System.EventHandler(this.txtFlete_Enter);
             // 
             // label5
             // 
@@ -169,6 +177,10 @@
             this.txtSoldicom.Name = "txtSoldicom";
             this.txtSoldicom.Size = new System.Drawing.Size(100, 20);
             this.txtSoldicom.TabIndex = 6;
+            this.txtSoldicom.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSoldicom.Leave += new System.EventHandler(this.txtSoldicom_Leave);
+            this.txtSoldicom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSoldicom_MouseClick);
+            this.txtSoldicom.Enter += new System.EventHandler(this.txtSoldicom_Enter);
             // 
             // label6
             // 
@@ -185,6 +197,10 @@
             this.txtSobretasa.Name = "txtSobretasa";
             this.txtSobretasa.Size = new System.Drawing.Size(100, 20);
             this.txtSobretasa.TabIndex = 7;
+            this.txtSobretasa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSobretasa.Leave += new System.EventHandler(this.txtSobretasa_Leave);
+            this.txtSobretasa.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSobretasa_MouseClick);
+            this.txtSobretasa.Enter += new System.EventHandler(this.txtSobretasa_Enter);
             // 
             // label7
             // 
@@ -201,6 +217,10 @@
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioVenta.TabIndex = 8;
+            this.txtPrecioVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrecioVenta.Leave += new System.EventHandler(this.txtPrecioVenta_Leave);
+            this.txtPrecioVenta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPrecioVenta_MouseClick);
+            this.txtPrecioVenta.Enter += new System.EventHandler(this.txtPrecioVenta_Enter);
             // 
             // label8
             // 

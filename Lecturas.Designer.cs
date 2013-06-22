@@ -136,6 +136,10 @@
             this.txtMedida.Name = "txtMedida";
             this.txtMedida.Size = new System.Drawing.Size(100, 20);
             this.txtMedida.TabIndex = 27;
+            this.txtMedida.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMedida.Leave += new System.EventHandler(this.txtMedida_Leave);
+            this.txtMedida.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMedida_MouseClick);
+            this.txtMedida.Enter += new System.EventHandler(this.txtMedida_Enter);
             // 
             // cmdLimpiar
             // 

@@ -29,13 +29,13 @@ namespace Exportador_Ventas_ServP
 
         
         private void reiniciarValores()
-        {   
-            txtGalones.Text = "0";
-            txtValorUnitario.Text = "0";
-            txtValorTotal.Text = "0";
-            txtSoldicom.Text = "0";
-            txtFlete.Text = "0";
-            txtImpuesto.Text = "0";
+        {
+            txtGalones.Text = String.Format("{0,10:#,0.00}", 0);
+            txtValorUnitario.Text = String.Format("{0,10:#,0.00}", 0);
+            txtValorTotal.Text = String.Format("{0,10:#,0.00}", 0);
+            txtSoldicom.Text = String.Format("{0,10:#,0.00}", 0);
+            txtFlete.Text = String.Format("{0,10:#,0.00}", 0);
+            txtImpuesto.Text = String.Format("{0,10:#,0.00}", 0);
         }
 
         private void ComprasCombustible_FormClosed(object sender, FormClosedEventArgs e)
@@ -102,31 +102,162 @@ namespace Exportador_Ventas_ServP
             }
         }
 
-        /*private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            if (compraCombustibleVOBindingSource.Current != null)
-            {
-                CompraCombustibleVO c = (CompraCombustibleVO)compraCombustibleVOBindingSource.Current;
-                txtFecha.Text = c.Fecha.ToShortDateString();
-                txtFactura.Text = c.Factura.ToString(); ;
-                cboProducto.SelectedValue = c.IdProducto;
-                txtGalones.Text = c.Galones.ToString();
-                txtValorUnitario.Text = c.ValorUnitario.ToString();
-                txtValorTotal.Text = c.Valor.ToString();
-                txtSoldicom.Text = c.Soldicom.ToString();
-                txtFlete.Text = c.Flete.ToString();
-                txtImpuesto.Text = c.Impuesto.ToString();
-            }
-        }*/
-
-       
-
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             if (!txtFecha.Text.Equals(""))
             {
                 compraCombustibleVOBindingSource.DataSource = cp.consultarComprasFecha(DateTime.Parse(txtFecha.Text));
             }
+        }
+
+        private void txtGalones_Enter(object sender, EventArgs e)
+        {
+            txtGalones.SelectionStart = 0;
+            txtGalones.SelectionLength = txtGalones.Text.Length;
+        }
+
+        private void txtGalones_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtGalones.SelectionStart = 0;
+            txtGalones.SelectionLength = txtGalones.Text.Length;
+        }
+
+        private void txtGalones_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtGalones.Text);
+                txtGalones.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch 
+            {
+                txtGalones.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtValorUnitario_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtValorUnitario.Text);
+                txtValorUnitario.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtValorUnitario.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtValorUnitario_Enter(object sender, EventArgs e)
+        {
+            txtValorUnitario.SelectionStart = 0;
+            txtValorUnitario.SelectionLength = txtValorUnitario.Text.Length;
+        }
+
+        private void txtValorUnitario_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtValorUnitario.SelectionStart = 0;
+            txtValorUnitario.SelectionLength = txtValorUnitario.Text.Length;
+        }
+
+        private void txtValorTotal_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtValorTotal.SelectionStart = 0;
+            txtValorTotal.SelectionLength = txtValorTotal.Text.Length;
+        }
+
+        private void txtValorTotal_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtValorTotal.Text);
+                txtValorTotal.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtValorTotal.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtValorTotal_Enter(object sender, EventArgs e)
+        {
+            txtValorTotal.SelectionStart = 0;
+            txtValorTotal.SelectionLength = txtValorTotal.Text.Length;
+        }
+
+        private void txtFlete_Enter(object sender, EventArgs e)
+        {
+            txtFlete.SelectionStart = 0;
+            txtFlete.SelectionLength = txtFlete.Text.Length;
+        }
+
+        private void txtFlete_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtFlete.Text);
+                txtFlete.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtFlete.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtFlete_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtFlete.SelectionStart = 0;
+            txtFlete.SelectionLength = txtFlete.Text.Length;
+        }
+
+        private void txtSoldicom_Enter(object sender, EventArgs e)
+        {
+            txtSoldicom.SelectionStart = 0;
+            txtSoldicom.SelectionLength = txtSoldicom.Text.Length;
+        }
+
+        private void txtSoldicom_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtSoldicom.Text);
+                txtSoldicom.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtSoldicom.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtSoldicom_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtSoldicom.SelectionStart = 0;
+            txtSoldicom.SelectionLength = txtSoldicom.Text.Length;
+        }
+
+        private void txtImpuesto_Enter(object sender, EventArgs e)
+        {
+            txtImpuesto.SelectionStart = 0;
+            txtImpuesto.SelectionLength = txtImpuesto.Text.Length;
+        }
+
+        private void txtImpuesto_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtImpuesto.Text);
+                txtImpuesto.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtImpuesto.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtImpuesto_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtImpuesto.SelectionStart = 0;
+            txtImpuesto.SelectionLength = txtImpuesto.Text.Length;
         }        
     }
 }

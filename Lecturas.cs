@@ -90,5 +90,30 @@ namespace Exportador_Ventas_ServP
                 dataGridView1.Update();
             }
         }
+
+        private void txtMedida_Enter(object sender, EventArgs e)
+        {
+            txtMedida.SelectionStart = 0;
+            txtMedida.SelectionLength = txtMedida.Text.Length;
+        }
+
+        private void txtMedida_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtMedida.Text);
+                txtMedida.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtMedida.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtMedida_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtMedida.SelectionStart = 0;
+            txtMedida.SelectionLength = txtMedida.Text.Length;
+        }
     }
 }

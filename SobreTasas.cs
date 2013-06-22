@@ -119,5 +119,130 @@ namespace Exportador_Ventas_ServP
             DateTime fechaDesde = DateTime.Parse(txtFechaDesde.Text);
             sobretasaVOBindingSource.DataSource = cp.consultarSobretasasProductoFecha(fechaDesde.Month, fechaDesde.Year, idProd, fechaDesde.Day);
         }
+
+        private void txtPrecioBase_Enter(object sender, EventArgs e)
+        {
+            txtPrecioBase.SelectionStart = 0;
+            txtPrecioBase.SelectionLength = txtPrecioBase.Text.Length;
+        }
+
+        private void txtPrecioBase_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtPrecioBase.Text);
+                txtPrecioBase.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtPrecioBase.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtPrecioBase_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtPrecioBase.SelectionStart = 0;
+            txtPrecioBase.SelectionLength = txtPrecioBase.Text.Length;
+        }
+
+        private void txtFlete_Enter(object sender, EventArgs e)
+        {
+            txtFlete.SelectionStart = 0;
+            txtFlete.SelectionLength = txtFlete.Text.Length;
+        }
+
+        private void txtFlete_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtFlete.Text);
+                txtFlete.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtFlete.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtFlete_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtFlete.SelectionStart = 0;
+            txtFlete.SelectionLength = txtFlete.Text.Length;
+        }
+
+        private void txtPrecioVenta_Enter(object sender, EventArgs e)
+        {
+            txtPrecioVenta.SelectionStart = 0;
+            txtPrecioVenta.SelectionLength = txtPrecioVenta.Text.Length;
+        }
+
+        private void txtPrecioVenta_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtPrecioVenta.Text);
+                txtPrecioVenta.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtPrecioVenta.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtPrecioVenta_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtPrecioVenta.SelectionStart = 0;
+            txtPrecioVenta.SelectionLength = txtPrecioVenta.Text.Length;
+        }
+
+        private void txtSoldicom_Enter(object sender, EventArgs e)
+        {
+            txtSoldicom.SelectionStart = 0;
+            txtSoldicom.SelectionLength = txtSoldicom.Text.Length;
+        }
+
+        private void txtSoldicom_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtSoldicom.Text);
+                txtSoldicom.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtSoldicom.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtSoldicom_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtSoldicom.SelectionStart = 0;
+            txtSoldicom.SelectionLength = txtSoldicom.Text.Length;
+        }
+
+        private void txtSobretasa_Enter(object sender, EventArgs e)
+        {
+            txtSobretasa.SelectionStart = 0;
+            txtSobretasa.SelectionLength = txtSobretasa.Text.Length;
+        }
+
+        private void txtSobretasa_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double tmp = double.Parse(txtSobretasa.Text);
+                txtSobretasa.Text = String.Format("{0,10:#,0.00}", tmp);
+            }
+            catch
+            {
+                txtSobretasa.Text = String.Format("{0,10:#,0.00}", 0);
+            }
+        }
+
+        private void txtSobretasa_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtSobretasa.SelectionStart = 0;
+            txtSobretasa.SelectionLength = txtSobretasa.Text.Length;
+        }
     }
 }

@@ -86,7 +86,7 @@ namespace Exportador_Ventas_ServP.Reports
             cuenta.Name = EstadoDeCuenta1.Parameter_N_CUENTA.ParameterFieldName;
             value = new ParameterDiscreteValue();
             cuenta.ParameterValueType = ParameterValueKind.StringParameter;
-            value.Value = getNumeroCuenta(new DateTime());
+            value.Value = getNumeroCuenta(DateTime.Now);
             cuenta.DefaultValues.Add(value);
             cuenta.CurrentValues.Add(value);
             this.crystalReportViewer1.ParameterFieldInfo.Add(cuenta);
