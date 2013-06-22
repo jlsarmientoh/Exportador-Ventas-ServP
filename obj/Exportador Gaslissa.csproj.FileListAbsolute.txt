@@ -105,3 +105,95 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.pdb
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.EstadoDeCuenta.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Reports.InformeEstadoDeCuenta.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.exe.config
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.exe
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Empleado.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Venta.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ConfigHibernate\configExpo.cfg.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ConfigHibernate\configServ.cfg.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\VentaExpo.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\CierreVenta.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Ingreso.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Egreso.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\VentaTurno.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Cliente.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\ProductoTurno.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\ProductoTurnoExpo.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\ClienteServP.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Sobretasa.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\ControlCombustible.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Producto.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Tanque.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\VolumenTanque.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\CompraCombustible.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Resources\search.gif
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\DisposicionEfectivo.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\InformeCombustible.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\InformeGeneralCierreVenta.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ProductoTurno.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ResumenMediosPago.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ResumenProductoTurno.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\VentasProductoTurno.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\DisposicionEfectivo.cs
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\InformeCombustible.cs
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\InformeGeneralCierreVenta.cs
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ProductoTurno.cs
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ResumenMediosPago.cs
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ResumenProductoTurno.cs
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\VentasProductoTurno.cs
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.exe.manifest
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.application
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.exe
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Antlr3.Runtime.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Castle.Core.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Castle.DynamicProxy2.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\EstacionDB.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\GeoAPI.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Iesi.Collections.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\log4net.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\NetTopologySuite.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\NHibernate.ByteCode.Castle.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\NHibernate.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\NHibernate.Spatial.dll
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\log4net.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\NHibernate.Spatial.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\NetTopologySuite.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Castle.DynamicProxy2.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\NHibernate.ByteCode.Castle.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\EstacionDB.pdb
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\GeoAPI.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Castle.Core.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Iesi.Collections.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\NHibernate.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.DisposicionEfectivo.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.EstadoCuentaCliente.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.EstadoDeCuenta.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.InformeCombustible.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.InformeGeneralCierreVenta.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ProductoTurno.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ResumenMediosPago.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ResumenProductoTurno.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.VentasProductoTurno.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AboutGaslissa.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Clientes.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ComprasCombustible.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.EdicionCierres.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Exportador.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ExportarMovimientos.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ImportarCliente.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeCombustible.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeDisposicionEfectivo.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeEstadoDeCuenta.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.InformesCierre.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Lecturas.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.MovimientosDiarios.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.PanelPrincipal.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Properties.Resources.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.SobreTasas.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Gaslissa.csproj.GenerateResource.Cache
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.TrustInfo.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.exe.manifest
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.application
