@@ -197,3 +197,6 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.TrustInfo.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.exe.manifest
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.application
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ListadoVales.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeVales.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AjusteDeVales.resources

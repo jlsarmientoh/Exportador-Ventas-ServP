@@ -50,11 +50,13 @@
             this.cierreVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disposiciónDeEfectivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeTanquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadosDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.valesCréditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.estadosDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajustarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +103,8 @@
             // 
             this.ventasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroDiarioToolStripMenuItem,
-            this.exportarToolStripMenuItem});
+            this.exportarToolStripMenuItem,
+            this.ajustarToolStripMenuItem});
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
             this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(52, 20);
             this.ventasToolStripMenuItem1.Text = "Ventas";
@@ -112,7 +115,7 @@
             this.registroDiarioToolStripMenuItem1,
             this.modificarToolStripMenuItem});
             this.registroDiarioToolStripMenuItem.Name = "registroDiarioToolStripMenuItem";
-            this.registroDiarioToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.registroDiarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registroDiarioToolStripMenuItem.Text = "Cierres";
             this.registroDiarioToolStripMenuItem.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem_Click);
             // 
@@ -133,7 +136,7 @@
             // exportarToolStripMenuItem
             // 
             this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportarToolStripMenuItem.Text = "Exportar";
             this.exportarToolStripMenuItem.Click += new System.EventHandler(this.exportarToolStripMenuItem_Click);
             // 
@@ -198,7 +201,8 @@
             this.cierreVentasToolStripMenuItem,
             this.disposiciónDeEfectivoToolStripMenuItem,
             this.controlDeTanquesToolStripMenuItem,
-            this.estadosDeCuentaToolStripMenuItem});
+            this.estadosDeCuentaToolStripMenuItem,
+            this.valesCréditoToolStripMenuItem});
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.informesToolStripMenuItem.Text = "Informes";
@@ -224,6 +228,20 @@
             this.controlDeTanquesToolStripMenuItem.Text = "Control de tanques";
             this.controlDeTanquesToolStripMenuItem.Click += new System.EventHandler(this.controlDeTanquesToolStripMenuItem_Click);
             // 
+            // estadosDeCuentaToolStripMenuItem
+            // 
+            this.estadosDeCuentaToolStripMenuItem.Name = "estadosDeCuentaToolStripMenuItem";
+            this.estadosDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.estadosDeCuentaToolStripMenuItem.Text = "Estados de cuenta";
+            this.estadosDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.estadosDeCuentaToolStripMenuItem_Click);
+            // 
+            // valesCréditoToolStripMenuItem
+            // 
+            this.valesCréditoToolStripMenuItem.Name = "valesCréditoToolStripMenuItem";
+            this.valesCréditoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.valesCréditoToolStripMenuItem.Text = "Vales crédito";
+            this.valesCréditoToolStripMenuItem.Click += new System.EventHandler(this.valesCréditoToolStripMenuItem_Click);
+            // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
@@ -247,12 +265,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // estadosDeCuentaToolStripMenuItem
+            // ajustarToolStripMenuItem
             // 
-            this.estadosDeCuentaToolStripMenuItem.Name = "estadosDeCuentaToolStripMenuItem";
-            this.estadosDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.estadosDeCuentaToolStripMenuItem.Text = "Estados de cuenta";
-            this.estadosDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.estadosDeCuentaToolStripMenuItem_Click);
+            this.ajustarToolStripMenuItem.Name = "ajustarToolStripMenuItem";
+            this.ajustarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ajustarToolStripMenuItem.Text = "Ajustar";
+            this.ajustarToolStripMenuItem.Click += new System.EventHandler(this.ajustarToolStripMenuItem_Click);
             // 
             // PanelPrincipal
             // 
@@ -303,6 +321,8 @@
         private System.Windows.Forms.ToolStripMenuItem lecturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem estadosDeCuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem valesCréditoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajustarToolStripMenuItem;
     }
 }
 

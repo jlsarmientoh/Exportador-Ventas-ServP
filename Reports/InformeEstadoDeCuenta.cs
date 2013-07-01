@@ -167,8 +167,8 @@ namespace Exportador_Ventas_ServP.Reports
 
         private List<ModoPagoDTO> getModosPago(){
             List<ModoPagoDTO> modos = new List<ModoPagoDTO>();
-            modos.Add(new ModoPagoDTO(1, "Crédito con CHIP"));
-            modos.Add(new ModoPagoDTO(7, "Crédito sin CHIP"));
+            modos.Add(new ModoPagoDTO(7, "Crédito con CHIP"));
+            modos.Add(new ModoPagoDTO(1, "Crédito sin CHIP"));
             modos.Add(new ModoPagoDTO(2, "Tarjeta Plus"));
 
             return modos;

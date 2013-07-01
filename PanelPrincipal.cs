@@ -28,6 +28,8 @@ namespace Exportador_Ventas_ServP
         private ExportarMovimientos exportarMovimientos;
         private EdicionCierres edicionCierres;
         private SobreTasas sobretasas;
+        private InformeVales informeVales;
+        private AjusteDeVales ajusteVales;
         private AboutGaslissa about;
         #endregion
 
@@ -312,6 +314,20 @@ namespace Exportador_Ventas_ServP
             informaEstadoDeCuenta = new InformeEstadoDeCuenta();
             informaEstadoDeCuenta.MdiParent = this;
             informaEstadoDeCuenta.Show();
+        }
+
+        private void valesCréditoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            informeVales = new InformeVales();
+            informeVales.MdiParent = this;
+            informeVales.Show();
+        }
+
+        private void ajustarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ajusteVales = new AjusteDeVales();
+            ajusteVales.MdiParent = this;
+            ajusteVales.Show();
         }
     }
 }

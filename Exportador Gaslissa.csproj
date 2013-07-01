@@ -139,6 +139,12 @@
     <Compile Include="AboutGaslissa.Designer.cs">
       <DependentUpon>AboutGaslissa.cs</DependentUpon>
     </Compile>
+    <Compile Include="AjusteDeVales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjusteDeVales.Designer.cs">
+      <DependentUpon>AjusteDeVales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,12 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="ListadoVales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListadoVales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ProductoTurno.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -218,6 +230,7 @@
     </Compile>
     <Compile Include="Reports\DTO\EstadoCuentaDTO.cs" />
     <Compile Include="Reports\DTO\ModoPagoDTO.cs" />
+    <Compile Include="Reports\DTO\VentaDTO.cs" />
     <Compile Include="Reports\InformeCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +279,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>AboutGaslissa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AjusteDeVales.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AjusteDeVales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Clientes.cs</DependentUpon>
@@ -313,6 +330,10 @@
       <LastGenOutput>InformeGeneralCierreVenta.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListadoVales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListadoVales.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductoTurno.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ProductoTurno.cs</LastGenOutput>
@@ -351,6 +372,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InformeVales.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InformeVales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResumenMediosPago.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ResumenMediosPago.cs</LastGenOutput>
@@ -385,6 +410,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\InformeVales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\InformeVales.Designer.cs">
+      <DependentUpon>InformeVales.cs</DependentUpon>
     </Compile>
     <Compile Include="ResumenMediosPago.cs">
       <AutoGen>True</AutoGen>

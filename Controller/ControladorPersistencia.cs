@@ -9,6 +9,7 @@ using System.Globalization;
 using NHibernate.Mapping;
 using EstacionDB.DAO;
 using EstacionDB.Utilidades;
+using Exportador_Ventas_ServP.Reports.DTO;
 
 namespace Exportador_Ventas_ServP.Controller
 {
@@ -608,6 +609,18 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
+        public VentaVO consultarVentaExpo(long nroTiquete)
+        {
+            try
+            {
+                return getVentasDAO().consultarVentasByTiqueteExpo(nroTiquete);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la consulta ventas en DB estación.", ex);
+            }
+        }
+
         public VentaVO consultarVentaTurno(long nroTiquete, DateTime fecha1, DateTime fecha2, int isla, int turno)
         {
             try
@@ -649,6 +662,18 @@ namespace Exportador_Ventas_ServP.Controller
             try
             {
                 return getVentasDAO().guardarVentas(ventas);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la actualizacion de las ventas en DB app.", ex);
+            }
+        }
+
+        public int guardarVenta(VentaVO venta)
+        {
+            try
+            {
+                return getVentasDAO().guardarVenta(venta);
             }
             catch (EstacionDBException ex)
             {
@@ -699,6 +724,45 @@ namespace Exportador_Ventas_ServP.Controller
             catch (EstacionDBException ex)
             {
                 throw new PersistenciaException("Error en la actualizacion de las ventas en DB app.", ex);
+            }
+        }
+
+        public List<VentaDTO> consultarVentaCliente(DateTime fecha1, DateTime fecha2, string nit)
+        {
+            try
+            {
+                List<VentaDTO> result = new List<VentaDTO>();
+                List<VentaVO> list = getVentasDAO().consultarVentasCliente(fecha1, fecha2, nit);
+                foreach (VentaVO v in list)
+                {
+                    VentaDTO dto = new VentaDTO();
+                    dto.Consecutivo = v.Tiquete;
+                    dto.Fecha = v.Fecha;
+                    dto.Kilometraje = v.Kilometraje;
+                    dto.Placa = v.Placa;
+                    dto.Producto = v.Producto;
+                    dto.Total = v.Total;
+
+                    switch (v.ModoPago)
+                    {
+                        case 1: {
+                            dto.ModoPago = "Crédito sin chip";
+                            break; }
+                        case 2: {
+                            dto.ModoPago = "Tarjeta Plus";
+                            break; }
+                        case 7: {
+                            dto.ModoPago = "Crédito con chip";
+                            break; }
+                    }
+
+                    result.Add(dto);
+                }
+                return result;
+            }
+            catch (EstacionDBException)
+            {
+                throw new PersistenciaException("Error al consultar las ventas para el cliente y fechas seleccionados");
             }
         }
         #endregion
