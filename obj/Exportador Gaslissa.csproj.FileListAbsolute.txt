@@ -105,9 +105,6 @@ C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Rel
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador Ventas ServP.pdb
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.EstadoDeCuenta.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Exportador Ventas ServP\obj\Release\Exportador_Ventas_ServP.Reports.InformeEstadoDeCuenta.resources
-C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.exe.config
-C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.exe
-C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.pdb
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Empleado.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Venta.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ConfigHibernate\configExpo.cfg.xml
@@ -142,6 +139,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ProductoTu
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ResumenMediosPago.cs
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\ResumenProductoTurno.cs
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\VentasProductoTurno.cs
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.exe.config
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.exe.manifest
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.application
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Exportador Ventas ServP.exe
@@ -173,11 +171,13 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.EstadoDeCuenta.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.InformeCombustible.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.InformeGeneralCierreVenta.rpt
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ListadoVales.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ResumenMediosPago.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ResumenProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.VentasProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AboutGaslissa.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AjusteDeVales.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Clientes.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ComprasCombustible.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.EdicionCierres.resources
@@ -192,11 +192,11 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.MovimientosDiarios.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.PanelPrincipal.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Properties.Resources.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeVales.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.SobreTasas.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Gaslissa.csproj.GenerateResource.Cache
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.TrustInfo.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.exe.manifest
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.application
-C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ListadoVales.rpt
-C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeVales.resources
-C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AjusteDeVales.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.exe
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador Ventas ServP.pdb

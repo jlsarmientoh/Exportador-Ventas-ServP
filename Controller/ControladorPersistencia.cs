@@ -823,6 +823,45 @@ namespace Exportador_Ventas_ServP.Controller
             }
             return lectura;
         }
+
+        public double consultarLecturaFinalProducto(DateTime fecha1, DateTime fecha2, int idProdcuto)
+        {
+            try
+            {
+                double diferencia = 0;
+                double resultado = 0;
+                int prod = 0;
+                switch (idProdcuto)
+                {
+                    case 1:
+                        {
+                            prod = Utilidades.codigoCorriente;
+                            break;
+                        }
+                    case 2:
+                        {
+                            prod = Utilidades.codigoSuper;
+                            break;
+                        }
+                    case 3:
+                        {
+                            prod = Utilidades.codigoDiesel;
+                            break;
+                        }
+                }
+                diferencia = getLecturasDAO().consultarDiferenciaProducto(fecha1, fecha2, prod);
+                diferencia = Math.Round(diferencia, 0, MidpointRounding.AwayFromZero);
+
+                resultado = this.consultarSaldoAnterior(idProdcuto, fecha1, fecha2);
+                resultado = resultado - diferencia;
+
+                return resultado;
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la consulta lecturas en DB estación.", ex);
+            }
+        }
         #endregion
 
         #region clientes

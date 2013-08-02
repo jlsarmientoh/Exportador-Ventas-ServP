@@ -57,7 +57,9 @@ namespace Exportador_Ventas_ServP.Reports
             ParameterField nitCliente = new ParameterField();
             ParameterField cliente = new ParameterField();
             ParameterField telCliente = new ParameterField();
+            ParameterField total = new ParameterField();
             ParameterDiscreteValue value = new ParameterDiscreteValue();
+            double totalEstadoCuenta = 0;
 
             telCliente.Name = EstadoDeCuenta1.Parameter_CLI_TEL.ParameterFieldName;
             value = new ParameterDiscreteValue();
@@ -147,8 +149,17 @@ namespace Exportador_Ventas_ServP.Reports
                 e.Producto = v.Producto;
                 e.ValorBruto = v.Total;
                 e.ValorTotal = v.Total;
+                totalEstadoCuenta += v.Total;
                 this.detalles.Add(e);
             }
+
+            total.Name = EstadoDeCuenta1.Parameter_TOTAL.ParameterFieldName;
+            value = new ParameterDiscreteValue();
+            fechaHasta.ParameterValueType = ParameterValueKind.NumberParameter;
+            value.Value = totalEstadoCuenta;
+            total.DefaultValues.Add(value);
+            total.CurrentValues.Add(value);
+            this.crystalReportViewer1.ParameterFieldInfo.Add(total);
 
             EstadoDeCuenta1.SetDataSource(this.detalles);
 

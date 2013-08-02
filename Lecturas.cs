@@ -31,6 +31,7 @@ namespace Exportador_Ventas_ServP
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
+            //Consulta los galones a partir de la fecha, de la medida de la vara, del producto y tipo de tanque
             if (!txtFecha.Text.Equals("") && !txtMedida.Text.Equals(""))
             {
                 DateTime fecha = DateTime.Parse(txtFecha.Text);
@@ -47,9 +48,21 @@ namespace Exportador_Ventas_ServP
                     MessageBox.Show("No hay información en las tablas de aforo para el producto y tanque seleccionados", "No hay información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-            else
+            //Consulta los galones a partir de la fecha y del producto
+            else if (!txtFecha.Text.Equals("") && txtMedida.Text.Equals(""))
             {
-                MessageBox.Show("Debe llenar todos la fecha, producto, tanque y nivel", "Campos requeridos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DateTime fecha = DateTime.Parse(txtFecha.Text);
+                double galones = cp.consultarLecturaFinalProducto(fecha, fecha,(int)cboProducto.SelectedValue);
+                LecturaDTO lectura = new LecturaDTO();
+                lectura.IdProducto = ((ProductoVO)cboProducto.SelectedItem).IdProducto;
+                lectura.Producto = ((ProductoVO)cboProducto.SelectedItem).Nombre;
+                lectura.IdTanque = ((TanqueVO)cboTanque.SelectedItem).IdTanque;
+                lectura.Tanque = ((TanqueVO)cboTanque.SelectedItem).Descripcion;
+                lectura.Nivel = 0;
+                lectura.Galones = galones;
+                lecturaDTOBindingSource.Add(lectura);
+                
+                //MessageBox.Show("Debe llenar todos la fecha, producto, tanque y nivel", "Campos requeridos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -67,6 +80,7 @@ namespace Exportador_Ventas_ServP
                     {
                         lecturaDTOBindingSource.Clear();
                         txtMedida.Text = "";
+                        txtFecha.Text = "";
                         MessageBox.Show("Lecturas guardadas", "Datos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else

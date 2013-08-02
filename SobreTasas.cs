@@ -28,19 +28,21 @@ namespace Exportador_Ventas_ServP
             txtPrecioBase.Text = "0";
             txtPrecioVenta.Text = "0";
             txtSobretasa.Text = "0";
-            txtSoldicom.Text = "0";
-            DateTime fechaDesde = new DateTime();
-            DateTime fechaHasta = fechaDesde;
-            txtFechaDesde.Text = fechaDesde.ToShortDateString();
-            txtFechaHasta.Text = fechaHasta.ToShortDateString();
+            txtSoldicom.Text = "0";            
+            txtFechaDesde.Text = "";
+            txtFechaHasta.Text = "";
             cboProducto.Focus();
+            currentSobretasa = null;
         }
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                currentSobretasa = new SobretasaVO();
+                if (currentSobretasa == null)
+                {
+                    currentSobretasa = new SobretasaVO();
+                }
                 currentSobretasa.IdProducto = (int)cboProducto.SelectedValue;
                 currentSobretasa.Fletes = double.Parse(txtFlete.Text);
                 currentSobretasa.PrecioBase = double.Parse(txtPrecioBase.Text);
@@ -81,10 +83,8 @@ namespace Exportador_Ventas_ServP
             txtPrecioVenta.Text = "0";
             txtSobretasa.Text = "0";
             txtSoldicom.Text = "0";
-            DateTime fechaDesde = new DateTime();
-            DateTime fechaHasta = fechaDesde;
-            txtFechaDesde.Text = fechaDesde.ToShortDateString();
-            txtFechaHasta.Text = fechaHasta.ToShortDateString();
+            txtFechaDesde.Text = "";
+            txtFechaHasta.Text = "";
             cboProducto.Focus();
         }
 
