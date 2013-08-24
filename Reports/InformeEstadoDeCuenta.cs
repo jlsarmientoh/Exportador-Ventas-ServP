@@ -9,6 +9,8 @@ using Exportador_Ventas_ServP.Reports.DTO;
 using CrystalDecisions.Shared;
 using Exportador_Ventas_ServP.Controller;
 using EstacionDB.VO;
+using EstacionDB.Utilidades;
+using EstacionDB.DTO;
 
 namespace Exportador_Ventas_ServP.Reports
 {
@@ -64,7 +66,17 @@ namespace Exportador_Ventas_ServP.Reports
             telCliente.Name = EstadoDeCuenta1.Parameter_CLI_TEL.ParameterFieldName;
             value = new ParameterDiscreteValue();
             telCliente.ParameterValueType = ParameterValueKind.StringParameter;
-            value.Value = "";//getNumeroCuenta(new DateTime());
+            // Intenta obtener el teléfono del cliente
+            NitDTO tmpNit = Utilidades.formatearNit(((ClienteVO)cboClientes.SelectedItem).Identificacion);
+            List<ClienteVO> tmpCli = cp.consultarClientesPorCampo(tmpNit.Nit, Utilidades.C_CLI_NIT);
+            if (tmpCli.Count > 0)
+            {
+                value.Value = tmpCli[0].Telefono;
+            }
+            else
+            {
+                value.Value = "No registra";//getNumeroCuenta(new DateTime());
+            }
             telCliente.DefaultValues.Add(value);
             telCliente.CurrentValues.Add(value);
             this.crystalReportViewer1.ParameterFieldInfo.Add(telCliente);
