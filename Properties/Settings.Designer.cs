@@ -132,5 +132,17 @@ namespace Exportador_Ventas_ServP.Properties {
                 this["telefonoEDS"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4731")]
+        public string codigoCIIU {
+            get {
+                return ((string)(this["codigoCIIU"]));
+            }
+            set {
+                this["codigoCIIU"] = value;
+            }
+        }
     }
 }

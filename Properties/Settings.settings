@@ -33,5 +33,8 @@
     <Setting Name="telefonoEDS" Type="System.String" Scope="User">
       <Value Profile="(Default)">3107855</Value>
     </Setting>
+    <Setting Name="codigoCIIU" Type="System.String" Scope="User">
+      <Value Profile="(Default)">4731</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

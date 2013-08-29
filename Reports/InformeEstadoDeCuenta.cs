@@ -71,11 +71,11 @@ namespace Exportador_Ventas_ServP.Reports
             List<ClienteVO> tmpCli = cp.consultarClientesPorCampo(tmpNit.Nit, Utilidades.C_CLI_NIT);
             if (tmpCli.Count > 0)
             {
-                value.Value = tmpCli[0].Telefono;
+                value.Value = tmpCli[0].Telefono + " - " + tmpCli[0].Direccion;
             }
             else
             {
-                value.Value = "No registra";//getNumeroCuenta(new DateTime());
+                value.Value = "No registra";
             }
             telCliente.DefaultValues.Add(value);
             telCliente.CurrentValues.Add(value);
