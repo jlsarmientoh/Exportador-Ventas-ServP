@@ -178,6 +178,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ResumenProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.VentasProductoTurno.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AboutGaslissa.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AdministrarUsuarios.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AjusteDeVales.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Clientes.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ComprasCombustible.resources

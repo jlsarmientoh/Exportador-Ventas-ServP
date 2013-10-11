@@ -139,6 +139,12 @@
     <Compile Include="AboutGaslissa.Designer.cs">
       <DependentUpon>AboutGaslissa.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdministrarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarUsuarios.Designer.cs">
+      <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="AjusteDeVales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,10 @@
     <EmbeddedResource Include="AboutGaslissa.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AboutGaslissa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministrarUsuarios.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjusteDeVales.resx">
       <SubType>Designer</SubType>
@@ -466,6 +476,7 @@
     <None Include="Exportador Gaslissa_TemporaryKey.pfx" />
     <BaseApplicationManifest Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\EstacionDB.DTO.LecturaDTO.datasource" />
+    <None Include="Properties\DataSources\EstacionDB.DTO.UsuarioDTO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.BancoVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.CierreVentasVO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.ClienteVO.datasource" />

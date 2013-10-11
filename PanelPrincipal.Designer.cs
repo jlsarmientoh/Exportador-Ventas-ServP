@@ -57,6 +57,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.administrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +71,7 @@
             this.movimientosToolStripMenuItem,
             this.comprasToolStripMenuItem,
             this.informesToolStripMenuItem,
+            this.administrarToolStripMenuItem1,
             this.acercaDeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -272,6 +275,21 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
+            // administrarToolStripMenuItem1
+            // 
+            this.administrarToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem});
+            this.administrarToolStripMenuItem1.Name = "administrarToolStripMenuItem1";
+            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(73, 20);
+            this.administrarToolStripMenuItem1.Text = "Administrar";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
             // PanelPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +342,8 @@
         private System.Windows.Forms.ToolStripMenuItem estadosDeCuentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem valesCréditoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajustarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }
 

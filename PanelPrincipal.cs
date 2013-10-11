@@ -30,6 +30,7 @@ namespace Exportador_Ventas_ServP
         private SobreTasas sobretasas;
         private InformeVales informeVales;
         private AjusteDeVales ajusteVales;
+        private AdministrarUsuarios adminUsuarios;
         private AboutGaslissa about;
         #endregion
 
@@ -333,6 +334,13 @@ namespace Exportador_Ventas_ServP
         private void PanelPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            adminUsuarios = new AdministrarUsuarios();
+            adminUsuarios.MdiParent = this;
+            adminUsuarios.Show();
         }
     }
 }

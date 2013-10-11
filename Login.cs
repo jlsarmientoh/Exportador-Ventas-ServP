@@ -26,10 +26,10 @@ namespace Exportador_Ventas_ServP
             {
                 try
                 {
-                    UsuarioCore.getInstance().validarUsuario(txtUsuario.Text, txtPwd.Text);
+                    Utilidades.usuarioSesion = UsuarioCore.getInstance().validarUsuario(txtUsuario.Text, txtPwd.Text);
                     PanelPrincipal panel = new PanelPrincipal();
                     panel.Show();
-                    this.Hide();// Close();
+                    this.Hide();
                 }
                 catch (UsuarioException ex)
                 {

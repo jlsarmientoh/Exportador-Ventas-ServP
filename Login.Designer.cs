@@ -56,7 +56,7 @@
             this.label1.Location = new System.Drawing.Point(399, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 29);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Bienvenido";
             // 
             // label2
@@ -66,7 +66,7 @@
             this.label2.Location = new System.Drawing.Point(321, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 20;
             this.label2.Text = "Usuario";
             // 
             // label3
@@ -76,7 +76,7 @@
             this.label3.Location = new System.Drawing.Point(321, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 20);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 30;
             this.label3.Text = "Contraseña";
             // 
             // txtUsuario
@@ -85,7 +85,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(427, 77);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(157, 26);
-            this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.TabIndex = 1;
             // 
             // txtPwd
             // 
@@ -93,7 +93,7 @@
             this.txtPwd.Location = new System.Drawing.Point(427, 142);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(157, 26);
-            this.txtPwd.TabIndex = 5;
+            this.txtPwd.TabIndex = 2;
             this.txtPwd.UseSystemPasswordChar = true;
             // 
             // cmdIngresar
@@ -102,7 +102,7 @@
             this.cmdIngresar.Location = new System.Drawing.Point(428, 199);
             this.cmdIngresar.Name = "cmdIngresar";
             this.cmdIngresar.Size = new System.Drawing.Size(157, 31);
-            this.cmdIngresar.TabIndex = 6;
+            this.cmdIngresar.TabIndex = 3;
             this.cmdIngresar.Text = "Ingresar";
             this.cmdIngresar.UseVisualStyleBackColor = true;
             this.cmdIngresar.Click += new System.EventHandler(this.cmdIngresar_Click);
@@ -119,6 +119,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
