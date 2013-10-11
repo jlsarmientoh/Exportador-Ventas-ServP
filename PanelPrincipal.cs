@@ -329,5 +329,10 @@ namespace Exportador_Ventas_ServP
             ajusteVales.MdiParent = this;
             ajusteVales.Show();
         }
+
+        private void PanelPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

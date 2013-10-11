@@ -124,6 +124,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\P
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Tanque.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\VolumenTanque.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\CompraCombustible.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Usuario.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Resources\search.gif
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\DisposicionEfectivo.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\InformeCombustible.rpt
@@ -184,6 +185,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Exportador.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ExportarMovimientos.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ImportarCliente.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Login.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeCombustible.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeDisposicionEfectivo.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Reports.InformeEstadoDeCuenta.resources

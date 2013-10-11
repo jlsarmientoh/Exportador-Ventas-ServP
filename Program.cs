@@ -14,7 +14,7 @@ namespace Exportador_Ventas_ServP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PanelPrincipal());
+            Application.Run(new Login());
         }
     }
 }
