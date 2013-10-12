@@ -119,41 +119,11 @@ namespace Exportador_Ventas_ServP
                             if (confirm == DialogResult.Yes)
                             {
                                 guardarEgreso();
-                                /*System.Collections.IList tmpEgresos = egresoVOBindingSource.List;
-                                egresos = new EgresoVO[tmpEgresos.Count];
-                                tmpEgresos.CopyTo(egresos, 0);
-
-                                DateTime fecha = DateTime.Parse(txtFechaDesde.Text);
-                                DateTime fechaAplica = DateTime.Parse(txtFechaAplica.Text);
-
-                                int res = 0;
-                                res = cp.guardarEgresos(new List<EgresoVO>(egresos), fecha, fechaAplica);
-
-                                MessageBox.Show("Egresos guardados para la fecha: " + txtFechaDesde.Text + "\n\n" +
-                                    "Aplicados la fecha: " + txtFechaAplica.Text, "Egresos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                egresoVOBindingSource.Clear();
-                                txtTotalEgresos.Text = "0";
-                                txtSaldo.Text = "0";*/
                             }
                         }
                         else
                         {
                             guardarEgreso();
-                            /*System.Collections.IList tmpEgresos = egresoVOBindingSource.List;
-                            egresos = new EgresoVO[tmpEgresos.Count];
-                            tmpEgresos.CopyTo(egresos, 0);
-
-                            DateTime fecha = DateTime.Parse(txtFechaDesde.Text);
-                            DateTime fechaAplica = DateTime.Parse(txtFechaAplica.Text);
-
-                            int res = 0;
-                            res = cp.guardarEgresos(new List<EgresoVO>(egresos), fecha, fechaAplica);
-
-                            MessageBox.Show("Egresos guardados para la fecha: " + txtFechaDesde.Text + "\n\n" +
-                                "Aplicados la fecha: " + txtFechaAplica.Text, "Egresos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            egresoVOBindingSource.Clear();
-                            txtTotalEgresos.Text = "0";
-                            txtSaldo.Text = "0";*/
                         }
                     }
                 }

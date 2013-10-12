@@ -342,5 +342,11 @@ namespace Exportador_Ventas_ServP
             adminUsuarios.MdiParent = this;
             adminUsuarios.Show();
         }
+
+        private void PanelPrincipal_Load(object sender, EventArgs e)
+        {
+            modificarToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;
+            administrarToolStripMenuItem1.Enabled = Utilidades.usuarioSesion.IsAdmin;
+        }
     }
 }
