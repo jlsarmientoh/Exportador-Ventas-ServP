@@ -236,6 +236,18 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
+        public List<VentaVO> consultarVentasAgrupadas(DateTime fecha1, DateTime fecha2, string nit)
+        {
+            try
+            {
+                return getVentasDAO().consultarVentasAgrupadas(fecha1, fecha2, nit);
+            }
+            catch (EstacionDBException ex)
+            {
+                throw new PersistenciaException("Error en la consulta ventas en DB estación.", ex);
+            }
+        }
+
         public List<VentaVO> consultarVentasAgrupadas(DateTime fecha1, DateTime fecha2, string nit, long modoPago)
         {
             try

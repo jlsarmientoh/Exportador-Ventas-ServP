@@ -153,7 +153,15 @@ namespace Exportador_Ventas_ServP.Reports
             fechaHasta.CurrentValues.Add(value);
             this.crystalReportViewer1.ParameterFieldInfo.Add(fechaHasta);
 
-            List<VentaVO> ventas = cp.consultarVentasAgrupadas(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion, ((ModoPagoDTO)cboModoPago.SelectedItem).Id);
+            List<VentaVO> ventas = null;
+            if (((ModoPagoDTO)cboModoPago.SelectedItem).Id == 0)
+            {
+                ventas = cp.consultarVentasAgrupadas(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion);
+            }
+            else
+            {
+                ventas = cp.consultarVentasAgrupadas(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion, ((ModoPagoDTO)cboModoPago.SelectedItem).Id);
+            }
             this.detalles = new List<EstadoCuentaDTO>();
             foreach (VentaVO v in ventas)
             {
@@ -193,6 +201,7 @@ namespace Exportador_Ventas_ServP.Reports
             modos.Add(new ModoPagoDTO(7, "Crédito con CHIP"));
             modos.Add(new ModoPagoDTO(1, "Crédito sin CHIP"));
             modos.Add(new ModoPagoDTO(2, "Tarjeta Plus"));
+            modos.Add(new ModoPagoDTO(0, "Consolidado"));
 
             return modos;
         }
