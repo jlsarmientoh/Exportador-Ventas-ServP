@@ -31,6 +31,7 @@ namespace Exportador_Ventas_ServP
         private InformeVales informeVales;
         private AjusteDeVales ajusteVales;
         private AdministrarUsuarios adminUsuarios;
+        private EditarMovimientosDiarios editarMovimientosDiarios;
         private AboutGaslissa about;
         #endregion
 
@@ -343,10 +344,20 @@ namespace Exportador_Ventas_ServP
             adminUsuarios.Show();
         }
 
+        private void revisarEgresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            editarMovimientosDiarios = new EditarMovimientosDiarios();
+            editarMovimientosDiarios.MdiParent = this;
+            editarMovimientosDiarios.Show();
+        }
+
         private void PanelPrincipal_Load(object sender, EventArgs e)
         {
             modificarToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;
             administrarToolStripMenuItem1.Enabled = Utilidades.usuarioSesion.IsAdmin;
+            revisarEgresosToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;
         }
+
+        
     }
 }

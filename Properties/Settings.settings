@@ -36,5 +36,8 @@
     <Setting Name="codigoCIIU" Type="System.String" Scope="User">
       <Value Profile="(Default)">4731</Value>
     </Setting>
+    <Setting Name="DiferenciaSaldoDisposicion" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-2000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -59,6 +59,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.revisarEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -153,7 +154,8 @@
             // movimientosToolStripMenuItem
             // 
             this.movimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresosEgresosToolStripMenuItem});
+            this.ingresosEgresosToolStripMenuItem,
+            this.revisarEgresosToolStripMenuItem});
             this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
             this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.movimientosToolStripMenuItem.Text = "Movimientos";
@@ -161,7 +163,7 @@
             // ingresosEgresosToolStripMenuItem
             // 
             this.ingresosEgresosToolStripMenuItem.Name = "ingresosEgresosToolStripMenuItem";
-            this.ingresosEgresosToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.ingresosEgresosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.ingresosEgresosToolStripMenuItem.Text = "Egresos";
             this.ingresosEgresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosEgresosToolStripMenuItem_Click);
             // 
@@ -290,6 +292,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
+            // revisarEgresosToolStripMenuItem
+            // 
+            this.revisarEgresosToolStripMenuItem.Name = "revisarEgresosToolStripMenuItem";
+            this.revisarEgresosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.revisarEgresosToolStripMenuItem.Text = "Revisar egresos";
+            this.revisarEgresosToolStripMenuItem.Click += new System.EventHandler(this.revisarEgresosToolStripMenuItem_Click);
+            // 
             // PanelPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +354,7 @@
         private System.Windows.Forms.ToolStripMenuItem ajustarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem revisarEgresosToolStripMenuItem;
     }
 }
 

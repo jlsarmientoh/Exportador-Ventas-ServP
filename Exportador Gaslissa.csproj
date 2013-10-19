@@ -177,6 +177,12 @@
     <Compile Include="EdicionCierres.Designer.cs">
       <DependentUpon>EdicionCierres.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarMovimientosDiarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarMovimientosDiarios.Designer.cs">
+      <DependentUpon>EditarMovimientosDiarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstadoCuentaCliente.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -315,6 +321,10 @@
     <EmbeddedResource Include="EdicionCierres.resx">
       <SubType>Designer</SubType>
       <DependentUpon>EdicionCierres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarMovimientosDiarios.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditarMovimientosDiarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadoCuentaCliente.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -475,6 +485,7 @@
   <ItemGroup>
     <None Include="Exportador Gaslissa_TemporaryKey.pfx" />
     <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\EstacionDB.DTO.EgresoDTO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.DTO.LecturaDTO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.DTO.UsuarioDTO.datasource" />
     <None Include="Properties\DataSources\EstacionDB.VO.BancoVO.datasource" />
