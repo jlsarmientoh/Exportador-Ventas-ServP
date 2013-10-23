@@ -115,7 +115,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtMedida.Text);
+                double tmp = Utilidades.parsearDecimal(txtMedida.Text);
                 txtMedida.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch

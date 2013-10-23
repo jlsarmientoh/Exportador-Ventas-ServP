@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Exportador_Ventas_ServP.Controller;
 using EstacionDB.VO;
 using EstacionDB.Exceptions;
+using EstacionDB.Utilidades;
 
 namespace Exportador_Ventas_ServP
 {
@@ -126,7 +127,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtGalones.Text);
+                double tmp = Utilidades.parsearDecimal(txtGalones.Text);
                 txtGalones.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch 
@@ -139,7 +140,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtValorUnitario.Text);
+                double tmp = Utilidades.parsearDecimal(txtValorUnitario.Text);
                 txtValorUnitario.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
@@ -170,7 +171,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtValorTotal.Text);
+                double tmp = Utilidades.parsearDecimal(txtValorTotal.Text);
                 txtValorTotal.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
@@ -195,7 +196,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtFlete.Text);
+                double tmp = Utilidades.parsearDecimal(txtFlete.Text);
                 txtFlete.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
@@ -220,7 +221,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtSoldicom.Text);
+                double tmp = Utilidades.parsearDecimal(txtSoldicom.Text);
                 txtSoldicom.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
@@ -245,7 +246,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtImpuesto.Text);
+                double tmp = Utilidades.parsearDecimal(txtImpuesto.Text);
                 txtImpuesto.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch

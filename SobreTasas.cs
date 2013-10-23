@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Exportador_Ventas_ServP.Controller;
 using EstacionDB.VO;
 using EstacionDB.Exceptions;
+using EstacionDB.Utilidades;
 
 namespace Exportador_Ventas_ServP
 {
@@ -130,7 +131,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtPrecioBase.Text);
+                double tmp = Utilidades.parsearDecimal(txtPrecioBase.Text);
                 txtPrecioBase.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
@@ -155,7 +156,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtFlete.Text);
+                double tmp = Utilidades.parsearDecimal(txtFlete.Text);
                 txtFlete.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
@@ -180,7 +181,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtPrecioVenta.Text);
+                double tmp = Utilidades.parsearDecimal(txtPrecioVenta.Text);
                 txtPrecioVenta.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
@@ -205,7 +206,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtSoldicom.Text);
+                double tmp = Utilidades.parsearDecimal(txtSoldicom.Text);
                 txtSoldicom.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
@@ -230,7 +231,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                double tmp = double.Parse(txtSobretasa.Text);
+                double tmp = Utilidades.parsearDecimal(txtSobretasa.Text);
                 txtSobretasa.Text = String.Format("{0,10:#,0.00}", tmp);
             }
             catch
