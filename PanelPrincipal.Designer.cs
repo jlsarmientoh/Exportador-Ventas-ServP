@@ -42,6 +42,7 @@
             this.ajustarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresosEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revisarEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.combustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lecturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +60,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.revisarEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cruzarInformaciónEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -155,7 +156,8 @@
             // 
             this.movimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresosEgresosToolStripMenuItem,
-            this.revisarEgresosToolStripMenuItem});
+            this.revisarEgresosToolStripMenuItem,
+            this.cruzarInformaciónEgresosToolStripMenuItem});
             this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
             this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.movimientosToolStripMenuItem.Text = "Movimientos";
@@ -163,9 +165,16 @@
             // ingresosEgresosToolStripMenuItem
             // 
             this.ingresosEgresosToolStripMenuItem.Name = "ingresosEgresosToolStripMenuItem";
-            this.ingresosEgresosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.ingresosEgresosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.ingresosEgresosToolStripMenuItem.Text = "Egresos";
             this.ingresosEgresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosEgresosToolStripMenuItem_Click);
+            // 
+            // revisarEgresosToolStripMenuItem
+            // 
+            this.revisarEgresosToolStripMenuItem.Name = "revisarEgresosToolStripMenuItem";
+            this.revisarEgresosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.revisarEgresosToolStripMenuItem.Text = "Revisar egresos";
+            this.revisarEgresosToolStripMenuItem.Click += new System.EventHandler(this.revisarEgresosToolStripMenuItem_Click);
             // 
             // comprasToolStripMenuItem
             // 
@@ -292,12 +301,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // revisarEgresosToolStripMenuItem
+            // cruzarInformaciónEgresosToolStripMenuItem
             // 
-            this.revisarEgresosToolStripMenuItem.Name = "revisarEgresosToolStripMenuItem";
-            this.revisarEgresosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.revisarEgresosToolStripMenuItem.Text = "Revisar egresos";
-            this.revisarEgresosToolStripMenuItem.Click += new System.EventHandler(this.revisarEgresosToolStripMenuItem_Click);
+            this.cruzarInformaciónEgresosToolStripMenuItem.Name = "cruzarInformaciónEgresosToolStripMenuItem";
+            this.cruzarInformaciónEgresosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.cruzarInformaciónEgresosToolStripMenuItem.Text = "Cruzar información egresos";
+            this.cruzarInformaciónEgresosToolStripMenuItem.Click += new System.EventHandler(this.cruzarInformaciónEgresosToolStripMenuItem_Click);
             // 
             // PanelPrincipal
             // 
@@ -355,6 +364,7 @@
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem revisarEgresosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cruzarInformaciónEgresosToolStripMenuItem;
     }
 }
 

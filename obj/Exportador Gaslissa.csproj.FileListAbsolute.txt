@@ -182,6 +182,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.AjusteDeVales.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Clientes.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ComprasCombustible.resources
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.ComprobarEgresos.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.EdicionCierres.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.EditarMovimientosDiarios.resources
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\obj\Release\Exportador_Ventas_ServP.Exportador.resources

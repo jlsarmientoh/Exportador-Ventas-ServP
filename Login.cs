@@ -17,7 +17,7 @@ namespace Exportador_Ventas_ServP
         public Login()
         {
             InitializeComponent();
-            Utilidades.configExpo = ConfigurationSettings.AppSettings["ExpoConfig"].ToString();
+            Utilidades.configExpo = Application.StartupPath + ConfigurationSettings.AppSettings["ExpoConfig"].ToString();
         }
 
         private void cmdIngresar_Click(object sender, EventArgs e)

@@ -163,6 +163,12 @@
     <Compile Include="ComprasCombustible.Designer.cs">
       <DependentUpon>ComprasCombustible.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComprobarEgresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprobarEgresos.Designer.cs">
+      <DependentUpon>ComprobarEgresos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller\ControladorPersistencia.cs" />
     <Compile Include="DisposicionEfectivo.cs">
       <AutoGen>True</AutoGen>
@@ -312,6 +318,10 @@
     <EmbeddedResource Include="ComprasCombustible.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ComprasCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprobarEgresos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComprobarEgresos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DisposicionEfectivo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

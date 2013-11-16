@@ -32,6 +32,7 @@ namespace Exportador_Ventas_ServP
         private AjusteDeVales ajusteVales;
         private AdministrarUsuarios adminUsuarios;
         private EditarMovimientosDiarios editarMovimientosDiarios;
+        private ComprobarEgresos comprobarEgresos;
         private AboutGaslissa about;
         #endregion
 
@@ -40,8 +41,8 @@ namespace Exportador_Ventas_ServP
             InitializeComponent();            
             Utilidades.cadenaConexion = ConfigurationSettings.AppSettings["Main.ConnectionString"].ToString();
             Utilidades.appCadenaConexion = ConfigurationSettings.AppSettings["App.ConnectionString"].ToString();
-            Utilidades.configServ = ConfigurationSettings.AppSettings["ServConfig"].ToString();
-            Utilidades.configExpo = ConfigurationSettings.AppSettings["ExpoConfig"].ToString();
+            Utilidades.configServ = Application.StartupPath + ConfigurationSettings.AppSettings["ServConfig"].ToString();
+            Utilidades.configExpo = Application.StartupPath + ConfigurationSettings.AppSettings["ExpoConfig"].ToString();
             Utilidades.nombreVistaVentas = ConfigurationSettings.AppSettings["NombreVista"].ToString();
             Utilidades.nombreVistaLecturas = ConfigurationSettings.AppSettings["NombreVistaLecturas"].ToString();
             Utilidades.nombreTablaEmpleados = ConfigurationSettings.AppSettings["NombreTablaEmpleados"].ToString();
@@ -351,13 +352,19 @@ namespace Exportador_Ventas_ServP
             editarMovimientosDiarios.Show();
         }
 
+        private void cruzarInformaciónEgresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            comprobarEgresos = new ComprobarEgresos();
+            comprobarEgresos.MdiParent = this;
+            comprobarEgresos.Show();
+        }
+
         private void PanelPrincipal_Load(object sender, EventArgs e)
         {
             modificarToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;
             administrarToolStripMenuItem1.Enabled = Utilidades.usuarioSesion.IsAdmin;
-            revisarEgresosToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;
+            revisarEgresosToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;            
         }
-
         
     }
 }
