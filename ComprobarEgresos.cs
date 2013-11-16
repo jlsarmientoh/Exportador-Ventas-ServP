@@ -22,6 +22,7 @@ namespace Exportador_Ventas_ServP
         {
             InitializeComponent();
             openDialog = new OpenFileDialog();
+            openDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
             sb = new StringBuilder();
         }
 
@@ -33,18 +34,6 @@ namespace Exportador_Ventas_ServP
                 cmdSeleccionar.Enabled = false;
 
                 importWorker.RunWorkerAsync(openDialog.FileName);
-
-                /*List<EgresoDTO> egresos = FileImporter.importarEgresos(@openDialog.FileName);
-
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine("Resultado:");
-
-                foreach (EgresoDTO egreso in egresos)
-                {   
-                    sb.AppendLine(egreso.ToString());
-                }
-
-                txtResultado.Text = sb.ToString();*/
             }
         }
 
