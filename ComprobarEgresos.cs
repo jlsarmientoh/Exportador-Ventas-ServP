@@ -32,6 +32,9 @@ namespace Exportador_Ventas_ServP
             {
                 labelArchivo.Text = openDialog.FileName;
                 cmdSeleccionar.Enabled = false;
+                sb.Remove(0, sb.Length - 1);
+                sb.AppendLine("Resultado:");
+                txtResultado.Text = sb.ToString();
 
                 importWorker.RunWorkerAsync(openDialog.FileName);
             }
@@ -48,7 +51,7 @@ namespace Exportador_Ventas_ServP
                 try
                 {
                     DisposicionEfectivoCore.getInstance().validarEgreso(egreso);
-                    importWorker.ReportProgress(i, "Egreso # " + egreso.Numero + "OK");
+                    importWorker.ReportProgress(i, "Egreso # " + egreso.Numero + " - OK");
                 }
                 catch (CierreException ce)
                 {
