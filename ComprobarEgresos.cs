@@ -32,7 +32,11 @@ namespace Exportador_Ventas_ServP
             {
                 labelArchivo.Text = openDialog.FileName;
                 cmdSeleccionar.Enabled = false;
-                sb.Remove(0, sb.Length - 1);
+                cmdReprocesar.Enabled = false;
+                if (sb.Length > 0)
+                {
+                    sb.Remove(0, sb.Length - 1);
+                }
                 sb.AppendLine("Resultado:");
                 txtResultado.Text = sb.ToString();
 
@@ -81,6 +85,25 @@ namespace Exportador_Ventas_ServP
         private void importWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             cmdSeleccionar.Enabled = true;
+            cmdReprocesar.Enabled = true;
+        }
+
+        private void cmdReprocesar_Click(object sender, EventArgs e)
+        {
+            if (openDialog.FileName != null && openDialog.FileName.Length > 0)
+            {
+                labelArchivo.Text = openDialog.FileName;
+                cmdSeleccionar.Enabled = false;
+                cmdReprocesar.Enabled = false;
+                if (sb.Length > 0)
+                {
+                    sb.Remove(0, sb.Length - 1);
+                }
+                sb.AppendLine("Resultado:");
+                txtResultado.Text = sb.ToString();
+
+                importWorker.RunWorkerAsync(openDialog.FileName);
+            }
         }
     }
 }

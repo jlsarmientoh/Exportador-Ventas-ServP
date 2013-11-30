@@ -33,8 +33,8 @@
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.cmdSeleccionar = new System.Windows.Forms.Button();
             this.labelArchivo = new System.Windows.Forms.Label();
-            this.cmdEjecutar = new System.Windows.Forms.Button();
             this.progressImport = new System.Windows.Forms.ProgressBar();
+            this.cmdReprocesar = new System.Windows.Forms.Button();
             this.groupBoxResultados.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,15 +86,6 @@
             this.labelArchivo.TabIndex = 2;
             this.labelArchivo.Text = "No se ha seleccionado archivo";
             // 
-            // cmdEjecutar
-            // 
-            this.cmdEjecutar.Location = new System.Drawing.Point(684, 19);
-            this.cmdEjecutar.Name = "cmdEjecutar";
-            this.cmdEjecutar.Size = new System.Drawing.Size(75, 27);
-            this.cmdEjecutar.TabIndex = 3;
-            this.cmdEjecutar.Text = "Ejecutar";
-            this.cmdEjecutar.UseVisualStyleBackColor = true;
-            // 
             // progressImport
             // 
             this.progressImport.Location = new System.Drawing.Point(27, 495);
@@ -103,13 +94,23 @@
             this.progressImport.Step = 1;
             this.progressImport.TabIndex = 4;
             // 
+            // cmdReprocesar
+            // 
+            this.cmdReprocesar.Image = global::Exportador_Ventas_ServP.Properties.Resources.refresh_hov;
+            this.cmdReprocesar.Location = new System.Drawing.Point(736, 19);
+            this.cmdReprocesar.Name = "cmdReprocesar";
+            this.cmdReprocesar.Size = new System.Drawing.Size(25, 25);
+            this.cmdReprocesar.TabIndex = 5;
+            this.cmdReprocesar.UseVisualStyleBackColor = true;
+            this.cmdReprocesar.Click += new System.EventHandler(this.cmdReprocesar_Click);
+            // 
             // ComprobarEgresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 522);
+            this.Controls.Add(this.cmdReprocesar);
             this.Controls.Add(this.progressImport);
-            this.Controls.Add(this.cmdEjecutar);
             this.Controls.Add(this.labelArchivo);
             this.Controls.Add(this.cmdSeleccionar);
             this.Controls.Add(this.groupBoxResultados);
@@ -129,8 +130,8 @@
         private System.Windows.Forms.GroupBox groupBoxResultados;
         private System.Windows.Forms.Button cmdSeleccionar;
         private System.Windows.Forms.Label labelArchivo;
-        private System.Windows.Forms.Button cmdEjecutar;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.ProgressBar progressImport;
+        private System.Windows.Forms.Button cmdReprocesar;
     }
 }
