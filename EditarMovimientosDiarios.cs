@@ -35,14 +35,17 @@ namespace Exportador_Ventas_ServP
                 {
                     limpiarCampos();
                     DateTime fecha = DateTime.Parse(txtFechaCierre.Text);
-                    egresoDTOBindingSource.DataSource = DisposicionEfectivoCore.getInstance().consultarEgresosAplicados(fecha);
-                    totalEfectivo = DisposicionEfectivoCore.getInstance().getTotalEfectivoFecha(fecha);
-                    totalEgresos = DisposicionEfectivoCore.getInstance().getTotalEfectivoDispuestoFecha(fecha);
-                    saldo = totalEfectivo - totalEgresos;
+                    if (!CierreEfectivoCore.getInstance().existeCierre(fecha, fecha))
+                    {
+                        egresoDTOBindingSource.DataSource = DisposicionEfectivoCore.getInstance().consultarEgresosAplicados(fecha);
+                        totalEfectivo = DisposicionEfectivoCore.getInstance().getTotalEfectivoFecha(fecha);
+                        totalEgresos = DisposicionEfectivoCore.getInstance().getTotalEfectivoDispuestoFecha(fecha);
+                        saldo = totalEfectivo - totalEgresos;
 
-                    chkEditar.Enabled = true;
-                    cmdGuardar.Enabled = true;
-                    actualizarCampos();
+                        chkEditar.Enabled = true;
+                        cmdGuardar.Enabled = true;
+                        actualizarCampos();
+                    }
                 }
             }
             catch (CierreException ex)
@@ -71,13 +74,15 @@ namespace Exportador_Ventas_ServP
         private void actualizarCampos()
         {
             txtTotalEgresos.Text = Utilidades.formatearDecimal(totalEgresos);
-            if (saldo < Exportador_Ventas_ServP.Properties.Settings.Default.DiferenciaSaldoDisposicion)
+            if (Math.Abs(saldo) > Math.Abs(Exportador_Ventas_ServP.Properties.Settings.Default.DiferenciaSaldoDisposicion))
             {
                 txtSaldo.BackColor = Color.Red;
+                cmdCierre.Enabled = false;
             }
             else
             {
                 txtSaldo.BackColor = Color.Empty;
+                cmdCierre.Enabled = true;
             }
             txtSaldo.Text = Utilidades.formatearDecimal(saldo);
         }
@@ -177,6 +182,51 @@ namespace Exportador_Ventas_ServP
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cmdCierre_Click(object sender, EventArgs e)
+        {
+            /*if (egresoDTOBindingSource.List.Count > 0)
+            {
+                DialogResult resp = MessageBox.Show("Resumen del cierre:\n\n" +
+                "\tEgresos:\t\t\t$ " + Utilidades.formatearDecimal(totalEgresos) + "\n" +
+                "TOTAL:\t\t\t$ " + Utilidades.formatearDecimal(totalEgresos) + "\n\n" +
+                "¿Desea continuar?\n", "Resumen de egresos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resp == DialogResult.Yes)
+                {
+                    if (totalEgresos > totalEfectivo)
+                    {
+                        DialogResult confirm = MessageBox.Show("El valor total de los egresos supera el saldo en efectivo para la fecha seleccionada. \n\n¿Desea continuar?", "Consulta egresos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (confirm == DialogResult.Yes)
+                        {
+                            guardarEgreso();
+                        }
+                    }
+                    else
+                    {
+                        guardarEgreso();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay egresos para guardar o no ha seleccionado la fecha", "No hay egresos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }  */
+        }
+
+        private void guardarCierre()
+        {
+            /*try
+            {
+                DisposicionEfectivoCore.getInstance().guardarEgresos(egresoDTOBindingSource.List);
+                MessageBox.Show("Los egresos han sido guardados", "Egresos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                egresoDTOBindingSource.Clear();
+                limpiarCampos();
+            }
+            catch (CierreException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
         }
     }
 }

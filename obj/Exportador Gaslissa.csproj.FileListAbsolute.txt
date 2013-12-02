@@ -125,6 +125,7 @@ C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\T
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\VolumenTanque.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\CompraCombustible.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\Usuario.hbm.xml
+C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Mappings\CierreEfectivo.hbm.xml
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\Resources\search.gif
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\DisposicionEfectivo.rpt
 C:\Documents and Settings\Usuario\Mis documentos\Gaslissa\bin\Release\InformeCombustible.rpt

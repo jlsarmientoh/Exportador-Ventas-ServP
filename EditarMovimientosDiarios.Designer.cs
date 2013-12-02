@@ -32,22 +32,23 @@
             this.txtFechaCierre = new System.Windows.Forms.MaskedTextBox();
             this.cmdConsultar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSaldo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTotalEgresos = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.TipoDocumento = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.FechaAplica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chkEditar = new System.Windows.Forms.CheckBox();
-            this.cmdGuardar = new System.Windows.Forms.Button();
-            this.cmdEliminar = new System.Windows.Forms.Button();
             this.tipoIdVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beneficiarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaAplica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.egresoDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTotalEgresos = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.chkEditar = new System.Windows.Forms.CheckBox();
+            this.cmdGuardar = new System.Windows.Forms.Button();
+            this.cmdEliminar = new System.Windows.Forms.Button();
+            this.cmdCierre = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoIdVOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.egresoDTOBindingSource)).BeginInit();
@@ -94,6 +95,61 @@
             this.dataGridView1.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowLeave);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.DataPropertyName = "TipoDocumento";
+            this.TipoDocumento.DataSource = this.tipoIdVOBindingSource;
+            this.TipoDocumento.DisplayMember = "Nombre";
+            this.TipoDocumento.HeaderText = "Tipo Documento";
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.ReadOnly = true;
+            this.TipoDocumento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TipoDocumento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.TipoDocumento.ValueMember = "IdTipo";
+            // 
+            // tipoIdVOBindingSource
+            // 
+            this.tipoIdVOBindingSource.DataSource = typeof(EstacionDB.VO.TipoIdVO);
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // beneficiarioDataGridViewTextBoxColumn
+            // 
+            this.beneficiarioDataGridViewTextBoxColumn.DataPropertyName = "Beneficiario";
+            this.beneficiarioDataGridViewTextBoxColumn.HeaderText = "Beneficiario";
+            this.beneficiarioDataGridViewTextBoxColumn.Name = "beneficiarioDataGridViewTextBoxColumn";
+            this.beneficiarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "Valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha Egreso";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // FechaAplica
+            // 
+            this.FechaAplica.DataPropertyName = "FechaAplica";
+            this.FechaAplica.HeaderText = "Fecha Aplica";
+            this.FechaAplica.Name = "FechaAplica";
+            this.FechaAplica.ReadOnly = true;
+            // 
+            // egresoDTOBindingSource
+            // 
+            this.egresoDTOBindingSource.DataSource = typeof(EstacionDB.DTO.EgresoDTO);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -139,25 +195,6 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Total egresos";
             // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.DataPropertyName = "TipoDocumento";
-            this.TipoDocumento.DataSource = this.tipoIdVOBindingSource;
-            this.TipoDocumento.DisplayMember = "Nombre";
-            this.TipoDocumento.HeaderText = "Tipo Documento";
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.ReadOnly = true;
-            this.TipoDocumento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TipoDocumento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.TipoDocumento.ValueMember = "IdTipo";
-            // 
-            // FechaAplica
-            // 
-            this.FechaAplica.DataPropertyName = "FechaAplica";
-            this.FechaAplica.HeaderText = "Fecha Aplica";
-            this.FechaAplica.Name = "FechaAplica";
-            this.FechaAplica.ReadOnly = true;
-            // 
             // chkEditar
             // 
             this.chkEditar.AutoSize = true;
@@ -192,47 +229,23 @@
             this.cmdEliminar.UseVisualStyleBackColor = true;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
-            // tipoIdVOBindingSource
+            // cmdCierre
             // 
-            this.tipoIdVOBindingSource.DataSource = typeof(EstacionDB.VO.TipoIdVO);
-            // 
-            // numeroDataGridViewTextBoxColumn
-            // 
-            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero";
-            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
-            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // beneficiarioDataGridViewTextBoxColumn
-            // 
-            this.beneficiarioDataGridViewTextBoxColumn.DataPropertyName = "Beneficiario";
-            this.beneficiarioDataGridViewTextBoxColumn.HeaderText = "Beneficiario";
-            this.beneficiarioDataGridViewTextBoxColumn.Name = "beneficiarioDataGridViewTextBoxColumn";
-            this.beneficiarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorDataGridViewTextBoxColumn
-            // 
-            this.valorDataGridViewTextBoxColumn.DataPropertyName = "Valor";
-            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
-            this.valorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha Egreso";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // egresoDTOBindingSource
-            // 
-            this.egresoDTOBindingSource.DataSource = typeof(EstacionDB.DTO.EgresoDTO);
+            this.cmdCierre.Enabled = false;
+            this.cmdCierre.Location = new System.Drawing.Point(16, 306);
+            this.cmdCierre.Name = "cmdCierre";
+            this.cmdCierre.Size = new System.Drawing.Size(118, 24);
+            this.cmdCierre.TabIndex = 23;
+            this.cmdCierre.Text = "Confirmar Cerrar";
+            this.cmdCierre.UseVisualStyleBackColor = true;
+            this.cmdCierre.Click += new System.EventHandler(this.cmdCierre_Click);
             // 
             // EditarMovimientosDiarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 338);
+            this.Controls.Add(this.cmdCierre);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.chkEditar);
@@ -278,5 +291,6 @@
         private System.Windows.Forms.CheckBox chkEditar;
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.Button cmdEliminar;
+        private System.Windows.Forms.Button cmdCierre;
     }
 }
