@@ -31,7 +31,7 @@ namespace Exportador_Ventas_ServP
         {
             try
             {
-                if (!txtFechaCierre.Text.Equals(""))
+                if (!txtFechaCierre.Text.Equals("  /  /"))
                 {
                     limpiarCampos();
                     DateTime fecha = DateTime.Parse(txtFechaCierre.Text);
@@ -46,6 +46,10 @@ namespace Exportador_Ventas_ServP
                         cmdGuardar.Enabled = true;
                         actualizarCampos();
                     }
+                    else
+                    {
+                        MessageBox.Show("Ya existe un cierre para la fecha seleccionada", "Cierre ya existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
             }
             catch (CierreException ex)
@@ -55,8 +59,7 @@ namespace Exportador_Ventas_ServP
         }
 
         private void limpiarCampos()
-        {
-            //txtFechaCierre.Text = "";
+        {   
             txtTotalEgresos.Text = "";
             txtSaldo.BackColor = Color.Empty;            
             txtSaldo.Text = "";
@@ -68,6 +71,7 @@ namespace Exportador_Ventas_ServP
             chkEditar.Enabled = false;
             cmdEliminar.Enabled = false;
             cmdGuardar.Enabled = false;
+            cmdCierre.Enabled = false;
             saldo = 0;
         }
 
@@ -186,47 +190,62 @@ namespace Exportador_Ventas_ServP
 
         private void cmdCierre_Click(object sender, EventArgs e)
         {
-            /*if (egresoDTOBindingSource.List.Count > 0)
+            if (!txtFechaCierre.Text.Equals("  /  /"))
             {
-                DialogResult resp = MessageBox.Show("Resumen del cierre:\n\n" +
-                "\tEgresos:\t\t\t$ " + Utilidades.formatearDecimal(totalEgresos) + "\n" +
-                "TOTAL:\t\t\t$ " + Utilidades.formatearDecimal(totalEgresos) + "\n\n" +
-                "¿Desea continuar?\n", "Resumen de egresos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resp == DialogResult.Yes)
+                DateTime fecha = DateTime.Parse(txtFechaCierre.Text);
+                if (!CierreEfectivoCore.getInstance().existeCierre(fecha, fecha))
                 {
-                    if (totalEgresos > totalEfectivo)
+                    DialogResult resp = MessageBox.Show("Resumen del cierre:\n\n" +
+                    "Egresos:\t\t\t$ " + Utilidades.formatearDecimal(totalEgresos) + "\n" +
+                    "Efectivo:\t\t\t$ " + Utilidades.formatearDecimal(totalEfectivo) + "\n" +
+                    "Diferencia:\t\t\t$ " + Utilidades.formatearDecimal(saldo) + "\n" +
+                    "¿Desea continuar?\n", "Resumen del cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resp == DialogResult.Yes)
                     {
-                        DialogResult confirm = MessageBox.Show("El valor total de los egresos supera el saldo en efectivo para la fecha seleccionada. \n\n¿Desea continuar?", "Consulta egresos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (confirm == DialogResult.Yes)
+                        if (totalEgresos > totalEfectivo)
                         {
-                            guardarEgreso();
+                            DialogResult confirm = MessageBox.Show("El valor total de los egresos supera el saldo en efectivo para la fecha seleccionada. \n\n¿Desea continuar?", "Confirmación del cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (confirm == DialogResult.Yes)
+                            {
+                                guardarCierre();
+                            }
+                        }
+                        else
+                        {
+                            guardarCierre();
                         }
                     }
-                    else
-                    {
-                        guardarEgreso();
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe un cierre para la fecha seleccionada", "Cierre ya existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("No hay egresos para guardar o no ha seleccionado la fecha", "No hay egresos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }  */
+                MessageBox.Show("No ha seleccionado la fecha", "Cierre de efectivo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void guardarCierre()
         {
-            /*try
+            try
             {
-                DisposicionEfectivoCore.getInstance().guardarEgresos(egresoDTOBindingSource.List);
-                MessageBox.Show("Los egresos han sido guardados", "Egresos guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CierreEfectivoDTO dto = new CierreEfectivoDTO();
+                dto.Efectivo = totalEfectivo;
+                dto.Egresos = totalEgresos;
+                dto.Estado = true;
+                dto.Fecha = DateTime.Parse(txtFechaCierre.Text);
+
+                CierreEfectivoCore.getInstance().guardarCierre(dto);
+                MessageBox.Show("El cierre han sido confirmado", "Cierre confirmado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 egresoDTOBindingSource.Clear();
                 limpiarCampos();
             }
             catch (CierreException ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
         }
     }
 }

@@ -236,7 +236,7 @@
             this.cmdCierre.Name = "cmdCierre";
             this.cmdCierre.Size = new System.Drawing.Size(118, 24);
             this.cmdCierre.TabIndex = 23;
-            this.cmdCierre.Text = "Confirmar Cerrar";
+            this.cmdCierre.Text = "Confirmar Cierre";
             this.cmdCierre.UseVisualStyleBackColor = true;
             this.cmdCierre.Click += new System.EventHandler(this.cmdCierre_Click);
             // 
