@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDesde = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.procesarDatosWorker = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoVOBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -142,6 +143,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha Desde";
             // 
+            // procesarDatosWorker
+            // 
+            this.procesarDatosWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.procesarDatosWorker_DoWork);
+            this.procesarDatosWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.procesarDatosWorker_RunWorkerCompleted);
+            // 
             // InformeCombustible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,5 +180,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource productoVOBindingSource;
         private Exportador_Ventas_ServP.InformeCombustible InformeCombustible1;
+        private System.ComponentModel.BackgroundWorker procesarDatosWorker;
     }
 }

@@ -11,6 +11,7 @@ using EstacionDB.Utilidades;
 using EstacionDB.DTO;
 using System.Collections;
 using EstacionDB.Exceptions;
+using EstacionDB.Core;
 
 namespace Exportador_Ventas_ServP
 {
@@ -75,7 +76,8 @@ namespace Exportador_Ventas_ServP
                     IList lista = lecturaDTOBindingSource.List;
                     LecturaDTO[] lecturas = new LecturaDTO[lista.Count];
                     lista.CopyTo(lecturas, 0);
-                    int rows = cp.procesarControles(fecha, lecturas);
+                    //int rows = cp.procesarControles(fecha, lecturas);
+                    int rows = ControlTanquesCore.getInstance().procesarControles(fecha, lecturas);
                     if (rows > 0)
                     {
                         lecturaDTOBindingSource.Clear();
@@ -88,7 +90,7 @@ namespace Exportador_Ventas_ServP
                         MessageBox.Show("No se guardaron las lecturas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
-                catch (PersistenciaException ex)
+                catch (ControlCombustibleException ex)
                 {
                     MessageBox.Show("No se guardaron las lecturas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }

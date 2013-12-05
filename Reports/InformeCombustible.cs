@@ -8,12 +8,17 @@ using System.Windows.Forms;
 using Exportador_Ventas_ServP.Controller;
 using CrystalDecisions.Shared;
 using EstacionDB.VO;
+using EstacionDB.Core;
+using EstacionDB.Exceptions;
 
 namespace Exportador_Ventas_ServP.Reports
 {
     public partial class InformeCombustible : Form
     {
         private ControladorPersistencia cp = new ControladorPersistencia();
+        private int idProd = 0;
+        private DateTime fechaInicio;
+        private DateTime fechaFin;
 
         public InformeCombustible()
         {
@@ -22,9 +27,14 @@ namespace Exportador_Ventas_ServP.Reports
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!txtDesde.Text.Equals("") && !txtHasta.Text.Equals(""))
+            if (!txtDesde.Text.Equals("  /  /") && !txtHasta.Text.Equals("  /  /"))
             {
-                if (this.crystalReportViewer1.Visible)
+                this.UseWaitCursor = true;
+                idProd = (int)cboProducto.SelectedValue;
+                fechaInicio = DateTime.Parse(txtDesde.Text);
+                fechaFin = DateTime.Parse(txtHasta.Text);
+                procesarDatosWorker.RunWorkerAsync();
+                /*if (this.crystalReportViewer1.Visible)
                 {
                     this.crystalReportViewer1.Hide();
                     this.InformeCombustible1.Refresh();
@@ -36,7 +46,7 @@ namespace Exportador_Ventas_ServP.Reports
                 {
                     getReportData();
                     this.crystalReportViewer1.Show();
-                }
+                }*/
             }
             else
             {
@@ -138,6 +148,40 @@ namespace Exportador_Ventas_ServP.Reports
             
 
             //this.crystalReportViewer1.Show();
+        }
+
+        private void procesarDatosWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.UseWaitCursor = false;
+            if (e.Result != null && e.Result.ToString().Length > 0)
+            {
+                MessageBox.Show(e.Result.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (this.crystalReportViewer1.Visible)
+            {
+                this.crystalReportViewer1.Hide();
+                this.InformeCombustible1.Refresh();
+                this.crystalReportViewer1.ReportSource = this.InformeCombustible1;
+                getReportData();
+                this.crystalReportViewer1.Show();
+            }
+            else
+            {
+                getReportData();
+                this.crystalReportViewer1.Show();
+            }
+        }
+
+        private void procesarDatosWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                ControlTanquesCore.getInstance().reProcesarControlesProducto(idProd, fechaInicio, fechaFin);
+            }
+            catch (ControlCombustibleException ex)
+            {
+                e.Result = ex.Message;
+            }
         }
     }
 }
