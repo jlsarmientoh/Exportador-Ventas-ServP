@@ -170,6 +170,12 @@
       <DependentUpon>ComprobarEgresos.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\ControladorPersistencia.cs" />
+    <Compile Include="ExportadorContingencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportadorContingencia.Designer.cs">
+      <DependentUpon>ExportadorContingencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="DisposicionEfectivo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -322,6 +328,10 @@
     <EmbeddedResource Include="ComprobarEgresos.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ComprobarEgresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportadorContingencia.resx">
+      <DependentUpon>ExportadorContingencia.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DisposicionEfectivo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
