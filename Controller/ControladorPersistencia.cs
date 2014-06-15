@@ -236,11 +236,11 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
-        public List<VentaVO> consultarVentasAgrupadas(DateTime fecha1, DateTime fecha2, string nit)
+        public List<VentaVO> consultarVentasAgrupadas(DateTime fecha1, DateTime fecha2, string nit, string codigo)
         {
             try
             {
-                return getVentasDAO().consultarVentasAgrupadas(fecha1, fecha2, nit);
+                return getVentasDAO().consultarVentasAgrupadas(fecha1, fecha2, nit, codigo);
             }
             catch (EstacionDBException ex)
             {
@@ -248,11 +248,11 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
-        public List<VentaVO> consultarVentasAgrupadas(DateTime fecha1, DateTime fecha2, string nit, long modoPago)
+        public List<VentaVO> consultarVentasAgrupadas(DateTime fecha1, DateTime fecha2, string nit, string codigo, long modoPago)
         {
             try
             {
-                return getVentasDAO().consultarVentasAgrupadas(fecha1, fecha2, nit, modoPago);
+                return getVentasDAO().consultarVentasAgrupadas(fecha1, fecha2, nit, codigo, modoPago);
             }
             catch (EstacionDBException ex)
             {
@@ -739,12 +739,12 @@ namespace Exportador_Ventas_ServP.Controller
             }
         }
 
-        public List<VentaDTO> consultarVentaCliente(DateTime fecha1, DateTime fecha2, string nit)
+        public List<VentaDTO> consultarVentaCliente(DateTime fecha1, DateTime fecha2, string nit, string codigo)
         {
             try
             {
                 List<VentaDTO> result = new List<VentaDTO>();
-                List<VentaVO> list = getVentasDAO().consultarVentasCliente(fecha1, fecha2, nit);
+                List<VentaVO> list = getVentasDAO().consultarVentasCliente(fecha1, fecha2, nit, codigo);
                 foreach (VentaVO v in list)
                 {
                     VentaDTO dto = new VentaDTO();
@@ -752,7 +752,7 @@ namespace Exportador_Ventas_ServP.Controller
                     dto.Fecha = v.Fecha;
                     dto.Kilometraje = v.Kilometraje;
                     dto.Placa = v.Placa;
-                    dto.Producto = v.Producto;
+                    dto.Producto = v.Producto.Trim();
                     dto.Total = v.Total;
 
                     switch (v.ModoPago)

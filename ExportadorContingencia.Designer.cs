@@ -74,6 +74,16 @@
             this.frameAcciones = new System.Windows.Forms.GroupBox();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmdCargarLecturas = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtLecFinDiesel = new System.Windows.Forms.TextBox();
+            this.txtLecIniDiesel = new System.Windows.Forms.TextBox();
+            this.txtLecFinSuper = new System.Windows.Forms.TextBox();
+            this.txtLecIniSuper = new System.Windows.Forms.TextBox();
+            this.txtLecFinCorriente = new System.Windows.Forms.TextBox();
+            this.txtLecIniCorriente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.txtSodexo = new System.Windows.Forms.TextBox();
@@ -97,15 +107,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.cierreWorker = new System.ComponentModel.BackgroundWorker();
             this.consultaWorker = new System.ComponentModel.BackgroundWorker();
-            this.txtLecIniCorriente = new System.Windows.Forms.TextBox();
-            this.txtLecFinCorriente = new System.Windows.Forms.TextBox();
-            this.txtLecIniSuper = new System.Windows.Forms.TextBox();
-            this.txtLecFinSuper = new System.Windows.Forms.TextBox();
-            this.txtLecIniDiesel = new System.Windows.Forms.TextBox();
-            this.txtLecFinDiesel = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridVentasCargadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaVOBindingSource)).BeginInit();
             this.frameAdicionar.SuspendLayout();
@@ -499,6 +500,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmdCargarLecturas);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label20);
@@ -514,6 +516,85 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lecturas";
+            // 
+            // cmdCargarLecturas
+            // 
+            this.cmdCargarLecturas.Image = global::Exportador_Ventas_ServP.Properties.Resources.refresh_hov;
+            this.cmdCargarLecturas.Location = new System.Drawing.Point(257, 96);
+            this.cmdCargarLecturas.Name = "cmdCargarLecturas";
+            this.cmdCargarLecturas.Size = new System.Drawing.Size(29, 23);
+            this.cmdCargarLecturas.TabIndex = 9;
+            this.cmdCargarLecturas.UseVisualStyleBackColor = true;
+            this.cmdCargarLecturas.Click += new System.EventHandler(this.cmdCargarLecturas_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(15, 73);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(36, 13);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Diesel";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(15, 50);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(35, 13);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Super";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(15, 23);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(49, 13);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Corriente";
+            // 
+            // txtLecFinDiesel
+            // 
+            this.txtLecFinDiesel.Location = new System.Drawing.Point(187, 72);
+            this.txtLecFinDiesel.Name = "txtLecFinDiesel";
+            this.txtLecFinDiesel.Size = new System.Drawing.Size(100, 20);
+            this.txtLecFinDiesel.TabIndex = 5;
+            // 
+            // txtLecIniDiesel
+            // 
+            this.txtLecIniDiesel.Location = new System.Drawing.Point(83, 72);
+            this.txtLecIniDiesel.Name = "txtLecIniDiesel";
+            this.txtLecIniDiesel.Size = new System.Drawing.Size(100, 20);
+            this.txtLecIniDiesel.TabIndex = 4;
+            // 
+            // txtLecFinSuper
+            // 
+            this.txtLecFinSuper.Location = new System.Drawing.Point(187, 47);
+            this.txtLecFinSuper.Name = "txtLecFinSuper";
+            this.txtLecFinSuper.Size = new System.Drawing.Size(100, 20);
+            this.txtLecFinSuper.TabIndex = 3;
+            // 
+            // txtLecIniSuper
+            // 
+            this.txtLecIniSuper.Location = new System.Drawing.Point(83, 47);
+            this.txtLecIniSuper.Name = "txtLecIniSuper";
+            this.txtLecIniSuper.Size = new System.Drawing.Size(100, 20);
+            this.txtLecIniSuper.TabIndex = 2;
+            // 
+            // txtLecFinCorriente
+            // 
+            this.txtLecFinCorriente.Location = new System.Drawing.Point(187, 22);
+            this.txtLecFinCorriente.Name = "txtLecFinCorriente";
+            this.txtLecFinCorriente.Size = new System.Drawing.Size(100, 20);
+            this.txtLecFinCorriente.TabIndex = 1;
+            // 
+            // txtLecIniCorriente
+            // 
+            this.txtLecIniCorriente.Location = new System.Drawing.Point(83, 22);
+            this.txtLecIniCorriente.Name = "txtLecIniCorriente";
+            this.txtLecIniCorriente.Size = new System.Drawing.Size(100, 20);
+            this.txtLecIniCorriente.TabIndex = 0;
             // 
             // label2
             // 
@@ -745,75 +826,6 @@
             // 
             this.consultaWorker.WorkerReportsProgress = true;
             // 
-            // txtLecIniCorriente
-            // 
-            this.txtLecIniCorriente.Location = new System.Drawing.Point(83, 44);
-            this.txtLecIniCorriente.Name = "txtLecIniCorriente";
-            this.txtLecIniCorriente.Size = new System.Drawing.Size(100, 20);
-            this.txtLecIniCorriente.TabIndex = 0;
-            // 
-            // txtLecFinCorriente
-            // 
-            this.txtLecFinCorriente.Location = new System.Drawing.Point(187, 44);
-            this.txtLecFinCorriente.Name = "txtLecFinCorriente";
-            this.txtLecFinCorriente.Size = new System.Drawing.Size(100, 20);
-            this.txtLecFinCorriente.TabIndex = 1;
-            // 
-            // txtLecIniSuper
-            // 
-            this.txtLecIniSuper.Location = new System.Drawing.Point(83, 69);
-            this.txtLecIniSuper.Name = "txtLecIniSuper";
-            this.txtLecIniSuper.Size = new System.Drawing.Size(100, 20);
-            this.txtLecIniSuper.TabIndex = 2;
-            // 
-            // txtLecFinSuper
-            // 
-            this.txtLecFinSuper.Location = new System.Drawing.Point(187, 69);
-            this.txtLecFinSuper.Name = "txtLecFinSuper";
-            this.txtLecFinSuper.Size = new System.Drawing.Size(100, 20);
-            this.txtLecFinSuper.TabIndex = 3;
-            // 
-            // txtLecIniDiesel
-            // 
-            this.txtLecIniDiesel.Location = new System.Drawing.Point(83, 94);
-            this.txtLecIniDiesel.Name = "txtLecIniDiesel";
-            this.txtLecIniDiesel.Size = new System.Drawing.Size(100, 20);
-            this.txtLecIniDiesel.TabIndex = 4;
-            // 
-            // txtLecFinDiesel
-            // 
-            this.txtLecFinDiesel.Location = new System.Drawing.Point(187, 94);
-            this.txtLecFinDiesel.Name = "txtLecFinDiesel";
-            this.txtLecFinDiesel.Size = new System.Drawing.Size(100, 20);
-            this.txtLecFinDiesel.TabIndex = 5;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(15, 45);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(49, 13);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "Corriente";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(15, 72);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 13);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Super";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(15, 95);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(36, 13);
-            this.label22.TabIndex = 8;
-            this.label22.Text = "Diesel";
-            // 
             // ExportadorContingencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -931,6 +943,7 @@
         private System.Windows.Forms.TextBox txtLecIniCorriente;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button cmdCargarLecturas;
     }
 }
 

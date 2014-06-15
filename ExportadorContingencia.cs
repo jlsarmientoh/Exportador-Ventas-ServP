@@ -44,6 +44,7 @@ namespace Exportador_Ventas_ServP
             InitializeComponent();                        
             frameAdicionar.Enabled = false;
             empleadoVOBindingSource.DataSource = cp.getEmpleados();
+            productosTurno = new List<ProductoTurnoVO>();
         }
 
         private void cmdConsultar_Click(object sender, EventArgs e)
@@ -69,19 +70,20 @@ namespace Exportador_Ventas_ServP
                     long isla = long.Parse(txtIsla.Text);
                     long turno = long.Parse(txtTurno.Text);
                     cp = new ControladorPersistencia();
-                    if (cp.existeCierre(codEmp, turno, isla, fechaDesdePicker.Value, fechaDesdePicker.Value) == 0)
+                    DateTime fecha = new DateTime(fechaDesdePicker.Value.Year, fechaDesdePicker.Value.Month, fechaDesdePicker.Value.Day);
+                    if (cp.existeCierre(codEmp, turno, isla, fecha, fecha) == 0)
                     {
-                        totalCredito = cp.consultarTotalVentasFidelizadas(codEmp, turno, isla, fechaDesdePicker.Value, fechaDesdePicker.Value);
-                        ventaVOBindingSource.DataSource = cp.consultarVentasFidelizados(codEmp, fechaDesdePicker.Value, fechaDesdePicker.Value, isla, turno);
-                        productosTurno = cp.consultarProductosTurno(fechaDesdePicker.Value, fechaDesdePicker.Value, isla, turno);
+                        totalCredito = cp.consultarTotalVentasFidelizadas(codEmp, turno, isla, fecha, fecha);
+                        ventaVOBindingSource.DataSource = cp.consultarVentasFidelizados(codEmp, fecha, fecha, isla, turno);
+                        //productosTurno = cp.consultarProductosTurno(fecha, fecha, isla, turno);
 
-                        if (productosTurno != null && productosTurno.Count > 0)
+                        /*if (productosTurno != null && productosTurno.Count > 0)
                         {   
                             foreach (ProductoTurnoVO pt in productosTurno)
                             {
                                 totalConsumos += pt.Valor;
                             }
-                        }
+                        }*/
 
                         if (ventaVOBindingSource.Count == 0)
                         {
@@ -130,7 +132,8 @@ namespace Exportador_Ventas_ServP
             else
             {
                 cp = new ControladorPersistencia();
-                VentaVO venta = cp.consultarVentaTurno(long.Parse(txtTiquete.Text), fechaDesdePicker.Value, fechaDesdePicker.Value, int.Parse(txtIsla.Text), int.Parse(txtTurno.Text));
+                DateTime fecha = new DateTime(fechaDesdePicker.Value.Year, fechaDesdePicker.Value.Month, fechaDesdePicker.Value.Day);
+                VentaVO venta = cp.consultarVentaTurno(long.Parse(txtTiquete.Text), fecha, fecha, int.Parse(txtIsla.Text), int.Parse(txtTurno.Text));
                 if (venta != null)
                 {
                     venta.Nit = txtId.Text;
@@ -252,6 +255,7 @@ namespace Exportador_Ventas_ServP
             DialogResult res = MessageBox.Show(resumen, "Resumen del cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
+                DateTime fecha = new DateTime(fechaDesdePicker.Value.Year, fechaDesdePicker.Value.Month, fechaDesdePicker.Value.Day);
                 this.UseWaitCursor = true;
                 CierreVentasVO cierre = new CierreVentasVO();
                 cierre.CodEmpleado = long.Parse(cboEmpleados.SelectedValue.ToString());
@@ -268,7 +272,7 @@ namespace Exportador_Ventas_ServP
                 cierre.TotalVentas = totalVentas;
                 cierre.Fecha = fechaDesdePicker.Value;
 
-                if (cp.existeCierre(cierre.CodEmpleado, cierre.Turno, cierre.Isla, fechaDesdePicker.Value, fechaDesdePicker.Value) == 0)
+                if (cp.existeCierre(cierre.CodEmpleado, cierre.Turno, cierre.Isla, fecha, fecha) == 0)
                 {
 
                     int rows = 0;
@@ -285,8 +289,6 @@ namespace Exportador_Ventas_ServP
                         ventasExportar = new List<VentaVO>(ventas);
 
                         rows = cp.guardarVentasDia(ventasExportar);
-                        //rowsTurno = cp.guardarVentasTurno(cp.consultarVentasTurno(cierre.CodEmpleado, CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, cierre.Isla, cierre.Turno));
-                        //rowsTurno = cp.guardarProductosTurno(cp.consultarProductosTurno(CalendarDesde.SelectionStart, CalendarDesde.SelectionStart, cierre.Isla, cierre.Turno));
                         rowsTurno = cp.guardarProductosTurno(productosTurno);
                         MessageBox.Show("Se guardaron (" + rows + ") ventas en este cierre", "Resultado del cierre ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         totalEfectivo = 0;
@@ -504,6 +506,97 @@ namespace Exportador_Ventas_ServP
         private void cierreWorker_DoWork(object sender, DoWorkEventArgs e)
         {
 
+        }
+
+        private void cmdCargarLecturas_Click(object sender, EventArgs e)
+        {
+            totalConsumos = 0;
+            DateTime fecha = new DateTime(fechaDesdePicker.Value.Year, fechaDesdePicker.Value.Month, fechaDesdePicker.Value.Day);
+            productosTurno.Clear();
+
+            if (!txtLecIniCorriente.Text.Equals("") && !txtLecFinCorriente.Text.Equals(""))
+            {
+                double lecInicialCorriente = Utilidades.parsearDecimal(txtLecIniCorriente.Text);
+                double lecFinCorriente = Utilidades.parsearDecimal(txtLecFinCorriente.Text);
+                double consumoCorriente = lecFinCorriente - lecInicialCorriente;
+
+                SobretasaVO s = cp.consultarSobretasasProductoFecha(fecha.Month, fecha.Year, 1, fecha.Day);
+                if (s != null)
+                {
+                    ProductoTurnoVO ptCorriente = new ProductoTurnoVO();
+                    ptCorriente.Fecha = fecha;
+                    ptCorriente.Galones = consumoCorriente;
+                    ptCorriente.Isla = long.Parse(txtIsla.Text.Trim());
+                    ptCorriente.Turno = long.Parse(txtTurno.Text.Trim());
+
+                    consumoCorriente *= s.Venta;
+
+                    ptCorriente.Valor = consumoCorriente;
+                    productosTurno.Add(ptCorriente);
+
+                    totalConsumos += consumoCorriente;
+                }
+                else
+                {
+                    MessageBox.Show("Falta la información de sobretasa Corriente vigente para la fecha seleccionada", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if (!txtLecIniSuper.Text.Equals("") && !txtLecFinSuper.Text.Equals(""))
+            {
+                double lecInicialSuper = Utilidades.parsearDecimal(txtLecIniSuper.Text);
+                double lecFinSuper = Utilidades.parsearDecimal(txtLecFinSuper.Text);
+                double consumoSuper = lecFinSuper - lecInicialSuper;
+
+                SobretasaVO s = cp.consultarSobretasasProductoFecha(fecha.Month, fecha.Year, 2, fecha.Day);
+                if (s != null)
+                {
+                    ProductoTurnoVO ptSuper = new ProductoTurnoVO();
+                    ptSuper.Fecha = fecha;
+                    ptSuper.Galones = consumoSuper;
+                    ptSuper.Isla = long.Parse(txtIsla.Text.Trim());
+                    ptSuper.Turno = long.Parse(txtTurno.Text.Trim());
+
+                    consumoSuper *= s.Venta;
+
+                    ptSuper.Valor = consumoSuper;
+                    productosTurno.Add(ptSuper);
+
+                    totalConsumos += consumoSuper;
+                }
+                else
+                {
+                    MessageBox.Show("Falta la información de sobretasa Super vigente para la fecha seleccionada", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if (!txtLecIniDiesel.Text.Equals("") && !txtLecFinDiesel.Text.Equals(""))
+            {
+                double lecInicialDiesel = Utilidades.parsearDecimal(txtLecIniDiesel.Text);
+                double lecFinDiesel = Utilidades.parsearDecimal(txtLecFinDiesel.Text);
+                double consumoDiesel = lecFinDiesel - lecInicialDiesel;
+
+                SobretasaVO s = cp.consultarSobretasasProductoFecha(fecha.Month, fecha.Year, 3, fecha.Day);
+                if (s != null)
+                {
+                    ProductoTurnoVO ptDiesel = new ProductoTurnoVO();
+                    ptDiesel.Fecha = fecha;
+                    ptDiesel.Galones = consumoDiesel;
+                    ptDiesel.Isla = long.Parse(txtIsla.Text.Trim());
+                    ptDiesel.Turno = long.Parse(txtTurno.Text.Trim());
+
+                    consumoDiesel *= s.Venta;
+
+                    ptDiesel.Valor = consumoDiesel;
+                    productosTurno.Add(ptDiesel);
+
+                    totalConsumos += consumoDiesel;
+                }
+                else
+                {
+                    MessageBox.Show("Falta la información de sobretasa Diesel vigente para la fecha seleccionada", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            actualizarTotales();
         }
     }
 }

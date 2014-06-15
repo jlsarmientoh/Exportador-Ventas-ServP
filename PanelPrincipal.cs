@@ -18,6 +18,7 @@ namespace Exportador_Ventas_ServP
         private Lecturas lecturas;
         private Clientes clientes;
         private Exportador exportador;
+        private ExportadorContingencia exportadorContingencia;
         private MovimientosDiarios movimientos;
         private ComprasCombustible comprasCombustible;
         private InformesCierre informes;
@@ -363,7 +364,15 @@ namespace Exportador_Ventas_ServP
         {
             modificarToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;
             administrarToolStripMenuItem1.Enabled = Utilidades.usuarioSesion.IsAdmin;
-            revisarEgresosToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;            
+            revisarEgresosToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;
+            registroDiarioContingenciaToolStripMenuItem.Enabled = Utilidades.usuarioSesion.IsAdmin;
+        }
+
+        private void registroDiarioContingenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            exportadorContingencia = new ExportadorContingencia();
+            exportadorContingencia.MdiParent = this;
+            exportadorContingencia.Show();
         }
         
     }

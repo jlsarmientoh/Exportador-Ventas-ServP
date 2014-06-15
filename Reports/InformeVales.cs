@@ -110,7 +110,7 @@ namespace Exportador_Ventas_ServP.Reports
             fechaHasta.CurrentValues.Add(value);
             this.crystalReportViewer1.ParameterFieldInfo.Add(fechaHasta);
 
-            this.detalles = cp.consultarVentaCliente(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion);
+            this.detalles = cp.consultarVentaCliente(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion, ((ClienteVO)cboClientes.SelectedItem).Codigo);
 
             ListadoVales1.SetDataSource(this.detalles);
         }
@@ -118,7 +118,7 @@ namespace Exportador_Ventas_ServP.Reports
         private void InformeVales_Load(object sender, EventArgs e)
         {   
             crystalReportViewer1.Hide();
-            clienteVOBindingSource.DataSource = cp.consultarClientesVentas();
+            clienteVOBindingSource.DataSource = cp.consultarClientes();//cp.consultarClientesVentas();
         }
 
         private void InformeVales_Resize(object sender, EventArgs e)

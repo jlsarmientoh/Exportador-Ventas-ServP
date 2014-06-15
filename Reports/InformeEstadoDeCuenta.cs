@@ -156,11 +156,11 @@ namespace Exportador_Ventas_ServP.Reports
             List<VentaVO> ventas = null;
             if (((ModoPagoDTO)cboModoPago.SelectedItem).Id == 0)
             {
-                ventas = cp.consultarVentasAgrupadas(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion);
+                ventas = cp.consultarVentasAgrupadas(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion, ((ClienteVO)cboClientes.SelectedItem).Codigo);
             }
             else
             {
-                ventas = cp.consultarVentasAgrupadas(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion, ((ModoPagoDTO)cboModoPago.SelectedItem).Id);
+                ventas = cp.consultarVentasAgrupadas(DateTime.Parse(txtDesde.Text), DateTime.Parse(txtHasta.Text), ((ClienteVO)cboClientes.SelectedItem).Identificacion, ((ClienteVO)cboClientes.SelectedItem).Codigo, ((ModoPagoDTO)cboModoPago.SelectedItem).Id);
             }
             this.detalles = new List<EstadoCuentaDTO>();
             foreach (VentaVO v in ventas)
@@ -209,7 +209,7 @@ namespace Exportador_Ventas_ServP.Reports
         private void InformeEstadoDeCuenta_Load(object sender, EventArgs e)
         {
             crystalReportViewer1.Hide();
-            clienteVOBindingSource.DataSource = cp.consultarClientesVentas();
+            clienteVOBindingSource.DataSource = cp.consultarClientes();//consultarClientesVentas();
             modoPagoDTOBindingSource.DataSource = getModosPago();
         }
 

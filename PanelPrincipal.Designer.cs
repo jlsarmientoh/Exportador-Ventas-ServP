@@ -43,6 +43,7 @@
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresosEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revisarEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cruzarInformaciónEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.combustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lecturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +61,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.cruzarInformaciónEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDiarioContingenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -118,37 +119,38 @@
             // 
             this.registroDiarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroDiarioToolStripMenuItem1,
-            this.modificarToolStripMenuItem});
+            this.modificarToolStripMenuItem,
+            this.registroDiarioContingenciaToolStripMenuItem});
             this.registroDiarioToolStripMenuItem.Name = "registroDiarioToolStripMenuItem";
-            this.registroDiarioToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.registroDiarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registroDiarioToolStripMenuItem.Text = "Cierres";
             this.registroDiarioToolStripMenuItem.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem_Click);
             // 
             // registroDiarioToolStripMenuItem1
             // 
             this.registroDiarioToolStripMenuItem1.Name = "registroDiarioToolStripMenuItem1";
-            this.registroDiarioToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
+            this.registroDiarioToolStripMenuItem1.Size = new System.Drawing.Size(227, 22);
             this.registroDiarioToolStripMenuItem1.Text = "Registro diario";
             this.registroDiarioToolStripMenuItem1.Click += new System.EventHandler(this.registroDiarioToolStripMenuItem1_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // exportarToolStripMenuItem
             // 
             this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportarToolStripMenuItem.Text = "Exportar";
             this.exportarToolStripMenuItem.Click += new System.EventHandler(this.exportarToolStripMenuItem_Click);
             // 
             // ajustarToolStripMenuItem
             // 
             this.ajustarToolStripMenuItem.Name = "ajustarToolStripMenuItem";
-            this.ajustarToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.ajustarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ajustarToolStripMenuItem.Text = "Ajustar";
             this.ajustarToolStripMenuItem.Click += new System.EventHandler(this.ajustarToolStripMenuItem_Click);
             // 
@@ -175,6 +177,13 @@
             this.revisarEgresosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.revisarEgresosToolStripMenuItem.Text = "Revisar egresos";
             this.revisarEgresosToolStripMenuItem.Click += new System.EventHandler(this.revisarEgresosToolStripMenuItem_Click);
+            // 
+            // cruzarInformaciónEgresosToolStripMenuItem
+            // 
+            this.cruzarInformaciónEgresosToolStripMenuItem.Name = "cruzarInformaciónEgresosToolStripMenuItem";
+            this.cruzarInformaciónEgresosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.cruzarInformaciónEgresosToolStripMenuItem.Text = "Cruzar información egresos";
+            this.cruzarInformaciónEgresosToolStripMenuItem.Click += new System.EventHandler(this.cruzarInformaciónEgresosToolStripMenuItem_Click);
             // 
             // comprasToolStripMenuItem
             // 
@@ -301,12 +310,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(40, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // cruzarInformaciónEgresosToolStripMenuItem
+            // registroDiarioContingenciaToolStripMenuItem
             // 
-            this.cruzarInformaciónEgresosToolStripMenuItem.Name = "cruzarInformaciónEgresosToolStripMenuItem";
-            this.cruzarInformaciónEgresosToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.cruzarInformaciónEgresosToolStripMenuItem.Text = "Cruzar información egresos";
-            this.cruzarInformaciónEgresosToolStripMenuItem.Click += new System.EventHandler(this.cruzarInformaciónEgresosToolStripMenuItem_Click);
+            this.registroDiarioContingenciaToolStripMenuItem.Name = "registroDiarioContingenciaToolStripMenuItem";
+            this.registroDiarioContingenciaToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.registroDiarioContingenciaToolStripMenuItem.Text = "Registro diario [Contingencia]";
+            this.registroDiarioContingenciaToolStripMenuItem.Click += new System.EventHandler(this.registroDiarioContingenciaToolStripMenuItem_Click);
             // 
             // PanelPrincipal
             // 
@@ -365,6 +374,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem revisarEgresosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cruzarInformaciónEgresosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDiarioContingenciaToolStripMenuItem;
     }
 }
 
