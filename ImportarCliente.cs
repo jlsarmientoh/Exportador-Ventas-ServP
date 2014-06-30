@@ -70,6 +70,7 @@ namespace Exportador_Ventas_ServP
 
                 try
                 {
+                    cliente.Nombre = cliente.Nombre.Trim();
                     cp.guardarCliente(cliente);
                     importados++;
                 }
